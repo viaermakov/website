@@ -1,3 +1,8 @@
+:root {
+  --link-color: #dbf32c;
+}
+
+
 *,
 *:before,
 *:after {
@@ -21,13 +26,12 @@ h6 {
   font-family: Nunito Sans, sans-serif;
   font-weight: 700;
   line-height: 1.2;
-  margin: 0 0 0.5em 0;
+  margin: 0 0 0 0;
 }
 
 h1 {
-  font-family: Roboto, serif;
-  font-size: 4em;
-  margin: 0 0 1em 0;
+  font-family: Nunito Sans, serif;
+  font-size: 5.5em;
 }
 
 h2 {
@@ -41,6 +45,7 @@ h3 {
 
 h4 {
   font-size: 1.4em;
+  margin-bottom: 1rem;
 }
 
 h5 {
@@ -76,14 +81,14 @@ li p {
 }
 
 a {
-  padding: 2px 0;
-  border-bottom: 2px solid #dbf32c;
+  padding: 0 2px;
+  border-bottom: 2px solid var(--link-color);
   text-decoration: none;
   color: #000;
 }
 
 a:hover {
-  background: #dbf32c;
+  background: var(--link-color);
   text-decoration: none;
 }
 
@@ -179,7 +184,6 @@ th {
 td {
   padding: 0.4em 0.8em;
 }
-
 
 @media (max-width: 1020px) {
   h1 {
