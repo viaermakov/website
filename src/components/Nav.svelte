@@ -1,15 +1,25 @@
 <script>
+  import LampIcon from "../icons/lamp.svelte";
+  import { getContext, setContext } from "svelte";
+  import { theme } from "../store";
+
   export let segment;
+  let color = "#fff";
+
+  const handleChangeTheme = () => {
+    const newTheme = $theme === "light" ? "dark" : "light";
+    theme.update(() => newTheme);
+    color = newTheme === "light" ? "#fff" : "#ffce00";
+  };
 </script>
 
 <style>
   nav {
-    align-items: flex-end;
+    align-items: center;
     display: flex;
     flex: 1;
-    font-family: Roboto, sans-serif;
     justify-content: flex-end;
-    text-transform: uppercase;
+    margin: 0 1rem;
   }
 
   a {
@@ -19,8 +29,29 @@
     position: relative;
     margin-left: 20px;
   }
+  .switcher {
+    border: none;
+    background: none;
+    font-size: 1rem;
+    text-decoration: underline;
+    cursor: pointer;
+    color: #fff;
+  }
+  .light {
+    color: #212121;
+  }
 </style>
 
 <nav>
-  <a rel=prefetch class='{segment === "blog" ? "selected" : ""}' href='blog'>blog</a>
+  <div>
+    <a rel="prefetch" class={segment === 'blog' ? 'selected' : ''} href="blog">
+      blog
+    </a>
+  </div>
 </nav>
+<button
+  class="switcher"
+  class:light={$theme === 'light'}
+  on:click={handleChangeTheme}>
+  <LampIcon {color} />
+</button>

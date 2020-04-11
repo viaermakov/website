@@ -84,7 +84,6 @@ a {
   padding: 0 2px;
   border-bottom: 2px solid var(--link-color);
   text-decoration: none;
-  color: #000;
 }
 
 a:hover {

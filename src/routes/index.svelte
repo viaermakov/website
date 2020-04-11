@@ -54,6 +54,7 @@
   .container {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
   .avatar {
     height: 300px;
@@ -63,7 +64,7 @@
     flex-direction: column;
     justify-content: flex-end;
     width: 100%;
-    margin: 2rem 0;
+    margin-top: 4rem;
   }
   .project {
     display: flex;
@@ -84,7 +85,10 @@
   }
   .static {
     display: flex;
-    width: 70%;
+    width: 50%;
+  }
+  .about {
+    width: 50%;
   }
 
   .skill {
@@ -97,6 +101,27 @@
   }
   .strike {
     text-decoration: line-through;
+  }
+
+  @media screen and (max-width: 768px) {
+    .container {
+      margin-top: 2rem;
+    }
+    .about {
+      width: 100%;
+    }
+    .static {
+      margin-top: 2rem;
+      width: 100%;
+    }
+    .stat {
+      grid-template-columns: 90px 1fr;
+      grid-template-rows: auto;
+      grid-gap: 2rem;
+    }
+    .desc {
+      justify-self: start;
+    }
   }
 </style>
 
@@ -149,15 +174,17 @@
   {#each projects as project}
     <div class="project">
       <GithubIcon />
-      <a class="project-link" target="_blink" href={project.href}>
-        {project.title}
-      </a>
-      <div>{project.desc}</div>
       <div>
+        <a class="project-link" target="_blink" href={project.href}>
+          {project.title}
+        </a>
+      </div>
+      <div>{project.desc}</div>
+      <!-- <div>
         {#each project.tags as tag}
           <span>{tag}</span>
         {/each}
-      </div>
+      </div> -->
     </div>
   {/each}
 

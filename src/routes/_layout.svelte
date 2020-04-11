@@ -1,7 +1,9 @@
 <script>
   import Header from "../components/Header.svelte";
+  import { theme } from "../store";
 
   export let segment;
+
   const contacts = [
     { title: "telegram", url: "https://styled-components.com/" },
     { title: "github", url: "https://reactjs.org/" },
@@ -16,7 +18,22 @@
     justify-content: space-between;
     min-height: 100%;
     min-height: 100vh;
-    margin: 0 2rem;
+    padding: 0 2rem;
+  }
+
+  .light {
+    background: #fff;
+    color: #212121;
+  }
+  .light :global(a) {
+    color: #212121;
+  }
+  .dark :global(a) {
+    color: #fff;
+  }
+  .dark {
+    background: #212121;
+    color: #fff;
   }
 
   main {
@@ -38,9 +55,18 @@
     padding: 2em;
     width: 100%;
   }
+
+  @media screen and (max-width: 768px) {
+    .layout {
+      padding: 1rem;
+    }
+    footer {
+      padding: 1rem 0 0 0;
+    }
+  }
 </style>
 
-<div class="layout">
+<div class="layout {$theme}">
   <Header {segment} />
 
   <main>
