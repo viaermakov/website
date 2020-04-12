@@ -1,7 +1,7 @@
 <script>
   import Header from "../components/Header.svelte";
   import { theme } from "../store";
-
+  
   export let segment;
 
   const contacts = [
@@ -40,6 +40,7 @@
   main {
     max-width: 1100px;
     width: 100%;
+    flex: 1 0 auto;
   }
   .contacts {
     display: flex;

@@ -13,6 +13,9 @@
 </script>
 
 <style>
+  .container {
+    margin-top: 3rem;
+  }
   .post-item-date {
     min-width: 90px;
     margin-right: 4px;

@@ -44,24 +44,6 @@
     margin-top: -150px;
   }
 
-  .legend {
-    max-width: 250px;
-    margin-left: 30px;
-  }
-
-  .title {
-    font-family: "Verdana", sans-serif;
-    font-size: 18px;
-    line-height: 21px;
-    color: #591d48;
-  }
-
-  .caption-list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-
   .chart {
     min-width: 400px;
   }
