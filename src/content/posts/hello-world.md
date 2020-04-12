@@ -1,12 +1,10 @@
 ---
-title: Hello World 👋
+title: Hello World 
 date: "2019-06-11T08:38:00.000Z"
 ---
 
-Every blog starts with a single post. This is yours. Make it great.
+Every blog starts with a single post. This is mine. 
 
 <!-- more -->
 
-This post intentionally left blank.
-
-Write what you want.
+There are nothing. I am sorry.

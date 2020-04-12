@@ -1,19 +1,15 @@
 {
-  "name": "TODO",
-  "description": "TODO",
+  "name": "Viaermakov",
+  "description": "Viaermakov Website",
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",
     "build": "sapper build --legacy",
     "export": "sapper export --legacy",
-    "start": "node __sapper__/build",
-    "cy:run": "cypress run",
-    "cy:open": "cypress open",
-    "test": "run-p --race dev cy:run"
+    "start": "node __sapper__/build"
   },
   "dependencies": {
     "compression": "^1.7.1",
-    "date-fns": "^1.30.1",
     "gray-matter": "^4.0.2",
     "marked": "^0.6.2",
     "polka": "^0.5.0",

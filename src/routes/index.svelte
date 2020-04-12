@@ -1,8 +1,10 @@
 <script>
   import GithubIcon from "../icons/githubIcon.svelte";
   import Chart from "../components/chart.svelte";
-
   import { skills, jobs, projects } from "../content/data";
+  import { theme } from "../store";
+
+  $: color = $theme === "light" ? "#212121" : "#fff";
 </script>
 
 <style>
@@ -88,7 +90,7 @@
 </style>
 
 <svelte:head>
-  <title>Viacheslav</title>
+  <title>Viacheslav Ermakov</title>
 </svelte:head>
 
 <section class="container">
@@ -142,7 +144,7 @@
         </div>
         <div>{project.desc}</div>
         <a class="other-link" target="_blink" href={project.ghUrl}>
-          <GithubIcon />
+          <GithubIcon color={color}/>
         </a>
       </div>
     {/each}
