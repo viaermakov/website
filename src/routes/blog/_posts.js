@@ -9,7 +9,7 @@ const readingTime = require('reading-time')
 require('prismjs/components/prism-jsx.min')
 
 const cwd = process.cwd()
-const POSTS_DIR = path.join(cwd, 'src/routes/blog/posts/')
+const POSTS_DIR = path.join(cwd, 'src/content/posts/')
 const EXCERPT_SEPARATOR = '<!-- more -->'
 const renderer = new marked.Renderer()
 const linkRenderer = renderer.link;
@@ -55,7 +55,7 @@ const posts = fs.readdirSync(POSTS_DIR)
     const html = marked(content)
     const readingStats = readingTime(content)
     const printReadingTime = readingStats.text
-    const printDate = new Date(date);
+    const printDate = new Intl.DateTimeFormat().format(new Date('2019-06-16T12:51:00.000Z'));
 
     return {
       title: title || slug,

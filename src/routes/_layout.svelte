@@ -5,9 +5,9 @@
   export let segment;
 
   const contacts = [
-    { title: "telegram", url: "https://styled-components.com/" },
-    { title: "github", url: "https://reactjs.org/" },
-    { title: "slavaskainet@gmail.com", url: "mailto:slavaskainet@gmail.com" }
+    { title: "telegram", url: "https://t.me/nathaniel.maeus" },
+    { title: "github", url: "https://github.com/nathanielmaeus" },
+    { title: "email", url: "mailto:slavaskainet@gmail.com" }
   ];
 </script>
 
@@ -19,6 +19,7 @@
     min-height: 100%;
     min-height: 100vh;
     padding: 0 2rem;
+    align-items: center;
   }
 
   .light {
@@ -38,7 +39,7 @@
 
   main {
     max-width: 1100px;
-    margin: 0 auto;
+    width: 100%;
   }
   .contacts {
     display: flex;
@@ -67,6 +68,7 @@
 </style>
 
 <div class="layout {$theme}">
+
   <Header {segment} />
 
   <main>

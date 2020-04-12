@@ -1,53 +1,8 @@
 <script>
   import GithubIcon from "../icons/githubIcon.svelte";
+  import Chart from "../components/chart.svelte";
 
-  const skills = [
-    { title: "styled-components", url: "https://styled-components.com/" },
-    { title: "react", url: "https://reactjs.org/" },
-    { title: "redux", url: "https://redux.js.org/" },
-    { title: "svelte", url: "https://svelte.dev/" },
-    { title: "webpack", url: "https://webpack.js.org/" },
-    { title: "rollup", url: "https://rollupjs.org/guide/en/" },
-    { title: "redux-thunk", url: "https://github.com/reduxjs/redux-thunk" },
-    { title: "redux-saga", url: "https://github.com/redux-saga/redux-saga" },
-    { title: "reselect", url: "https://github.com/reduxjs/reselect" },
-    { title: "gatsby", url: "https://www.gatsbyjs.org/" },
-    { title: "next", url: "https://nextjs.org/" },
-    { title: "typescript", url: "https://www.typescriptlang.org/" },
-    { title: "graphql", url: "https://graphql.org/" }
-  ];
-
-  const jobs = [
-    { title: "AlfaStrahovanie", url: "https://www.alfastrah.ru/" },
-    { title: "OneTwoTrip", url: "https://www.onetwotrip.com/ru/" }
-  ];
-
-  const projects = [
-    {
-      title: "Spootifly",
-      desc: "Music web player based on Deezer API",
-      tags: ["react", "redux", "typescript"],
-      href: "https://spoootifly.herokuapp.com/"
-    },
-    {
-      title: "Space game",
-      desc: "Small game made by Svelte. I made just for fun and try Svelte",
-      tags: ["svelte", "sapper"],
-      href: "https://spacegame-svelte.herokuapp.com/"
-    },
-    {
-      title: "Unsplash",
-      desc: "Photo Viewer based on Unsplash API ",
-      tags: ["react", "redux"],
-      href: "https://unsplashapp.herokuapp.com/"
-    },
-    {
-      title: "Telegram chart",
-      desc: "Pure canvas charts for telegram contest",
-      tags: ["svelte"],
-      href: "https://tg-chart.herokuapp.com/"
-    }
-  ];
+  import { skills, jobs, projects } from "../content/data";
 </script>
 
 <style>
@@ -61,17 +16,17 @@
   }
   .projects {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
     width: 100%;
     margin-top: 4rem;
+  }
+  .projects-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
   }
   .project {
     display: flex;
     margin: 0.4rem 0;
-  }
-  .project-link {
-    margin-left: 8px;
   }
   .stat {
     align-content: center;
@@ -90,6 +45,13 @@
   .about {
     width: 50%;
   }
+  .other-link {
+    border: none;
+    text-decoration: none;
+  }
+  .other-link:hover {
+    background: none;
+  }
 
   .skill {
     display: inline-block;
@@ -97,7 +59,7 @@
   }
 
   .project div {
-    margin: 0 8px;
+    margin: 0 8px 0 0;
   }
   .strike {
     text-decoration: line-through;
@@ -129,13 +91,13 @@
   <title>Viacheslav</title>
 </svelte:head>
 
-<div class="container">
-  <section class="about">
+<section class="container">
+  <div class="about">
     <h1>Viacheslav Ermakov</h1>
     <h4>frontend developer, 23 y.o</h4>
-    <img class="avatar" src="./1233.jpg" alt="" />
-  </section>
-  <section class="static">
+    <img class="avatar" src="./1233.jpg" alt="my photo" />
+  </div>
+  <div class="static">
     <div class="stat">
       <div class="desc">Tools that I know:</div>
       <div>
@@ -161,31 +123,28 @@
               {job.title}
             </a>
           {/if}
-
           {#if idx !== jobs.length - 1}
             <span>--></span>
           {/if}
         {/each}
       </div>
     </div>
-  </section>
-</div>
+  </div>
+</section>
 <section class="projects">
-  {#each projects as project}
-    <div class="project">
-      <GithubIcon />
-      <div>
-        <a class="project-link" target="_blink" href={project.href}>
-          {project.title}
+  <div class="projects-list">
+    {#each projects as project}
+      <div class="project">
+        <div>
+          <a class="project-link" target="_blink" href={project.href}>
+            {project.title}
+          </a>
+        </div>
+        <div>{project.desc}</div>
+        <a class="other-link" target="_blink" href={project.ghUrl}>
+          <GithubIcon />
         </a>
       </div>
-      <div>{project.desc}</div>
-      <!-- <div>
-        {#each project.tags as tag}
-          <span>{tag}</span>
-        {/each}
-      </div> -->
-    </div>
-  {/each}
-
+    {/each}
+  </div>
 </section>
