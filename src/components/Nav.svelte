@@ -9,6 +9,7 @@
   const handleChangeTheme = () => {
     const newTheme = $theme === "light" ? "dark" : "light";
     theme.update(() => newTheme);
+    window.localStorage.setItem("theme", newTheme);
     color = newTheme === "light" ? "#fff" : "#ffce00";
   };
 </script>
@@ -40,9 +41,23 @@
   .light {
     color: #212121;
   }
+
+  .selected {
+    background: var(--link-color);
+    color: #212121 !important;
+    text-decoration: none;
+  }
 </style>
 
 <nav>
+  <div>
+    <a
+      rel="prefetch"
+      class={segment === 'projects' ? 'selected' : ''}
+      href="projects">
+      projects
+    </a>
+  </div>
   <div>
     <a rel="prefetch" class={segment === 'blog' ? 'selected' : ''} href="blog">
       blog

@@ -1,7 +1,7 @@
 <script>
   import Header from "../components/Header.svelte";
   import { theme } from "../store";
-  
+
   export let segment;
 
   const contacts = [
@@ -23,8 +23,9 @@
   }
 
   .light {
+    --text-color: #fff;
     background: #fff;
-    color: #212121;
+    color: var(--text-color);
   }
   .light :global(a) {
     color: #212121;
@@ -32,9 +33,13 @@
   .dark :global(a) {
     color: #fff;
   }
+  .dark :global(a):hover {
+    color: #212121;
+  }
   .dark {
+    --text-color: #fff;
     background: #212121;
-    color: #fff;
+    color: var(--text-color);
   }
 
   main {

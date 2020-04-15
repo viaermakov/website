@@ -48,4 +48,22 @@ export const projects = [
     href: "https://tg-chart.herokuapp.com/",
     ghUrl: "https://github.com/nathanielmaeus/tg-chart",
   },
+  {
+    title: "teamviewer",
+    desc: "A small testing task with different state managements",
+    tags: ["react", "redux", "effector", "mobx", "typescript", "css modules"],
+    ghUrl: "https://github.com/nathanielmaeus/teamviewer",
+  },
+  {
+    title: "slider",
+    desc: "Slider component",
+    tags: ["react", "typescript", "linaria"],
+    ghUrl: "https://github.com/nathanielmaeus/slider",
+  },
+  {
+    title: "linter",
+    desc: "Custom linter for yandex contest",
+    tags: ["javascript"],
+    ghUrl: "https://github.com/nathanielmaeus/custom-linter",
+  },
 ];

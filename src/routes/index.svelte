@@ -135,7 +135,7 @@
 </section>
 <section class="projects">
   <div class="projects-list">
-    {#each projects as project}
+    {#each projects.slice(0,4) as project}
       <div class="project">
         <div>
           <a class="project-link" target="_blink" href={project.href}>
