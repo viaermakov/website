@@ -86,6 +86,9 @@
     .desc {
       justify-self: start;
     }
+    .projects {
+      display: none;
+    }
   }
 </style>
 
@@ -135,7 +138,7 @@
 </section>
 <section class="projects">
   <div class="projects-list">
-    {#each projects.slice(0,4) as project}
+    {#each projects.slice(0, 4) as project}
       <div class="project">
         <div>
           <a class="project-link" target="_blink" href={project.href}>
@@ -144,7 +147,7 @@
         </div>
         <div>{project.desc}</div>
         <a class="other-link" target="_blink" href={project.ghUrl}>
-          <GithubIcon color={color}/>
+          <GithubIcon {color} />
         </a>
       </div>
     {/each}

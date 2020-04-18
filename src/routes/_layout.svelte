@@ -1,14 +1,9 @@
 <script>
   import Header from "../components/Header.svelte";
   import { theme } from "../store";
+  import { contacts } from "../content/data";
 
   export let segment;
-
-  const contacts = [
-    { title: "telegram", url: "https://t.me/nathaniel.maeus" },
-    { title: "github", url: "https://github.com/nathanielmaeus" },
-    { title: "email", url: "mailto:slavaskainet@gmail.com" }
-  ];
 </script>
 
 <style>
@@ -16,26 +11,29 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 100%;
+    align-items: center;
     min-height: 100vh;
     padding: 0 2rem;
-    align-items: center;
   }
 
   .light {
-    --text-color: #fff;
+    --text-color: #212121;
     background: #fff;
     color: var(--text-color);
   }
+  
   .light :global(a) {
     color: #212121;
   }
+
   .dark :global(a) {
     color: #fff;
   }
+
   .dark :global(a):hover {
     color: #212121;
   }
+
   .dark {
     --text-color: #fff;
     background: #212121;
@@ -43,13 +41,15 @@
   }
 
   main {
+    flex: 1 0 auto;
     max-width: 1100px;
     width: 100%;
-    flex: 1 0 auto;
   }
+
   .contacts {
     display: flex;
   }
+  
   .contacts a {
     margin: 0 4px;
   }

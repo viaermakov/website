@@ -16,9 +16,12 @@
     margin: 0 8px 0 0;
   }
   .other-link {
-    margin: 0 4px 0 8px;
+    margin: 0 4px 0 4px;
     border: none;
     text-decoration: none;
+  }
+  .outlink {
+    margin: 0 4px 0 8px;
   }
   .other-link:hover {
     background: none;
@@ -36,7 +39,24 @@
   }
   .project {
     display: flex;
+    align-items: center;
     margin: 0.4rem 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    .other-link {
+      display: none;
+    }
+    .tags {
+      display: none;
+    }
+
+    .project {
+      align-items: initial;
+    }
+    .project div {
+      min-width: 100px;
+    }
   }
 </style>
 
@@ -59,20 +79,26 @@
             </a>
           </div>
           <div>{project.desc}</div>
-          [
-          {#each project.tags as tag, idx}
-            {tag}
-            {#if idx !== project.tags.length - 1}
-              <span>,&nbsp;</span>
-            {/if}
-          {/each}
-          ]
-          <a class="other-link" target="_blink" href={project.ghUrl}>
-            <OutIcon {color} />
-          </a>
-          <a class="other-link" target="_blink" href={project.href}>
-            <GithubIcon {color} />
-          </a>
+          <div class="tags">
+            [
+            {#each project.tags as tag, idx}
+              {tag}
+              {#if idx !== project.tags.length - 1}
+                <span>,&nbsp;</span>
+              {/if}
+            {/each}
+            ]
+          </div>
+          {#if project.href}
+            <a class="other-link outlink" target="_blink" href={project.href}>
+              <OutIcon {color} />
+            </a>
+          {/if}
+          {#if project.ghUrl}
+            <a class="other-link" target="_blink" href={project.ghUrl}>
+              <GithubIcon {color} />
+            </a>
+          {/if}
         </div>
       {/each}
     </div>
