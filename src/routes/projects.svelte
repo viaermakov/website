@@ -3,8 +3,10 @@
   import OutIcon from "../icons/outIcon.svelte";
 
   import { projects } from "../content/data";
-  import { theme } from "../store";
+  import { theme, lang } from "../store";
+  import { translates } from "../lang";
 
+  $: l10n = translates[$lang];
   $: color = $theme === "light" ? "#212121" : "#fff";
 </script>
 
@@ -65,7 +67,7 @@
 </svelte:head>
 
 <section class="container">
-  <h2>Projects</h2>
+  <h2>{l10n['Projects']}</h2>
   <section class="projects">
     <div class="projects-list">
       {#each projects as project}
@@ -78,7 +80,7 @@
               {project.title}
             </a>
           </div>
-          <div>{project.desc}</div>
+          <div>{project[`desc${$lang}`]}</div>
           <div class="tags">
             [
             {#each project.tags as tag, idx}

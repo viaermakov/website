@@ -2,8 +2,10 @@
   import GithubIcon from "../icons/githubIcon.svelte";
   import Chart from "../components/chart.svelte";
   import { skills, jobs, projects } from "../content/data";
-  import { theme } from "../store";
+  import { theme, lang } from "../store";
+  import { translates } from "../lang";
 
+  $: l10n = translates[$lang];
   $: color = $theme === "light" ? "#212121" : "#fff";
 </script>
 
@@ -98,13 +100,13 @@
 
 <section class="container">
   <div class="about">
-    <h1>Viacheslav Ermakov</h1>
-    <h4>frontend developer, 23 y.o</h4>
+    <h1>{l10n['Viacheslav Ermakov']}</h1>
+    <h4>{l10n['frontend developer, 23 y.o']}</h4>
     <img class="avatar" src="./1233.jpg" alt="my photo" />
   </div>
   <div class="static">
     <div class="stat">
-      <div class="desc">Tools that I know:</div>
+      <div class="desc">{l10n['Tools that I know:']}</div>
       <div>
         {#each skills as item}
           <a class="skill" target="_blink" href={item.url} alt={item.title}>
@@ -112,7 +114,7 @@
           </a>
         {/each}
       </div>
-      <div class="desc">I work in:</div>
+      <div class="desc">{l10n['I work in:']}</div>
       <div>
         {#each jobs as job, idx}
           {#if idx === jobs.length - 1}
@@ -145,7 +147,7 @@
             {project.title}
           </a>
         </div>
-        <div>{project.desc}</div>
+        <div>{project[`desc${$lang}`]}</div>
         <a class="other-link" target="_blink" href={project.ghUrl}>
           <GithubIcon {color} />
         </a>

@@ -1,7 +1,11 @@
 <script>
   import Nav from "./Nav.svelte";
+  import { theme, lang } from "../store";
+  import { translates } from "../lang";
 
   export let segment;
+
+  $: l10n = translates[$lang];
 </script>
 
 <style>
@@ -24,7 +28,7 @@
 <header>
   <div>
     <a class={segment === undefined ? 'selected' : ''} href=".">
-      Viacheslav Ermakov
+      {l10n['Viacheslav Ermakov']}
     </a>
   </div>
   <Nav {segment} />

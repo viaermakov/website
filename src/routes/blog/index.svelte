@@ -9,7 +9,12 @@
 </script>
 
 <script>
+  import { theme, lang } from "../../store";
+  import { translates } from "../../lang";
+
   export let posts;
+
+  $: l10n = translates[$lang];
 </script>
 
 <style>
@@ -42,7 +47,7 @@
 </svelte:head>
 
 <section class="container">
-  <h2>Articles</h2>
+  <h2>{l10n['Articles']}</h2>
   {#each posts as post, index}
     <div class="post-item">
       <div class="post-item-date">{post.printDate}</div>

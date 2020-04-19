@@ -1,9 +1,13 @@
 <script>
   import LampIcon from "../icons/lamp.svelte";
   import { getContext, setContext } from "svelte";
-  import { theme } from "../store";
+  import { theme, lang } from "../store";
+  import { translates } from "../lang";
 
   export let segment;
+
+  $: l10n = translates[$lang];
+
   let color = "#fff";
 
   const handleChangeTheme = () => {
@@ -11,6 +15,12 @@
     theme.update(() => newTheme);
     window.localStorage.setItem("theme", newTheme);
     color = newTheme === "light" ? "#fff" : "#ffce00";
+  };
+
+  const handleChangeLang = () => {
+    const newLang = $lang === "en" ? "ru" : "en";
+    lang.update(() => newLang);
+    window.localStorage.setItem("lang", newLang);
   };
 </script>
 
@@ -38,6 +48,11 @@
     cursor: pointer;
     color: #fff;
   }
+  .switcher-lang {
+    color: var(--text-color);
+    text-decoration: dotted;
+    margin-left: 2rem;
+  }
   .light {
     color: #212121;
   }
@@ -55,12 +70,12 @@
       rel="prefetch"
       class={segment === 'projects' ? 'selected' : ''}
       href="projects">
-      projects
+      {l10n['Projects']}
     </a>
   </div>
   <div>
     <a rel="prefetch" class={segment === 'blog' ? 'selected' : ''} href="blog">
-      blog
+      {l10n['Articles']}
     </a>
   </div>
 </nav>
@@ -69,4 +84,7 @@
   class:light={$theme === 'light'}
   on:click={handleChangeTheme}>
   <LampIcon {color} />
+</button>
+<button class="switcher switcher-lang" on:click={handleChangeLang}>
+  {$lang}
 </button>
