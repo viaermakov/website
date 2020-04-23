@@ -15,15 +15,15 @@
     margin-top: 3rem;
   }
   .project div {
-    margin: 0 8px 0 0;
+    margin: 0 2px 0 0;
   }
   .other-link {
-    margin: 0 4px 0 4px;
+    margin: 2px 4px 0 4px;
     border: none;
     text-decoration: none;
   }
   .outlink {
-    margin: 0 4px 0 8px;
+    margin: 4px 4px 0 8px;
   }
   .other-link:hover {
     background: none;

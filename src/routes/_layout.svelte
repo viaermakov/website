@@ -21,7 +21,7 @@
     background: #fff;
     color: var(--text-color);
   }
-  
+
   .light :global(a) {
     color: #212121;
   }
@@ -49,7 +49,7 @@
   .contacts {
     display: flex;
   }
-  
+
   .contacts a {
     margin: 0 4px;
   }
@@ -73,7 +73,7 @@
   }
 </style>
 
-<div class="layout {$theme}">
+<div class="layout {$theme}" style={`visibility: ${process.browser ? "initial" : 'hidden'}`}>
 
   <Header {segment} />
 

@@ -1,7 +1,7 @@
 @font-face {
-  font-family: "Nunito";
+  font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  src: local("Nunito"), local("Nunito"),
-    url("./fonts/Nunito-Regular.ttf") format("truetype"); /* Safari, Android, iOS */
+  src: local("Inter"), local("Inter"),
+    url("./fonts/Inter.ttf") format("truetype");
 }
