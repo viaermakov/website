@@ -92,12 +92,12 @@
             ]
           </div>
           {#if project.href}
-            <a class="other-link outlink" target="_blink" href={project.href}>
+            <a class="other-link outlink" aria-label={project.title} target="_blink" href={project.href}>
               <OutIcon {color} />
             </a>
           {/if}
           {#if project.ghUrl}
-            <a class="other-link" target="_blink" href={project.ghUrl}>
+            <a class="other-link" target="_blink" aria-label={project.title} href={project.ghUrl}>
               <GithubIcon {color} />
             </a>
           {/if}

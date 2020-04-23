@@ -82,9 +82,13 @@
 <button
   class="switcher"
   class:light={$theme === 'light'}
-  on:click={handleChangeTheme}>
+  on:click={handleChangeTheme}
+  aria-label="switch theme">
   <LampIcon {color} />
 </button>
-<button class="switcher switcher-lang" on:click={handleChangeLang}>
+<button
+  class="switcher switcher-lang"
+  aria-label="switch lang"
+  on:click={handleChangeLang}>
   {$lang}
 </button>

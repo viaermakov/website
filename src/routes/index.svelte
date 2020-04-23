@@ -37,7 +37,7 @@
     display: grid;
     grid-template-columns: 150px 1fr;
     grid-template-rows: 100px;
-    grid-gap: 0 8px;
+    grid-gap: 16px 8px;
   }
   .desc {
     justify-self: end;
@@ -143,12 +143,12 @@
     {#each projects.slice(0, 4) as project}
       <div class="project">
         <div>
-          <a class="project-link" target="_blink" href={project.href}>
+          <a class="project-link" aria-label={project.title} target="_blink" href={project.href}>
             {project.title}
           </a>
         </div>
         <div>{project[`desc${$lang}`]}</div>
-        <a class="other-link" target="_blink" href={project.ghUrl}>
+        <a class="other-link" aria-label={project.title} target="_blink" href={project.ghUrl}>
           <GithubIcon {color} />
         </a>
       </div>
