@@ -4,6 +4,7 @@ import commonjs from "rollup-plugin-commonjs";
 import svelte from "rollup-plugin-svelte";
 import babel from "rollup-plugin-babel";
 import { terser } from "rollup-plugin-terser";
+import gzipPlugin from 'rollup-plugin-gzip'
 import config from "sapper/config/rollup.js";
 import marked from "marked";
 import pkg from "./package.json";
@@ -43,7 +44,7 @@ export default {
       }),
       resolve(),
       commonjs(),
-
+      gzipPlugin(),
       legacy &&
         babel({
           extensions: [".js", ".mjs", ".html", ".svelte"],
