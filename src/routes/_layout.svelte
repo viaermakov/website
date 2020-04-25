@@ -14,6 +14,7 @@
     align-items: center;
     min-height: 100vh;
     padding: 0 2rem;
+    transition: all 0.3s;
   }
 
   .light {
@@ -70,10 +71,15 @@
     footer {
       padding: 1rem 0 0 0;
     }
+    .contacts a {
+      margin: 0 16px 0 0;
+    }
   }
 </style>
 
-<div class="layout {$theme}" style={`visibility: ${process.browser ? "initial" : 'hidden'}`}>
+<div
+  class="layout {$theme}"
+  style={`visibility: ${process.browser ? 'initial' : 'hidden'}`}>
 
   <Header {segment} />
 

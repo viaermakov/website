@@ -15,7 +15,7 @@
     margin-top: 3rem;
   }
   .project div {
-    margin: 0 2px 0 0;
+    margin: 4px 2px 0 0;
   }
   .other-link {
     margin: 2px 4px 0 4px;
@@ -34,6 +34,10 @@
     width: 100%;
     margin-top: 4rem;
   }
+
+  .desc {
+    color: #7b7b7b;
+  }
   .projects-list {
     display: flex;
     flex-direction: column;
@@ -46,6 +50,9 @@
   }
 
   @media screen and (max-width: 768px) {
+    .projects {
+      margin-top: 2rem;
+    }
     .other-link {
       display: none;
     }
@@ -55,6 +62,7 @@
 
     .project {
       align-items: initial;
+      flex-direction: column;
     }
     .project div {
       min-width: 100px;
@@ -80,7 +88,7 @@
               {project.title}
             </a>
           </div>
-          <div>{project[`desc${$lang}`]}</div>
+          <div class="desc">{project[`desc${$lang}`]}</div>
           <div class="tags">
             [
             {#each project.tags as tag, idx}
@@ -92,12 +100,20 @@
             ]
           </div>
           {#if project.href}
-            <a class="other-link outlink" aria-label={project.title} target="_blink" href={project.href}>
+            <a
+              class="other-link outlink"
+              aria-label={project.title}
+              target="_blink"
+              href={project.href}>
               <OutIcon {color} />
             </a>
           {/if}
           {#if project.ghUrl}
-            <a class="other-link" target="_blink" aria-label={project.title} href={project.ghUrl}>
+            <a
+              class="other-link"
+              target="_blink"
+              aria-label={project.title}
+              href={project.ghUrl}>
               <GithubIcon {color} />
             </a>
           {/if}

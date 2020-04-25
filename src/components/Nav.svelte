@@ -51,7 +51,6 @@
   .switcher-lang {
     color: var(--text-color);
     text-decoration: dotted;
-    margin-left: 2rem;
   }
   .light {
     color: #212121;

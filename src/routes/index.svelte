@@ -71,13 +71,13 @@
 
   @media screen and (max-width: 768px) {
     .container {
-      margin-top: 2rem;
+      margin-top: 1rem;
     }
     .about {
       width: 100%;
     }
     .static {
-      margin-top: 2rem;
+      margin-top: 1rem;
       width: 100%;
     }
     .stat {
