@@ -7,4 +7,4 @@ Every blog starts with a single post. This is mine.
 
 <!-- more -->
 
-There are nothing. While.
+
