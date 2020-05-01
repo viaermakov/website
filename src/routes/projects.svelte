@@ -14,9 +14,7 @@
   .container {
     margin-top: 3rem;
   }
-  .project div {
-    margin: 4px 2px 0 0;
-  }
+
   .other-link {
     margin: 2px 4px 0 4px;
     border: none;
@@ -36,6 +34,7 @@
   }
 
   .desc {
+    margin: 0 8px;
     color: #7b7b7b;
   }
   .projects-list {
@@ -49,6 +48,10 @@
     margin: 0.4rem 0;
   }
 
+  .tags {
+    color: #7b7b7b;
+    margin-right: 4px;
+  }
   @media screen and (max-width: 768px) {
     .projects {
       margin-top: 2rem;
