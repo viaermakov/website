@@ -38,7 +38,7 @@
 
 <header>
   <p>{post.printDate} ~ {post.printReadingTime}</p>
-  <h3>{post.title}</h3>
+  <h2>{post.title}</h2>
 </header>
 <div class="container">
   <article class="content">
