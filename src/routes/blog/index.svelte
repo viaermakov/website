@@ -13,7 +13,7 @@
   import { translates } from "../../lang";
 
   export let posts;
-  $: filteredPost = posts.filter(post => post.lang === $lang);
+ // $: filteredPost = posts.filter(post => post.lang === $lang);
   $: l10n = translates[$lang];
 </script>
 
@@ -48,7 +48,7 @@
 
 <section class="container">
   <h2>{l10n['Articles']}</h2>
-  {#each filteredPost as post, index}
+  {#each posts as post, index}
     <div class="post-item">
       <div class="post-item-date">{post.printDate}</div>
       <div class="content">
