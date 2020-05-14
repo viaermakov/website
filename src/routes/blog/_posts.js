@@ -17,10 +17,8 @@ renderer.link = (href, title, text) => {
     const html = linkRenderer.call(renderer, href, title, text)
 
     if (href.indexOf('/') === 0) {
-      // Do not open internal links on new tab
       return html
     } else if (href.indexOf('#') === 0) {
-      // Handle hash links to internal elements
       const html = linkRenderer.call(renderer, 'javascript:;', title, text)
       return html.replace(/^<a /, `<a onclick="document.location.hash='${href.substr(1)}';" `)
     }

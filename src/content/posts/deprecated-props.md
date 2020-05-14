@@ -9,7 +9,7 @@ lang: 'ru'
 
 В таких случаях может помочь использование дополнительного хелпера, который будет генерировать ворнинги в консоль браузера и, тем самым, оповещая других разработчиков о необходимости изменения передаваемых пропсов в компонент. 
 
-Для этого можно создать такую функцию:
+Для этого можно создать функцию и использовать в описании пропсов вашего компонента:
 
 ```html
 const warned = {};        
@@ -40,14 +40,14 @@ export function deprecatedPropType(propType, explanation = '') {
 Теперь мы можем обернуть пропс, который является устаревшим.
 
 ```html
-autoComplete: deprecatedPropType(
+  GUINormal: deprecatedPropType(
     PropTypes.string,
-    'Use enableAutoComplete and autoCompleteName instead'
+    'GUINormal is deprecated, please use purpose instead'
   ),
 ```
 
 Таким образом браузер оповестит других разработчиков об изменениях:
 
-![Not so big](./dep.png)
+![Deprecated props in console](./dep.png)
 
 Это позволит быстрее избавляться от старой функциональности ваших компонентов.
