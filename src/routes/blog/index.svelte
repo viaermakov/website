@@ -40,6 +40,10 @@
   .content {
     margin-top: 2px;
   }
+
+  .hidden {
+    display: none;
+  }
 </style>
 
 <svelte:head>
@@ -49,16 +53,14 @@
 <section class="container">
   <h2>{l10n['Articles']}</h2>
   {#each posts as post, index}
-    {#if post.lang === $lang}
-      <div class="post-item">
-        <div class="post-item-date">{post.printDate}</div>
-        <div class="content">
-          <h5>
-            <a rel="prefetch" href="blog/{post.slug}">{post.title}</a>
-          </h5>
-          <p>{post.excerpt}</p>
-        </div>
+    <div class="post-item" class:hidden={post.lang === $lang}>
+      <div class="post-item-date">{post.printDate}</div>
+      <div class="content">
+        <h5>
+          <a rel="prefetch" href="blog/{post.slug}">{post.title}</a>
+        </h5>
+        <p>{post.excerpt}</p>
       </div>
-    {/if}
+    </div>
   {/each}
 </section>
