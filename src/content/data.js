@@ -54,7 +54,7 @@ export const projects = [
   {
     title: "teamviewer",
     descen: "A small testing task with different state managements",
-    descru: "Тестовое задание для студии Chulakov с различными стейт менеджерами",
+    descru: "Тестовое задание для студии Chulakov",
     tags: ["react", "redux", "effector", "mobx", "typescript", "css modules"],
     href: "https://chulakovtest.netlify.app",
     ghUrl: "https://github.com/nathanielmaeus/teamviewer",
