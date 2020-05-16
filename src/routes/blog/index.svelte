@@ -53,7 +53,7 @@
 <section class="container">
   <h2>{l10n['Articles']}</h2>
   {#each posts as post, index}
-    <div class="post-item" class:hidden={post.lang === $lang}>
+    <div class="post-item" class:hidden={post.lang !== $lang}>
       <div class="post-item-date">{post.printDate}</div>
       <div class="content">
         <h5>
