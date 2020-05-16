@@ -1,5 +1,5 @@
 ---
-title: Собственные deprecated props [ru]
+title: Собственные deprecated props
 date: 2020-05-13T12:51:00.000Z
 lang: 'ru'
 ---
