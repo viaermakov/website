@@ -10,7 +10,6 @@ export const skills = [
   { title: "rollup", url: "https://rollupjs.org/guide/en/" },
   { title: "gatsby", url: "https://www.gatsbyjs.org/" },
   { title: "next", url: "https://nextjs.org/" },
-  { title: "graphql", url: "https://graphql.org/" },
   { title: "styled-components", url: "https://styled-components.com/" },
 ];
 
@@ -25,7 +24,7 @@ export const projects = [
     descen: "Music web player based on Deezer API",
     descru: "Веб приложение для прослушивания музыки на основе Deezer API",
     tags: ["react", "redux", "typescript"],
-    href: "https://spoootifly.herokuapp.com/",
+    href: "https://spotifly.netlify.app",
     ghUrl: "https://github.com/nathanielmaeus/spotifLy",
   },
   {
@@ -33,7 +32,7 @@ export const projects = [
     descen: "Small game made by Svelte.",
     descru: "Игра на Svelte",
     tags: ["svelte", "sapper"],
-    href: "https://spacegame-svelte.herokuapp.com/",
+    href: "https://spacegames.netlify.app",
     ghUrl: "https://github.com/nathanielmaeus/space-game",
   },
   {
@@ -41,7 +40,7 @@ export const projects = [
     descen: "Photo Viewer based on Unsplash API",
     descru: "Приложение для просмотра изображений на Unsplash API",
     tags: ["react", "redux"],
-    href: "https://unsplashapp.herokuapp.com/",
+    href: "https://unsplashown.netlify.app",
     ghUrl: "https://github.com/nathanielmaeus/unsplash",
   },
   {
@@ -49,14 +48,15 @@ export const projects = [
     descen: "Pure canvas charts for telegram contest",
     descru: "Canvas графики для Телеграм",
     tags: ["svelte"],
-    href: "https://tg-chart.herokuapp.com/",
+    href: "https://tgcharts.netlify.app",
     ghUrl: "https://github.com/nathanielmaeus/tg-chart",
   },
   {
     title: "teamviewer",
     descen: "A small testing task with different state managements",
-    descru: "Тестовое задание с различными стейт менеджерами",
+    descru: "Тестовое задание для студии Chulakov с различными стейт менеджерами",
     tags: ["react", "redux", "effector", "mobx", "typescript", "css modules"],
+    href: "https://chulakovtest.netlify.app",
     ghUrl: "https://github.com/nathanielmaeus/teamviewer",
   },
   {
