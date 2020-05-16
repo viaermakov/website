@@ -13,7 +13,7 @@
   import { translates } from "../../lang";
 
   export let posts;
- // $: filteredPost = posts.filter(post => post.lang === $lang);
+  // $: filteredPost = posts.filter(post => post.lang === $lang);
   $: l10n = translates[$lang];
 </script>
 
@@ -49,14 +49,16 @@
 <section class="container">
   <h2>{l10n['Articles']}</h2>
   {#each posts as post, index}
-    <div class="post-item">
-      <div class="post-item-date">{post.printDate}</div>
-      <div class="content">
-        <h5>
-          <a rel="prefetch" href="blog/{post.slug}">{post.title}</a>
-        </h5>
-        <p>{post.excerpt}</p>
+    {#if post.lang === $lang}
+      <div class="post-item">
+        <div class="post-item-date">{post.printDate}</div>
+        <div class="content">
+          <h5>
+            <a rel="prefetch" href="blog/{post.slug}">{post.title}</a>
+          </h5>
+          <p>{post.excerpt}</p>
+        </div>
       </div>
-    </div>
+    {/if}
   {/each}
 </section>

@@ -1,3 +1,4 @@
 /node_modules
 markdown-test.md
 __sapper__
+.DS_Store
