@@ -2,7 +2,8 @@
   export let color;
 </script>
 
-<svg viewBox="0 0 512 512" height="24px" width="24px">
+<svg viewBox="0 0 512 512" height="24px" width="24px" role="img">
+  <desc>github link</desc>
   <path
     fill={color}
     d="M256 0C115.39 0 0 115.39 0 256c0 119.988 84.195 228.984 196

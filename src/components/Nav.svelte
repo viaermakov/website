@@ -48,6 +48,11 @@
     cursor: pointer;
     color: #fff;
   }
+  
+  .switcher:focus {
+    border: 1px solid #eee;
+  }
+
   .switcher-lang {
     color: var(--text-color);
     text-decoration: dotted;

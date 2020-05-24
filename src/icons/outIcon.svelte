@@ -6,7 +6,9 @@
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 283.922 283.922"
   height="24"
-  width="24">
+  width="24"
+  role="img">
+  <desc>open in new tab</desc>
   <path
     fill={color}
     d="M266.422 0h-97.625c-9.65 0-17.5 7.851-17.5 17.5 0 9.649 7.85 17.5 17.5
