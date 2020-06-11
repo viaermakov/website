@@ -11,7 +11,7 @@ lang: 'ru'
 
 Для этого можно создать функцию и после этого ее использовать в описании пропсов вашего компонента:
 
-```html
+```javascript
 const warned = {};        
 
 export function deprecatedPropType(propType, explanation = '') {
@@ -39,7 +39,7 @@ export function deprecatedPropType(propType, explanation = '') {
 
 Теперь мы можем обернуть пропс, который является устаревшим внутри компонента.
 
-```html
+```javascript
   GUINormal: deprecatedPropType(
     PropTypes.string,
     'GUINormal is deprecated, please use purpose instead'

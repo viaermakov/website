@@ -20,10 +20,6 @@
     text-align: center;
   }
 
-  header h1 {
-    margin-bottom: 0.7em;
-  }
-
   header p {
     color: #AAA;
     text-transform: uppercase;
