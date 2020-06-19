@@ -4,6 +4,17 @@
   import { contacts } from "../content/data";
 
   export let segment;
+
+  const MEDIA = "(prefers-color-scheme: dark)";
+  $: {
+    if (typeof window !== "undefined") {
+      const key = window.localStorage.getItem("theme");
+      if (!key) {
+        const newTheme = window.matchMedia(MEDIA).matches ? "dark" : "light";
+        theme.update(() => newTheme);
+      }
+    }
+  }
 </script>
 
 <style>
@@ -18,27 +29,25 @@
   }
 
   .light {
-    --text-color: #212121;
-    background: #fff;
-    color: var(--text-color);
+    background: var(--background-light-theme);
+    color: var(--text-light-theme);
   }
 
   .light :global(a) {
-    color: #212121;
+    color: var(--text-light-theme);
   }
 
   .dark :global(a) {
-    color: #fff;
+    color: var(--text-dark-theme);
   }
 
   .dark :global(a):hover {
-    color: #212121;
+    color: var(--text-light-theme);
   }
 
   .dark {
-    --text-color: #fff;
-    background: #212121;
-    color: var(--text-color);
+    background: var(--background-dark-theme);
+    color: var(--text-dark-theme);
   }
 
   main {
@@ -60,7 +69,6 @@
     display: flex;
     margin: 0 auto;
     max-width: 1400px;
-    padding: 2em;
     width: 100%;
   }
 
