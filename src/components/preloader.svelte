@@ -39,6 +39,7 @@
   const tick = () => {
     if (!$preloading) {
       stopTick();
+      return;
     }
     currentPercent = getNextPercent();
   };
