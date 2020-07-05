@@ -127,7 +127,18 @@
       justify-self: start;
     }
     .content {
-      display: none;
+      flex-direction: column;
+    }
+
+    .project {
+      align-items: initial;
+    }
+    
+    .content {
+      margin: 3rem 0;
+    }
+    .articles-list {
+      margin-top: 2rem;
     }
   }
 </style>
@@ -190,7 +201,7 @@
             {project.title}
           </a>
         </div>
-        <h5>{project[`desc${$lang}`]}</h5>
+        <div>{project[`desc${$lang}`]}</div>
         <a
           class="other-link"
           aria-label={project.title}
@@ -209,9 +220,9 @@
     {#each posts.filter(post => post.lang === $lang) as post, index}
       <div class="post-item">
         <div class="post-item-date">{post.printDate}</div>
-        <h5>
+        <div>
           <a rel="prefetch" href="blog/{post.slug}">{post.title}</a>
-        </h5>
+        </div>
         <p>{post.excerpt}</p>
       </div>
     {/each}

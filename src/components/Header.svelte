@@ -1,5 +1,5 @@
 <script>
-  import Nav from "./nav.svelte";
+  import Nav from "./Nav.svelte";
   import { theme, lang } from "../store";
   import { translates } from "../lang";
 

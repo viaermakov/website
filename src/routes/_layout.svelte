@@ -1,5 +1,5 @@
 <script>
-  import Header from "../components/header.svelte";
+  import Header from "../components/Header.svelte";
   import { theme } from "../store";
   import { contacts } from "../content/data";
   import { fade } from "svelte/transition";
@@ -95,7 +95,7 @@
 
   <Header {segment} />
   <Preloader {preloading} />
-  
+
   <main>
     <slot />
   </main>
