@@ -5,6 +5,7 @@ const ru = {
   "I work in:": "Я работаю в",
   Projects: "Проекты",
   Articles: "Заметки",
+  More: "Больше",
 };
 
 const en = {
@@ -14,6 +15,7 @@ const en = {
   "I work in:": "I work in:",
   Projects: "Projects",
   Articles: "Articles",
+  More: "More",
 };
 
 export const translates = { en, ru };

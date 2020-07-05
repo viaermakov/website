@@ -1,9 +1,21 @@
+<script context="module">
+  export function preload({ params, query }) {
+    return this.fetch(`blog.json`)
+      .then(r => r.json())
+      .then(posts => {
+        return { posts };
+      });
+  }
+</script>
+
 <script>
   import GithubIcon from "../icons/githubIcon.svelte";
   import Chart from "../components/chart.svelte";
   import { skills, jobs, projects } from "../content/data";
   import { theme, lang } from "../store";
   import { translates } from "../lang";
+
+  export let posts;
 
   $: l10n = translates[$lang];
   $: color = $theme === "light" ? "#212121" : "#fff";
@@ -26,11 +38,15 @@
   .projects-list {
     display: flex;
     flex-direction: column;
+    flex: 1 30px;
     width: 100%;
+  }
+  .articles-list {
+    flex: 1 30px;
   }
   .project {
     display: flex;
-    margin: 0.4rem 0;
+    margin: 0.1rem 0;
   }
   .stat {
     align-content: center;
@@ -67,6 +83,27 @@
   }
   .strike {
     text-decoration: line-through;
+  }
+
+  .more-link {
+    margin-top: 0.5rem;
+    width: fit-content;
+  }
+
+  .post-item {
+    display: flex;
+  }
+
+  .post-item-date {
+    min-width: 90px;
+    margin-right: 4px;
+    color: #aaa;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  .hidden {
+    display: none;
   }
 
   @media screen and (max-width: 768px) {
@@ -140,18 +177,43 @@
 </section>
 <section class="projects">
   <div class="projects-list">
-    {#each projects.slice(0, 4) as project}
+    <h3>{l10n['Projects']}</h3>
+    {#each projects.slice(0, 2) as project}
       <div class="project">
         <div>
-          <a class="project-link" aria-label={project.title} target="_blink" href={project.href}>
+          <a
+            class="project-link"
+            aria-label={project.title}
+            target="_blink"
+            href={project.href}>
             {project.title}
           </a>
         </div>
         <div>{project[`desc${$lang}`]}</div>
-        <a class="other-link" aria-label={project.title} target="_blink" href={project.ghUrl}>
+        <a
+          class="other-link"
+          aria-label={project.title}
+          target="_blink"
+          href={project.ghUrl}>
           <GithubIcon {color} />
         </a>
       </div>
     {/each}
+    <a href="/projects" class="more-link">{l10n['More']} -></a>
+  </div>
+  <div class="articles-list">
+    <h3>{l10n['Articles']}</h3>
+    {#each posts.filter(post => post.lang === $lang) as post, index}
+      <div class="post-item" class:hidden={post.lang !== $lang}>
+        <div class="post-item-date">{post.printDate}</div>
+        <div class="content">
+          <h5>
+            <a rel="prefetch" href="blog/{post.slug}">{post.title}</a>
+          </h5>
+          <p>{post.excerpt}</p>
+        </div>
+      </div>
+    {/each}
+    <a href="/blog" class="more-link">{l10n['More']} -></a>
   </div>
 </section>

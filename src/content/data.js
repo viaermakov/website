@@ -22,7 +22,7 @@ export const projects = [
   {
     title: "Spootifly",
     descen: "Music web player based on Deezer API",
-    descru: "Веб приложение для прослушивания музыки на основе Deezer API",
+    descru: "Веб плеер на основе Deezer API",
     tags: ["react", "redux", "typescript"],
     href: "https://spotifly.netlify.app",
     ghUrl: "https://github.com/nathanielmaeus/spotifLy",

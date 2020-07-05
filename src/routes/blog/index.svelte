@@ -13,7 +13,6 @@
   import { translates } from "../../lang";
 
   export let posts;
-  // $: filteredPost = posts.filter(post => post.lang === $lang);
   $: l10n = translates[$lang];
 </script>
 

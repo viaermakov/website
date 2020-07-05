@@ -16,12 +16,12 @@
   }
 
   .other-link {
-    margin: 2px 4px 0 4px;
+    margin: 0.1rem 0.25rem 0 0.25rem;
     border: none;
     text-decoration: none;
   }
   .outlink {
-    margin: 4px 4px 0 8px;
+    margin: 0.25rem 0.25rem 0 0.5rem;
   }
   .other-link:hover {
     background: none;
@@ -34,31 +34,48 @@
   }
 
   .desc {
-    margin: 0 8px;
+    margin: 0 0.5rem;
     color: #7b7b7b;
   }
+
   .projects-list {
     display: flex;
     flex-direction: column;
     width: 100%;
   }
+
   .project {
     display: flex;
     align-items: center;
-    margin: 0.4rem 0;
+    margin: 0.5rem 0;
   }
 
   .tags {
-    color: #7b7b7b;
-    margin-right: 4px;
+    color: var(--text-light-theme);
+    margin-right: 0.25rem;
   }
+
+  .tag {
+    padding: 0.25rem 0.5rem;
+    margin: 0 0.25rem;
+    border-radius: 0.25rem;
+    font-size: 0.8rem;
+    background-color: rgba(219, 243, 44, 0.4);
+  }
+
+  .description {
+    display: flex;
+  }
+
   @media screen and (max-width: 768px) {
     .projects {
       margin-top: 2rem;
     }
+
     .other-link {
       display: none;
     }
+
     .tags {
       display: none;
     }
@@ -67,6 +84,7 @@
       align-items: initial;
       flex-direction: column;
     }
+
     .project div {
       min-width: 100px;
     }
@@ -83,24 +101,21 @@
     <div class="projects-list">
       {#each projects as project}
         <div class="project">
-          <div>
-            <a
-              class="project-link"
-              target="_blink"
-              href={project.href || project.ghUrl}>
-              {project.title}
-            </a>
+          <div class="description">
+            <div>
+              <a
+                class="project-link"
+                target="_blink"
+                href={project.href || project.ghUrl}>
+                {project.title}
+              </a>
+            </div>
+            <div class="desc">{project[`desc${$lang}`]}</div>
           </div>
-          <div class="desc">{project[`desc${$lang}`]}</div>
           <div class="tags">
-            [
             {#each project.tags as tag, idx}
-              {tag}
-              {#if idx !== project.tags.length - 1}
-                <span>,&nbsp;</span>
-              {/if}
+              <span class="tag">{tag}</span>
             {/each}
-            ]
           </div>
           {#if project.href}
             <a
