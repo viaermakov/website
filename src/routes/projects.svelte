@@ -92,7 +92,7 @@
 </style>
 
 <svelte:head>
-  <title>Projects</title>
+  <title>{l10n['Projects']}</title>
 </svelte:head>
 
 <section class="container">

@@ -30,7 +30,7 @@
   .avatar {
     height: 300px;
   }
-  .projects {
+  .content {
     display: flex;
     width: 100%;
     margin-top: 4rem;
@@ -38,14 +38,17 @@
   .projects-list {
     display: flex;
     flex-direction: column;
-    flex: 1 30px;
+    flex: 1 1;
     width: 100%;
   }
   .articles-list {
-    flex: 1 30px;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1;
   }
   .project {
     display: flex;
+    align-items: center;
     margin: 0.1rem 0;
   }
   .stat {
@@ -66,6 +69,7 @@
     width: 50%;
   }
   .other-link {
+    margin-left: 0.25rem;
     border: none;
     text-decoration: none;
   }
@@ -92,6 +96,7 @@
 
   .post-item {
     display: flex;
+    padding-top: 0.25rem;
   }
 
   .post-item-date {
@@ -100,10 +105,6 @@
     color: #aaa;
     text-align: left;
     text-transform: uppercase;
-  }
-
-  .hidden {
-    display: none;
   }
 
   @media screen and (max-width: 768px) {
@@ -125,7 +126,7 @@
     .desc {
       justify-self: start;
     }
-    .projects {
+    .content {
       display: none;
     }
   }
@@ -175,7 +176,7 @@
     </div>
   </div>
 </section>
-<section class="projects">
+<section class="content">
   <div class="projects-list">
     <h3>{l10n['Projects']}</h3>
     {#each projects.slice(0, 2) as project}
@@ -189,7 +190,7 @@
             {project.title}
           </a>
         </div>
-        <div>{project[`desc${$lang}`]}</div>
+        <h5>{project[`desc${$lang}`]}</h5>
         <a
           class="other-link"
           aria-label={project.title}
@@ -199,21 +200,21 @@
         </a>
       </div>
     {/each}
-    <a href="/projects" class="more-link">{l10n['More']} -></a>
+    <a href="/projects" alt={l10n['More']} class="more-link">
+      {l10n['More']} ->
+    </a>
   </div>
   <div class="articles-list">
     <h3>{l10n['Articles']}</h3>
     {#each posts.filter(post => post.lang === $lang) as post, index}
-      <div class="post-item" class:hidden={post.lang !== $lang}>
+      <div class="post-item">
         <div class="post-item-date">{post.printDate}</div>
-        <div class="content">
-          <h5>
-            <a rel="prefetch" href="blog/{post.slug}">{post.title}</a>
-          </h5>
-          <p>{post.excerpt}</p>
-        </div>
+        <h5>
+          <a rel="prefetch" href="blog/{post.slug}">{post.title}</a>
+        </h5>
+        <p>{post.excerpt}</p>
       </div>
     {/each}
-    <a href="/blog" class="more-link">{l10n['More']} -></a>
+    <a href="/blog" alt={l10n['More']} class="more-link">{l10n['More']} -></a>
   </div>
 </section>

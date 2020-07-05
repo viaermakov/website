@@ -2,7 +2,11 @@
   import Header from "../components/Header.svelte";
   import { theme } from "../store";
   import { contacts } from "../content/data";
+  import { fade } from "svelte/transition";
+  import { stores } from "@sapper/app";
+  import Preloader from "../components/preloader.svelte";
 
+  const { preloading } = stores();
   export let segment;
 
   const MEDIA = "(prefers-color-scheme: dark)";
@@ -90,7 +94,7 @@
   style={`visibility: ${process.browser ? 'initial' : 'hidden'}`}>
 
   <Header {segment} />
-
+  <Preloader {preloading} />
   <main>
     <slot />
   </main>
