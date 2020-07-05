@@ -2,6 +2,7 @@
 title: Special behavior of browser-specific rules
 date: 2020-07-05T15:16:00.000Z
 lang: 'en'
+tags: css
 ---
 When writing different styles, there is a situation when you need to add a specific prefix to change the behavior of the element on the page.
 

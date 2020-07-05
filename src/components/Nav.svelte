@@ -62,7 +62,7 @@
   }
 
   .selected {
-    background: var(--link-color);
+    background: var(--brand-color-main);
     color: #212121 !important;
     text-decoration: none;
   }

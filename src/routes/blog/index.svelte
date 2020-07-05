@@ -9,11 +9,17 @@
 </script>
 
 <script>
+  import Tags from "../../components/tags.svelte";
+
   import { theme, lang } from "../../store";
   import { translates } from "../../lang";
 
   export let posts;
   $: l10n = translates[$lang];
+
+  const getTags = post => {
+    return post.tags ? post.tags.split(" ") : [];
+  };
 </script>
 
 <style>
@@ -29,6 +35,8 @@
   }
   .post-item {
     display: flex;
+    align-items: center;
+    margin: 0.5rem 0;
   }
 
   p {
@@ -37,7 +45,8 @@
   }
 
   .content {
-    margin-top: 2px;
+    display: flex;
+    align-items: center;
   }
 
   .hidden {
@@ -59,6 +68,7 @@
           <a rel="prefetch" href="blog/{post.slug}">{post.title}</a>
         </h5>
         <p>{post.excerpt}</p>
+        <Tags tags={getTags(post)} />
       </div>
     </div>
   {/each}

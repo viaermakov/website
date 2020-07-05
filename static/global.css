@@ -1,5 +1,6 @@
 :root {
-  --link-color: #dbf32c;
+  --brand-color-main: #dbf32c;
+  --brand-color-additional: #a32cf3;
   --text-light-theme: #212121;
   --text-dark-theme: #fff;
   --background-dark-theme: #212121;
@@ -77,12 +78,12 @@ li p {
 
 a {
   padding: 0 2px;
-  border-bottom: 2px solid var(--link-color);
+  border-bottom: 2px solid var(--brand-color-main);
   text-decoration: none;
 }
 
 a:hover {
-  background: var(--link-color);
+  background: var(--brand-color-main);
   text-decoration: none;
 }
 

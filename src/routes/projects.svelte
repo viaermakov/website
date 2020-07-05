@@ -1,6 +1,7 @@
 <script>
   import GithubIcon from "../icons/githubIcon.svelte";
   import OutIcon from "../icons/outIcon.svelte";
+  import Tags from "../components/tags.svelte";
 
   import { projects } from "../content/data";
   import { theme, lang } from "../store";
@@ -34,7 +35,7 @@
   }
 
   .desc {
-    margin: 0 0.5rem;
+    margin-left: 0.5rem;
     color: #7b7b7b;
   }
 
@@ -50,19 +51,6 @@
     margin: 0.5rem 0;
   }
 
-  .tags {
-    color: var(--text-light-theme);
-    margin-right: 0.25rem;
-  }
-
-  .tag {
-    padding: 0.25rem 0.5rem;
-    margin: 0 0.25rem;
-    border-radius: 0.25rem;
-    font-size: 0.8rem;
-    background-color: rgba(219, 243, 44, 0.4);
-  }
-
   .description {
     display: flex;
   }
@@ -73,10 +61,6 @@
     }
 
     .other-link {
-      display: none;
-    }
-
-    .tags {
       display: none;
     }
 
@@ -112,11 +96,7 @@
             </div>
             <div class="desc">{project[`desc${$lang}`]}</div>
           </div>
-          <div class="tags">
-            {#each project.tags as tag, idx}
-              <span class="tag">{tag}</span>
-            {/each}
-          </div>
+          <Tags tags={project.tags} />
           {#if project.href}
             <a
               class="other-link outlink"

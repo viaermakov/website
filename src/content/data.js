@@ -76,7 +76,7 @@ export const projects = [
 ];
 
 export const contacts = [
-  { title: "telegram", url: "https://t.me/nathaniel.maeus" },
+  { title: "slavaskainet@gmail.com", url: "mailto:slavaskainet@gmail.com" },
   { title: "github", url: "https://github.com/nathanielmaeus" },
-  { title: "email", url: "mailto:slavaskainet@gmail.com" }
+  { title: "telegram", url: "https://t.me/nathaniel.maeus" },
 ];

@@ -2,6 +2,7 @@
 title: Custom deprecated props
 date: 2020-07-05T15:29:00.000Z
 lang: 'en'
+tags: react javascript
 ---
 Different companies often develop their own internal libraries to unify and recognize products by users. 
 
