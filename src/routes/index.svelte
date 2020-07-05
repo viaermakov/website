@@ -96,7 +96,7 @@
 
   .post-item {
     display: flex;
-    padding-top: 0.25rem;
+    padding-top: 0.35rem;
   }
 
   .post-item-date {
@@ -215,6 +215,12 @@
         <p>{post.excerpt}</p>
       </div>
     {/each}
-    <a href="/blog" alt={l10n['More']} class="more-link">{l10n['More']} -></a>
+    <a
+      style="margin-top: 3px;"
+      href="/blog"
+      alt={l10n['More']}
+      class="more-link">
+      {l10n['More']} ->
+    </a>
   </div>
 </section>
