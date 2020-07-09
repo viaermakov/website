@@ -3,7 +3,7 @@
 
   export let preloading;
 
-  const TIME = 5000;
+  const TIME = 2500;
   const TICK_TIME = 30;
   const DURATION = 500;
   const MIN_PERCENT = 10;

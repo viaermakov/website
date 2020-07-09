@@ -4,11 +4,11 @@ date: 2020-07-05T15:29:00.000Z
 lang: 'en'
 tags: react javascript
 ---
-Different companies often develop their own internal libraries to unify and recognize products by users. 
+Different companies often has own internal libraries to unify and recognize products by users. 
 
-Sometimes it can be very difficult for developers to follow the API components that are changed by other colleagues. Even if teams have additional solutions for their documentation, such as Storybook, etc. this problem still remains. If developer doesn't use a component often in the project he can miss component changes. For instance, he used a component once in a project that was not modified anymore.
+Sometimes it can be very difficult for developers to follow the API components that are changed by other colleagues. This problem still remains even if teams have additional solutions for their documentation, such as Storybook, etc. If developer doesn't use a component often in a project he can miss component changes. For instance, he used a component once that was not modified anymore in a project.
 
-In such cases you can use an additional helper which will generate a browser console warnings and notify other developers about changes props of components. 
+In such cases you can use an additional helper which will generate console warnings and notify other developers about changes in their components. 
 
 So you can create a helper and then use it in prop types:
 
@@ -38,7 +38,7 @@ export function deprecatedPropType(propType, explanation = '') {
 }
 ```
 
-Now we can wrap the prop, which is obsolete inside the component.
+Now we can wrap the prop, which is obsolete.
 
 ```javascript
   GUINormal: deprecatedPropType(
@@ -47,7 +47,7 @@ Now we can wrap the prop, which is obsolete inside the component.
   ),
 ```
 
-In this way, the component itself will notify other developers about changes:
+In this way, the component will notify other developers about changes:
 
 ![Deprecated props in console](./dep.jpg)
 

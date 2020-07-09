@@ -19,6 +19,8 @@
 
   $: l10n = translates[$lang];
   $: color = $theme === "light" ? "#212121" : "#fff";
+
+  let filteredPosts = posts.filter(post => post.lang === $lang).slice(0, 2);
 </script>
 
 <style>
@@ -133,7 +135,7 @@
     .project {
       align-items: initial;
     }
-    
+
     .content {
       margin: 3rem 0;
     }
@@ -217,7 +219,7 @@
   </div>
   <div class="articles-list">
     <h3>{l10n['Articles']}</h3>
-    {#each posts.filter(post => post.lang === $lang) as post, index}
+    {#each filteredPosts as post, index}
       <div class="post-item">
         <div class="post-item-date">{post.printDate}</div>
         <div>
