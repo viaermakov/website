@@ -37,6 +37,7 @@
     property="og:url"
     content={`https://viaermakov.com/blog/svg-optimization/${post.slug}`} />
   <meta property="og:description" content={shortMessage} />
+  <meta property="og:image" content="./1233.jpg" />
 </svelte:head>
 
 <header>

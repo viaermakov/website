@@ -81,6 +81,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://viaermakov.com" />
   <meta property="og:description" content="Personal website" />
+  <meta property="og:image" content="./1233.jpg" />
 </svelte:head>
 
 <section class="container">
