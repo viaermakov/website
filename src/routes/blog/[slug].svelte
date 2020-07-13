@@ -12,7 +12,7 @@
 </script>
 
 <script>
-  export let post
+  export let post;
 </script>
 
 <style>
@@ -21,7 +21,7 @@
   }
 
   header p {
-    color: #AAA;
+    color: #aaa;
     text-transform: uppercase;
     font-family: Roboto, sans-serif;
     font-weight: 600;
@@ -30,6 +30,12 @@
 
 <svelte:head>
   <title>{post.title}</title>
+  <meta property="og:description" content={post.html.slice(4) + '...'} />
+  <meta property="og:title" content={post.title} />
+  <meta property="og:type" content="website" />
+  <meta
+    property="og:url"
+    content={`https://viaermakov.com/blog/svg-optimization/${post.slug}`} />
 </svelte:head>
 
 <header>
