@@ -35,7 +35,7 @@
   <meta property="og:type" content="website" />
   <meta
     property="og:url"
-    content={`https://viaermakov.com/blog/svg-optimization/${post.slug}`} />
+    content={`https://viaermakov.com/blog/${post.slug}`} />
   <meta property="og:description" content={shortMessage} />
   <meta property="og:image" content="./1233.jpg" />
 </svelte:head>
