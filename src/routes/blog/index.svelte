@@ -56,6 +56,10 @@
 
 <svelte:head>
   <title>{l10n['Articles']}</title>
+  <meta property="og:title" content="Viacheslav Ermakov" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://viaermakov.com" />
+  <meta property="og:description" content="Personal website" />
 </svelte:head>
 
 <section class="container">
