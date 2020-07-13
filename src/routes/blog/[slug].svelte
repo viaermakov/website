@@ -13,6 +13,7 @@
 
 <script>
   export let post;
+  const shortMessage = `${post.html.slice(3, 100)}...`;
 </script>
 
 <style>
@@ -30,12 +31,12 @@
 
 <svelte:head>
   <title>{post.title}</title>
-  <meta property="og:description" content={post.html.slice(4) + '...'} />
   <meta property="og:title" content={post.title} />
   <meta property="og:type" content="website" />
   <meta
     property="og:url"
     content={`https://viaermakov.com/blog/svg-optimization/${post.slug}`} />
+  <meta property="og:description" content={shortMessage} />
 </svelte:head>
 
 <header>
