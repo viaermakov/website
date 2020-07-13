@@ -70,6 +70,7 @@
   .about {
     width: 50%;
   }
+
   .other-link {
     margin-left: 0.25rem;
     border: none;
@@ -85,8 +86,10 @@
   }
 
   .project div {
+    min-width: 86px;
     margin: 0 8px 0 0;
   }
+
   .strike {
     text-decoration: line-through;
   }
@@ -163,9 +166,9 @@
     <div class="stat">
       <div class="desc">{l10n['Tools that I know:']}</div>
       <div>
-        {#each skills as item}
+        {#each skills as item, idx}
           <a class="skill" target="_blink" href={item.url} alt={item.title}>
-            {item.title},
+            {item.title}{#if idx !== skills.length - 1},{/if}
           </a>
         {/each}
       </div>

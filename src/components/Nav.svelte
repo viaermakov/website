@@ -57,6 +57,7 @@
     color: var(--text-color);
     text-decoration: dotted;
   }
+
   .light {
     color: #212121;
   }
@@ -65,6 +66,12 @@
     background: var(--brand-color-main);
     color: #212121 !important;
     text-decoration: none;
+  }
+
+  @media screen and (max-width: 376px) {
+    .theme {
+      display: none;
+    }
   }
 </style>
 
@@ -84,7 +91,7 @@
   </div>
 </nav>
 <button
-  class="switcher"
+  class="switcher theme"
   class:light={$theme === 'light'}
   on:click={handleChangeTheme}
   aria-label="switch theme">

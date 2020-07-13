@@ -20,6 +20,7 @@
 
   @media screen and (max-width: 768px) {
     header {
+      overflow-y: hidden;
       padding: 0 0 1rem 0;
     }
   }

@@ -26,6 +26,11 @@
   .container {
     margin-top: 3rem;
   }
+
+  .article {
+    line-height: 1.7rem;
+  }
+
   .post-item-date {
     min-width: 90px;
     margin-right: 4px;
@@ -70,7 +75,9 @@
       <div class="post-item-date">{post.printDate}</div>
       <div class="content">
         <h5>
-          <a rel="prefetch" href="blog/{post.slug}">{post.title}</a>
+          <a rel="prefetch" class="article" href="blog/{post.slug}">
+            {post.title}
+          </a>
         </h5>
         <p>{post.excerpt}</p>
         <Tags tags={getTags(post)} />

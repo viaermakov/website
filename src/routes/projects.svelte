@@ -60,6 +60,10 @@
       margin-top: 2rem;
     }
 
+    .project {
+      margin: 0.2rem 0;
+    }
+
     .other-link {
       display: none;
     }
@@ -70,7 +74,7 @@
     }
 
     .project div {
-      min-width: 100px;
+      min-width: 112px;
     }
   }
 </style>
