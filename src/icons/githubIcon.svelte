@@ -2,6 +2,12 @@
   export let color;
 </script>
 
+<style>
+  svg {
+    display: block;
+  }
+</style>
+
 <svg viewBox="0 0 512 512" height="24px" width="24px" role="img">
   <desc>github link</desc>
   <path

@@ -51,7 +51,7 @@
   .project {
     display: flex;
     align-items: center;
-    margin: 0.1rem 0;
+    margin: 0.3rem 0;
   }
   .stat {
     align-content: center;
@@ -160,7 +160,7 @@
   <div class="about">
     <h1>{l10n['Viacheslav Ermakov']}</h1>
     <h4>{l10n['frontend developer, 23 y.o']}</h4>
-    <img class="avatar" src="./1233.jpg" alt="my photo" />
+    <img class="avatar" src="./1233.jpg" alt="my photo" loading="lazy" />
   </div>
   <div class="static">
     <div class="stat">
