@@ -21,6 +21,7 @@
     const newLang = $lang === "en" ? "ru" : "en";
     lang.update(() => newLang);
     window.localStorage.setItem("lang", newLang);
+    document.documentElement.lang = newLang;
   };
 </script>
 
@@ -48,7 +49,7 @@
     cursor: pointer;
     color: #fff;
   }
-  
+
   .switcher:focus {
     border: 1px solid #eee;
   }
