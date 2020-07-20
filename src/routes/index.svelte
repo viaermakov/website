@@ -164,7 +164,7 @@
   </div>
   <div class="static">
     <div class="stat">
-      <div class="desc">{l10n['Tools that I know:']}</div>
+      <div class="desc">{l10n['Tools that I use:']}</div>
       <div>
         {#each skills as item, idx}
           <a class="skill" target="_blink" href={item.url} alt={item.title}>
