@@ -8,13 +8,13 @@
   export let segment;
 
   $: l10n = translates[$lang];
-  let color = COLORS.LIGHT_BACKGROUNDD;
+  let color = COLORS.LIGHT_BACKGROUND;
 
   const handleChangeTheme = () => {
     const newTheme = $theme === THEMES.LIGHT ? THEMES.DARK : THEMES.LIGHT;
     theme.update(() => newTheme);
     window.localStorage.setItem("theme", newTheme);
-    color = newTheme === THEMES.LIGHT ? COLORS.LIGHT_BACKGROUNDD : "#ffce00";
+    color = newTheme === THEMES.LIGHT ? COLORS.LIGHT_BACKGROUND : "#ffce00";
   };
 
   const handleChangeLang = () => {
