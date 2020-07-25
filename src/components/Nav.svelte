@@ -21,7 +21,6 @@
     const newLang = $lang === "en" ? "ru" : "en";
     lang.update(() => newLang);
     window.localStorage.setItem("lang", newLang);
-    document.documentElement.lang = newLang;
   };
 </script>
 

@@ -13,7 +13,7 @@
     margin: 0 0.25rem;
     border-radius: 0.25rem;
     font-size: 0.8rem;
-    background-color: rgba(219, 243, 44, 0.4);
+    background-color: rgba(219, 243, 44, 0.8);
   }
 
   @media screen and (max-width: 768px) {

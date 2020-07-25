@@ -19,8 +19,7 @@
 
   $: l10n = translates[$lang];
   $: color = $theme === "light" ? "#212121" : "#fff";
-
-  let filteredPosts = posts.filter(post => post.lang === $lang).slice(0, 2);
+  $: filteredPosts = posts.filter(post => post.lang === $lang).slice(0, 2);
 </script>
 
 <style>
