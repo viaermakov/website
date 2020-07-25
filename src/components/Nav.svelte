@@ -3,22 +3,22 @@
   import { getContext, setContext } from "svelte";
   import { theme, lang } from "../store";
   import { translates } from "../lang";
+  import { COLORS, THEMES, LANGUAGES } from "../consts";
 
   export let segment;
 
   $: l10n = translates[$lang];
-
-  let color = "#fff";
+  let color = COLORS.LIGHT_BACKGROUNDD;
 
   const handleChangeTheme = () => {
-    const newTheme = $theme === "light" ? "dark" : "light";
+    const newTheme = $theme === THEMES.LIGHT ? THEMES.DARK : THEMES.LIGHT;
     theme.update(() => newTheme);
     window.localStorage.setItem("theme", newTheme);
-    color = newTheme === "light" ? "#fff" : "#ffce00";
+    color = newTheme === THEMES.LIGHT ? COLORS.LIGHT_BACKGROUNDD : "#ffce00";
   };
 
   const handleChangeLang = () => {
-    const newLang = $lang === "en" ? "ru" : "en";
+    const newLang = $lang === LANGUAGES.EN ? LANGUAGES.RU : LANGUAGES.EN;
     lang.update(() => newLang);
     window.localStorage.setItem("lang", newLang);
   };
@@ -46,7 +46,7 @@
     font-size: 1rem;
     text-decoration: underline;
     cursor: pointer;
-    color: #fff;
+    color: var(--background-light-theme);
   }
 
   .switcher:focus {
@@ -59,12 +59,12 @@
   }
 
   .light {
-    color: #212121;
+    color: var(--background-dark-theme);
   }
 
   .selected {
     background: var(--brand-color-main);
-    color: #212121 !important;
+    color: var(--background-dark-theme) !important;
     text-decoration: none;
   }
 
