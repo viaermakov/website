@@ -27,6 +27,30 @@
     font-family: Roboto, sans-serif;
     font-weight: 600;
   }
+
+  .cover {
+    position: relative;
+    background-image: url("./carbon.jpg");
+    height: 400px;
+    background-repeat: round;
+  }
+
+  .cover:before {
+    content: "";
+    position: absolute;
+    height: 428px;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(transparent -30%, var(--background-dark-theme));
+  }
+
+  .content {
+    margin: 3rem auto;
+    line-height: 1.65;
+    max-width: 728px;
+  }
 </style>
 
 <svelte:head>
@@ -43,6 +67,7 @@
 <header>
   <p>{post.printDate} ~ {post.printReadingTime}</p>
   <h2>{post.title}</h2>
+  <div class="cover" />
 </header>
 <div class="container">
   <article class="content">
