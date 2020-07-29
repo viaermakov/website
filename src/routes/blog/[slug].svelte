@@ -30,15 +30,14 @@
 
   .cover {
     position: relative;
-    background-image: url("./carbon.jpg");
-    height: 400px;
+    height: 512px;
     background-repeat: round;
   }
 
   .cover:before {
     content: "";
     position: absolute;
-    height: 428px;
+    height: 512px;
     top: 0;
     right: 0;
     left: 0;
@@ -51,6 +50,13 @@
     line-height: 1.65;
     max-width: 728px;
   }
+
+  :global(.content pre, .content img) {
+    position: relative;
+    width: 120%;
+    right: 10%;
+    margin: 1rem 0;
+  }
 </style>
 
 <svelte:head>
@@ -61,15 +67,16 @@
     property="og:url"
     content={`https://viaermakov.com/blog/${post.slug}`} />
   <meta property="og:description" content={shortMessage} />
-  <meta property="og:image" content="./1233.jpg" />
+  <meta property="og:image" content={post.cover} />
 </svelte:head>
 
 <header>
   <p>{post.printDate} ~ {post.printReadingTime}</p>
   <h2>{post.title}</h2>
-  <div class="cover" />
+  <div class="cover" style={`background-image: url(${post.cover})`} />
 </header>
 <div class="container">
+  <pre />
   <article class="content">
     {@html post.html}
   </article>

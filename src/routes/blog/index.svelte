@@ -65,7 +65,9 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://viaermakov.com" />
   <meta property="og:description" content="Personal website" />
-  <meta property="og:image" content="./1233.jpg" />
+  <meta
+    property="og:image"
+    content="https://res.cloudinary.com/dk4mytxmk/image/upload/v1595920880/website/1233_fk2hoq.jpg" />
 </svelte:head>
 
 <section class="container">
