@@ -16,8 +16,17 @@
 body {
   margin: 0;
   font-family: Inter, serif;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.6;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+  h5 {
+    font-size: 1rem;
+  }
 }
 
 h1,
@@ -53,7 +62,7 @@ h4 {
 }
 
 h5 {
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 h6 {
@@ -85,10 +94,6 @@ a {
 a:hover {
   background: var(--brand-color-main);
   text-decoration: none;
-}
-
-img {
-  max-width: 100%;
 }
 
 hr {
@@ -177,4 +182,3 @@ td {
     font-size: 2.4em;
   }
 }
-

@@ -33,7 +33,7 @@
 
   .post-item-date {
     min-width: 90px;
-    margin-right: 4px;
+    margin-right: 1rem;
     color: #aaa;
     text-align: left;
     text-transform: uppercase;
@@ -41,7 +41,7 @@
   .post-item {
     display: flex;
     align-items: center;
-    margin: 0.5rem 0;
+    margin: 1rem 0;
   }
 
   p {
@@ -65,7 +65,9 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://viaermakov.com" />
   <meta property="og:description" content="Personal website" />
-  <meta property="og:image" content="./1233.jpg" />
+  <meta
+    property="og:image"
+    content="https://res.cloudinary.com/dk4mytxmk/image/upload/v1595920880/website/1233_fk2hoq.jpg" />
 </svelte:head>
 
 <section class="container">
@@ -74,11 +76,11 @@
     <div class="post-item" class:hidden={post.lang !== $lang}>
       <div class="post-item-date">{post.printDate}</div>
       <div class="content">
-        <h5>
+        <div>
           <a rel="prefetch" class="article" href="blog/{post.slug}">
             {post.title}
           </a>
-        </h5>
+        </div>
         <p>{post.excerpt}</p>
         <Tags tags={getTags(post)} />
       </div>

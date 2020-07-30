@@ -15,7 +15,6 @@
     padding-left: 30px;
 
     font-family: "Verdana", sans-serif;
-    font-size: 16px;
     line-height: 18px;
     color: #591d48;
     cursor: pointer;

@@ -3,6 +3,8 @@ title: Special behavior of browser-specific rules
 date: 2020-07-05T15:16:00.000Z
 lang: 'en'
 tags: css
+cover: https://res.cloudinary.com/dk4mytxmk/image/upload/f_auto,q_auto/v1596132450/website/browsers_vwlird.jpg
+
 ---
 There is a situation when you need to add a specific prefix to change the behavior of the element on a page.
 

@@ -58,7 +58,7 @@
     align-content: center;
     display: grid;
     grid-template-columns: 150px 1fr;
-    grid-template-rows: 100px;
+    grid-template-rows: max-content;
     grid-gap: 16px 8px;
   }
   .desc {
@@ -87,7 +87,7 @@
   }
 
   .project div {
-    min-width: 86px;
+    min-width: 100px;
     margin: 0 8px 0 0;
   }
 
@@ -107,7 +107,7 @@
 
   .post-item-date {
     min-width: 90px;
-    margin-right: 4px;
+    margin-right: 1rem;
     color: #aaa;
     text-align: left;
     text-transform: uppercase;
@@ -161,7 +161,11 @@
   <div class="about">
     <h1>{l10n['Viacheslav Ermakov']}</h1>
     <h4>{l10n['frontend developer, 23 y.o']}</h4>
-    <img class="avatar" src="./1233.jpg" alt="my photo" loading="lazy" />
+    <img
+      class="avatar"
+      src="https://res.cloudinary.com/dk4mytxmk/image/upload/v1595920880/website/1233_fk2hoq.jpg"
+      alt="my photo"
+      loading="lazy" />
   </div>
   <div class="static">
     <div class="stat">
@@ -169,7 +173,8 @@
       <div>
         {#each skills as item, idx}
           <a class="skill" target="_blink" href={item.url} alt={item.title}>
-            {item.title}{#if idx !== skills.length - 1},{/if}
+            {item.title}
+            {#if idx !== skills.length - 1},{/if}
           </a>
         {/each}
       </div>
