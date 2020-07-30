@@ -20,6 +20,15 @@ body {
   line-height: 1.6;
 }
 
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+  h5 {
+    font-size: 1rem;
+  }
+}
+
 h1,
 h2,
 h3,
@@ -53,7 +62,7 @@ h4 {
 }
 
 h5 {
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 h6 {
@@ -86,10 +95,6 @@ a:hover {
   background: var(--brand-color-main);
   text-decoration: none;
 }
-
-/* img {
-  max-width: 100%;
-} */
 
 hr {
   background-image: linear-gradient(
@@ -177,4 +182,3 @@ td {
     font-size: 2.4em;
   }
 }
-

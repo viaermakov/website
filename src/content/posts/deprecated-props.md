@@ -3,6 +3,7 @@ title: Собственные deprecated props
 date: 2020-05-13T12:51:00.000Z
 lang: 'ru'
 tags: react javascript
+cover: https://res.cloudinary.com/dk4mytxmk/image/upload/f_auto,q_auto/v1596132847/website/react_l2oqsr.jpg
 ---
 
 Как правило, различные команды очень часто разрабатывают свои собственные внутренние библиотеки для унификации и узнаваемости продукта пользователями.
@@ -55,6 +56,14 @@ export function deprecatedPropType(propType, explanation = '') {
 
 Таким образом компонент сам будет оповещать других разработчиков о необходимых изменениях:
 
-![Deprecated props in console](https://res.cloudinary.com/dk4mytxmk/image/upload/v1595920880/website/dep_qai61e.jpg)
+<picture>
+    <source media="(max-width: 767px)" 
+            sizes="1px"
+            srcset="https://res.cloudinary.com/dk4mytxmk/image/upload/w_0.5,q_auto,f_auto/v1595920880/website/dep_qai61e.jpg"/>
+    <source media="(min-width: 768px)" 
+            sizes="300px" 
+            srcset="https://res.cloudinary.com/dk4mytxmk/image/upload/v1595920880/website/dep_qai61e.jpg" />
+    <img src="https://res.cloudinary.com/dk4mytxmk/image/upload/v1595920880/website/dep_qai61e.jpg" alt="Deprecated props in console" loading="lazy" />
+</picture>
 
 Это позволит быстрее избавляться от старой функциональности ваших компонентов.

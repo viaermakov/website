@@ -33,7 +33,7 @@
 
   .post-item-date {
     min-width: 90px;
-    margin-right: 4px;
+    margin-right: 1rem;
     color: #aaa;
     text-align: left;
     text-transform: uppercase;
@@ -41,7 +41,7 @@
   .post-item {
     display: flex;
     align-items: center;
-    margin: 0.5rem 0;
+    margin: 1rem 0;
   }
 
   p {
@@ -76,11 +76,11 @@
     <div class="post-item" class:hidden={post.lang !== $lang}>
       <div class="post-item-date">{post.printDate}</div>
       <div class="content">
-        <h5>
+        <div>
           <a rel="prefetch" class="article" href="blog/{post.slug}">
             {post.title}
           </a>
-        </h5>
+        </div>
         <p>{post.excerpt}</p>
         <Tags tags={getTags(post)} />
       </div>

@@ -2,7 +2,7 @@ const ru = {
   "Viacheslav Ermakov": "Вячеслав Ермаков",
   "frontend developer, 23 y.o": "frontend разработчик, 23 года",
   "Tools that I use:": "Я использую:",
-  "I work in:": "Я работаю в",
+  "I work in:": "Работаю в",
   Projects: "Проекты",
   Articles: "Заметки",
   More: "Больше",

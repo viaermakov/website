@@ -3,6 +3,7 @@ title: Custom deprecated props
 date: 2020-07-05T15:29:00.000Z
 lang: 'en'
 tags: react javascript
+cover: https://res.cloudinary.com/dk4mytxmk/image/upload/f_auto,q_auto/v1596132847/website/react_l2oqsr.jpg
 ---
 
 Different companies often has own internal libraries to unify and recognize products by users.
@@ -55,8 +56,16 @@ Now we can wrap the prop, which is obsolete.
 
 In this way, the component will notify other developers about changes:
 
-<img src="https://res.cloudinary.com/dk4mytxmk/image/upload/v1595920880/website/dep_qai61e.jpg"
-     alt="Deprecated props in console"
-     loading="lazy" />
+
+<picture>
+    <source media="(max-width: 767px)" 
+            sizes="1px"
+            srcset="https://res.cloudinary.com/dk4mytxmk/image/upload/w_0.5,q_auto,f_auto/v1595920880/website/dep_qai61e.jpg"/>
+    <source media="(min-width: 768px)" 
+            sizes="300px" 
+            srcset="https://res.cloudinary.com/dk4mytxmk/image/upload/v1595920880/website/dep_qai61e.jpg" />
+    <img src="https://res.cloudinary.com/dk4mytxmk/image/upload/v1595920880/website/dep_qai61e.jpg" alt="Deprecated props in console" loading="lazy" />
+</picture>
+
 
 As a result you can get rid of the old functionality of your components more quickly.

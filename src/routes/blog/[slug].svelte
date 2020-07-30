@@ -31,17 +31,19 @@
   .cover {
     position: relative;
     height: 512px;
-    background-repeat: round;
+    border-radius: 20px;
+    background: center no-repeat;
   }
 
   .cover:before {
     content: "";
     position: absolute;
-    height: 512px;
     top: 0;
     right: 0;
     left: 0;
     bottom: 0;
+    height: 512px;
+    border-radius: 20px;
     background: linear-gradient(transparent -30%, var(--background-dark-theme));
   }
 
@@ -56,6 +58,17 @@
     width: 120%;
     right: 10%;
     margin: 1rem 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    .cover {
+      display: none;
+    }
+
+    :global(.content pre, .content img) {
+      width: 100%;
+      right: 0;
+    }
   }
 </style>
 
