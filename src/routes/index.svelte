@@ -36,7 +36,7 @@
   .content {
     display: flex;
     width: 100%;
-    margin-top: 4rem;
+    margin: 4rem 0;
   }
   .projects-list {
     display: flex;

@@ -31,6 +31,8 @@
     flex: 1;
     justify-content: flex-end;
     margin: 0 1rem;
+    font-family: system-ui;
+    font-weight: bold;
   }
 
   a {
@@ -40,6 +42,7 @@
     position: relative;
     margin-left: 20px;
   }
+
   .switcher {
     border: none;
     background: none;
@@ -47,6 +50,8 @@
     text-decoration: underline;
     cursor: pointer;
     color: var(--background-light-theme);
+    font-family: system-ui;
+    font-weight: bold;
   }
 
   .switcher:focus {
