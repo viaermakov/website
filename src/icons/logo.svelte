@@ -30,7 +30,7 @@
 
   const changeBlob = () => {
     const { path } = generator(CONFIG);
-    //animator(INIT_PATH, path);
+    animator(INIT_PATH, path);
   };
 
   onMount(async () => {
