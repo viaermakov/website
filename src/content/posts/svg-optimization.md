@@ -36,3 +36,13 @@ SVG элементы достаточно эффективны и очень ч�
 </picture>
 
 И последний самый удобный сервис — [transform](https://transform.tools/). Помимо возможностей преобразования различных форматов на все случаи жизни (например, мое любимое — преобразование JSON в Typescript) так же имеет оптимизацию SVG изображений и совмещает в себе оба вышеперечисленных сервиса.
+
+<picture>
+    <source media="(max-width: 767px)" 
+            sizes="1px"
+            srcset="https://res.cloudinary.com/dk4mytxmk/image/upload/w_0.5,q_auto,f_auto/v1596737668/website/transform_ftkbby.jpg"/>
+    <source media="(min-width: 768px)" 
+            sizes="300px" 
+            srcset="https://res.cloudinary.com/dk4mytxmk/image/upload/v1596737668/website/transform_ftkbby.jpg" />
+    <img src="https://res.cloudinary.com/dk4mytxmk/image/upload/v1596737668/website/transform_ftkbby.jpg" alt="Transform webview" loading="lazy" />
+</picture>
