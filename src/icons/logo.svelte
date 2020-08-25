@@ -3,14 +3,15 @@
   import { generator } from "../generateLogo.js";
   import anime from "animejs";
 
+  const INIT_PATH =
+    "M387.5,333Q304,416,187,398.5Q70,381,70.5,250.5Q71,120,187.5,102Q304,84,387.5,167Q471,250,387.5,333Z";
   const CONFIG = {
     edges: 5,
     growth: 5,
     size: 500
   };
+
   let timer = null;
-  let INIT_PATH =
-    "M387.5,333Q304,416,187,398.5Q70,381,70.5,250.5Q71,120,187.5,102Q304,84,387.5,167Q471,250,387.5,333Z";
 
   function animator(newPath, path) {
     anime({

@@ -10,7 +10,6 @@
 
 <script>
   import GithubIcon from "../icons/githubIcon.svelte";
-  import Chart from "../components/chart.svelte";
   import { skills, jobs, projects } from "../content/data";
   import { COLORS, THEMES } from "../consts";
   import { theme, lang } from "../store";
