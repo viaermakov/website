@@ -1,22 +1,18 @@
 <script>
   export let title;
-
   let hovered = false;
-  const handleMouseOver = () => {
-    hovered = true;
-  };
+
+  const handleMouseOver = () => (hovered = true);
 </script>
 
 <style>
   .caption-item {
     position: relative;
-
     margin: 20px 0;
     padding-left: 30px;
-
     font-family: "Verdana", sans-serif;
     line-height: 18px;
-    color: #591d48;
+    color: hsl(317, 51%, 23%);
     cursor: pointer;
   }
 
@@ -26,14 +22,11 @@
 
   .caption-item::before {
     content: "";
-
     position: absolute;
     top: 0;
     left: 0;
-
     width: 20px;
     height: 20px;
-
     border-radius: 8px;
   }
 

@@ -1,15 +1,18 @@
 <script>
-  import Header from "../components/Header.svelte";
-  import { theme } from "../store";
-  import { contacts } from "../content/data";
   import { fade } from "svelte/transition";
   import { stores } from "@sapper/app";
+
+  import Header from "../components/Header.svelte";
   import Preloader from "../components/preloader.svelte";
+
+  import { theme } from "../store";
+  import { contacts } from "../content/data";
 
   const { preloading } = stores();
   export let segment;
 
   const MEDIA = "(prefers-color-scheme: dark)";
+
   $: {
     if (typeof window !== "undefined") {
       const key = window.localStorage.getItem("theme");
