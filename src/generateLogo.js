@@ -1,29 +1,28 @@
 const generator = ({ size = 400, growth = 6, edges = 6 } = {}) => {
-  var { destPoints, id } = _createPoints(size, growth, edges);
-  var path = _createSvgPath(destPoints);
+  const { destPoints, id } = _createPoints(size, growth, edges);
+  const path = _createSvgPath(destPoints);
   return { path, id };
 };
 
 const _toRad = (deg) => deg * (Math.PI / 180.0);
 
 const _divide = (count) => {
-  var deg = 360 / count;
-
+  const deg = 360 / count;
   return Array(count)
     .fill("a")
     .map((_, i) => i * deg);
 };
 
 const _randomDoubleGenerator = (s) => {
-  var mask = 0xffffffff;
-  var m_w = (123456789 + s) & mask;
-  var m_z = (987654321 - s) & mask;
+  let mask = 0xffffffff;
+  let m_w = (123456789 + s) & mask;
+  let m_z = (987654321 - s) & mask;
 
   return function () {
     m_z = (36969 * (m_z & 65535) + (m_z >>> 16)) & mask;
     m_w = (18000 * (m_w & 65535) + (m_w >>> 16)) & mask;
 
-    var result = ((m_z << 16) + (m_w & 65535)) >>> 0;
+    let result = ((m_z << 16) + (m_w & 65535)) >>> 0;
     result /= 4294967296;
     return result;
   };
@@ -40,8 +39,8 @@ const _magicPoint = (value, min, max) => {
 };
 
 const _point = (origin, radius, degree) => {
-  var x = origin + radius * Math.cos(_toRad(degree));
-  var y = origin + radius * Math.sin(_toRad(degree));
+  const x = origin + radius * Math.cos(_toRad(degree));
+  const y = origin + radius * Math.sin(_toRad(degree));
   return [Math.round(x), Math.round(y)];
 };
 
@@ -63,8 +62,8 @@ const _createPoints = (size, minGrowth, edgesCount) => {
   let destPoints = [];
 
   slices.forEach((degree) => {
-    let O = _magicPoint(randVal(), innerRad, outerRad);
-    let end = _point(center, O, degree);
+    const O = _magicPoint(randVal(), innerRad, outerRad);
+    const end = _point(center, O, degree);
     destPoints.push(end);
   });
   return { destPoints, id };
@@ -72,7 +71,7 @@ const _createPoints = (size, minGrowth, edgesCount) => {
 
 const _createSvgPath = (points) => {
   let svgPath = "";
-  var mid = [
+  let mid = [
     (points[0][0] + points[1][0]) / 2,
     (points[0][1] + points[1][1]) / 2,
   ];
