@@ -16,7 +16,7 @@
 body {
   margin: 0;
   font-family: Inter, serif;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.6;
 }
 
@@ -46,7 +46,7 @@ h1 {
 }
 
 h2 {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   font-size: 1.8em;
 }
 
@@ -85,8 +85,9 @@ li p {
 }
 
 a {
+  width: max-content;
   padding: 0;
-  border-bottom: 2px solid var(--brand-color-main);
+  border-bottom: 1px dashed var(--brand-color-main);
   text-decoration: none;
 }
 
@@ -158,7 +159,7 @@ figure {
 
 table {
   border-collapse: collapse;
-  font-family: Rubik, sans-serif;
+  font-family: Roboto, sans-serif;
   font-size: 1.125em;
   margin: 2em 0;
 }

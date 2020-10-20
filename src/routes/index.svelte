@@ -10,10 +10,12 @@
 
 <script>
   import GithubIcon from "../icons/githubIcon.svelte";
+  import Tooltip from "../components/tooltip.svelte";
   import { skills, jobs, projects } from "../content/data";
   import { COLORS, THEMES } from "../consts";
   import { theme, lang } from "../store";
   import { translates } from "../lang";
+  import { contacts } from "../content/data";
 
   export let posts;
 
@@ -32,220 +34,96 @@
   .avatar {
     height: 300px;
   }
-  .content {
-    display: flex;
-    width: 100%;
-    margin: 4rem 0;
+  .text {
+    width: 70%;
   }
-  .projects-list {
+
+  .stack {
+    margin-top: 4rem;
+  }
+  .tags {
+    margin-top: 1rem;
+    max-width: 520px;
+  }
+  .list {
     display: flex;
     flex-direction: column;
-    flex: 1 1;
-    width: 100%;
-  }
-  .articles-list {
-    display: flex;
-    flex-direction: column;
-    flex: 1 1;
-  }
-  .project {
-    display: flex;
-    align-items: center;
-    margin: 0.3rem 0;
-  }
-  .stat {
-    align-content: center;
-    display: grid;
-    grid-template-columns: 150px 1fr;
-    grid-template-rows: max-content;
-    grid-gap: 16px 8px;
-  }
-  .desc {
-    justify-self: end;
-  }
-  .static {
-    display: flex;
-    width: 50%;
-  }
-  .about {
-    width: 50%;
-  }
-
-  .other-link {
-    margin-left: 0.25rem;
-    border: none;
-    text-decoration: none;
-  }
-  .other-link:hover {
-    background: none;
-  }
-
-  .skill {
-    display: inline-block;
-    margin: 0 2px;
-  }
-
-  .project div {
-    min-width: 100px;
-    margin: 0 8px 0 0;
-  }
-
-  .strike {
-    text-decoration: line-through;
-  }
-
-  .more-link {
     margin-top: 0.5rem;
-    width: fit-content;
   }
-
-  .post-item {
+  .contacts {
     display: flex;
-    padding-top: 0.35rem;
+    flex-direction: column;
+    margin-top: 2rem;
   }
 
-  .post-item-date {
-    min-width: 90px;
-    margin-right: 1rem;
-    color: #aaa;
-    text-align: left;
-    text-transform: uppercase;
+  .contacts a {
+    margin: 0.5rem 0 0 0;
   }
 
-  @media screen and (max-width: 768px) {
-    .container {
-      margin-top: 1rem;
-    }
-    .about {
-      width: 100%;
-    }
-    .static {
-      margin-top: 1rem;
-      width: 100%;
-    }
-    .stat {
-      grid-template-columns: 90px 1fr;
-      grid-template-rows: auto;
-      grid-gap: 2rem;
-    }
-    .desc {
-      justify-self: start;
-    }
-    .content {
-      flex-direction: column;
-    }
-
-    .project {
-      align-items: initial;
-    }
-
-    .content {
-      margin: 3rem 0;
-    }
-    .articles-list {
-      margin-top: 2rem;
-    }
+  .text div {
+    margin: 1rem 0;
   }
 </style>
 
 <svelte:head>
   <title>Viacheslav Ermakov</title>
-  <meta property="og:title" content="Viacheslav Ermakov" />
+  <meta property="og:title" content={l10n["Viacheslav Ermakov"]} />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://viaermakov.com" />
   <meta property="og:description" content="Personal website" />
 </svelte:head>
-
-<section class="container">
-  <div class="about">
-    <h1>{l10n['Viacheslav Ermakov']}</h1>
-    <h4>{l10n['frontend developer, 23 y.o']}</h4>
-    <img
-      class="avatar"
-      src="https://res.cloudinary.com/dk4mytxmk/image/upload/v1595920880/website/1233_fk2hoq.jpg"
-      alt="my photo"
-      loading="lazy" />
-  </div>
-  <div class="static">
-    <div class="stat">
-      <div class="desc">{l10n['Tools that I use:']}</div>
+<main>
+  <div class="container">
+    <section class="text">
+      <h2>{l10n.hi}</h2>
+      <h2>{l10n.name}</h2>
+      <div>{l10n.short}</div>
       <div>
-        {#each skills as item, idx}
-          <a class="skill" target="_blink" href={item.url} alt={item.title}>
-            {item.title}
-            {#if idx !== skills.length - 1},{/if}
+        {l10n.share}
+        <div>
+          {l10n.more}
+          <a
+            rel="noreferrer"
+            href="https://svelte.dev"
+            target="_blank"
+            alt="Svelte website">
+            Svelte
           </a>
-        {/each}
+          {@html l10n.but}
+        </div>
       </div>
-      <div class="desc">{l10n['I work in:']}</div>
-      <div>
-        {#each jobs as job, idx}
-          {#if idx === jobs.length - 1}
-            <a class="skill" target="_blink" href={job.url} alt={job.title}>
-              {job.title}
-            </a>
-          {:else}
-            <a
-              class="skill strike"
-              target="_blink"
-              href={job.url}
-              alt={job.title}>
-              {job.title}
-            </a>
-          {/if}
-          {#if idx !== jobs.length - 1}
-            <span>--></span>
-          {/if}
-        {/each}
-      </div>
+      <div>{l10n.open}</div>
+    </section>
+    <Tooltip text={l10n.photo1}>
+      <img
+        class="avatar"
+        src="https://res.cloudinary.com/dk4mytxmk/image/upload/v1595920880/website/1233_fk2hoq.jpg"
+        alt="This is my photo"
+        width="225"
+        height="300"
+        loading="lazy" />
+    </Tooltip>
+  </div>
+  <div class="stack">
+    <h5>{l10n.tags}</h5>
+    <div class="tags">
+      {#each skills as item, idx}
+        <a class="skill" target="_blink" rel="noreferrer" href={item.url} alt={item.title}>
+          {item.title}{#if idx !== skills.length - 1},{/if}
+        </a>
+      {/each}
     </div>
   </div>
-</section>
-<section class="content">
-  <div class="projects-list">
-    <h3>{l10n['Projects']}</h3>
-    {#each projects.slice(0, 2) as project}
-      <div class="project">
-        <div>
-          <a
-            class="project-link"
-            aria-label={project.title}
-            target="_blink"
-            href={project.href}>
-            {project.title}
-          </a>
-        </div>
-        <div>{project[`desc${$lang}`]}</div>
-        <a
-          class="other-link"
-          aria-label={project.title}
-          target="_blink"
-          href={project.ghUrl}>
-          <GithubIcon {color} />
+</main>
+<footer>
+  <div class="contacts">
+    <h5>{l10n.connect}</h5>
+    <div class="list">
+      {#each contacts as contact}
+        <a class="project-link" rel="noreferrer" target="_blink" href={contact.url}>
+          {contact[$lang === 'ru' ? 'titleru' : 'titleen']}
         </a>
-      </div>
-    {/each}
-    <a href="/projects" alt={l10n['More']} class="more-link">
-      {l10n['More']} ->
-    </a>
+      {/each}
+    </div>
   </div>
-  <div class="articles-list">
-    <h3>{l10n['Articles']}</h3>
-    {#each filteredPosts as post, index}
-      <div class="post-item">
-        <div class="post-item-date">{post.printDate}</div>
-        <div>
-          <a rel="prefetch" href="blog/{post.slug}">{post.title}</a>
-        </div>
-        <p>{post.excerpt}</p>
-      </div>
-    {/each}
-    <a
-      style="margin-top: 3px;"
-      href="/blog"
-      alt={l10n['More']}
-      class="more-link">
-      {l10n['More']} ->
-    </a>
-  </div>
-</section>
+</footer>

@@ -3,6 +3,7 @@
   import Logo from "../icons/logo.svelte";
   import { theme, lang } from "../store";
   import { translates } from "../lang";
+  import Tooltip from "../components/tooltip.svelte";
 
   export let segment;
 
@@ -14,8 +15,8 @@
     display: flex;
     align-items: center;
     margin: 0 auto;
-    max-width: 1400px;
-    padding: 2em;
+    max-width: 1200px;
+    padding: 2rem 0;
     width: 100%;
   }
 
@@ -52,7 +53,9 @@
 
 <header>
   <div class="logo">
-    <Logo />
+    <Tooltip text={l10n.logo}>
+      <Logo />
+    </Tooltip>
     <a class={segment === undefined ? 'selected text' : 'text'} href=".">
       {l10n['Viacheslav Ermakov']}
     </a>

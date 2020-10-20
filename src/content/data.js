@@ -16,6 +16,26 @@ export const skills = [
   { title: "styled-components", url: "https://styled-components.com/" },
 ];
 
+export const ottSkills = [
+  { title: "react", url: "https://reactjs.org/" },
+  { title: "redux", url: "https://redux.js.org/" },
+  { title: "typescript", url: "https://www.typescriptlang.org/" },
+  { title: "webpack", url: "https://webpack.js.org/" },
+  { title: "redux-thunk", url: "https://github.com/reduxjs/redux-thunk" },
+  { title: "reselect", url: "https://github.com/reduxjs/reselect" },
+  { title: "SASS", url: "https://sass-lang.com/" },
+];
+
+export const alfaSkills = [
+  { title: "react", url: "https://reactjs.org/" },
+  { title: "redux", url: "https://redux.js.org/" },
+  { title: "webpack", url: "https://webpack.js.org/" },
+  { title: "redux-saga", url: "https://github.com/redux-saga/redux-saga" },
+  { title: "redux-thunk", url: "https://github.com/reduxjs/redux-thunk" },
+  { title: "reselect", url: "https://github.com/reduxjs/reselect" },
+  { title: "SASS", url: "https://sass-lang.com/" },
+];
+
 export const jobs = [
   { title: "AlfaStrahovanie", url: "https://www.alfastrah.ru/" },
   { title: "OneTwoTrip", url: "https://www.onetwotrip.com/" },
@@ -87,7 +107,19 @@ export const projects = [
 ];
 
 export const contacts = [
-  { title: "email", url: "mailto:slavaskainet@gmail.com" },
-  { title: "github", url: "https://github.com/nathanielmaeus" },
-  { title: "telegram", url: "https://t.me/nathaniel.maeus" },
+  {
+    titleru: "Моя почта - предпочитаемый способ связи",
+    titleen: "Mail - preferred method of communication",
+    url: "mailto:slavaskainet@gmail.com",
+  },
+  {
+    titleru: "Мой гитхаб",
+    titleen: "My github",
+    url: "https://github.com/nathanielmaeus",
+  },
+  {
+    titleru: "Телеграм",
+    titleen: "My telegram",
+    url: "https://t.me/nathaniel_maeus",
+  },
 ];

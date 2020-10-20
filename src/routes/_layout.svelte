@@ -59,7 +59,7 @@
 
   main {
     flex: 1 0 auto;
-    max-width: 1100px;
+    max-width: 1200px;
     width: 100%;
   }
 
@@ -67,27 +67,9 @@
     display: flex;
   }
 
-  .contacts a {
-    margin: 0 4px;
-  }
-
-  footer {
-    padding: 1rem 0;
-    display: flex;
-    margin: 0 auto;
-    max-width: 1400px;
-    width: 100%;
-  }
-
   @media screen and (max-width: 768px) {
     .layout {
       padding: 1rem;
-    }
-    footer {
-      padding: 1rem 0 0 0;
-    }
-    .contacts a {
-      margin: 0 16px 0 0;
     }
   }
 </style>
@@ -102,14 +84,4 @@
   <main>
     <slot />
   </main>
-
-  <footer>
-    <div class="contacts">
-      {#each contacts as contact}
-        <a class="project-link" target="_blink" href={contact.url}>
-          {contact.title}
-        </a>
-      {/each}
-    </div>
-  </footer>
 </div>
