@@ -81,14 +81,7 @@
       <div>
         {l10n.share}
         <div>
-          {l10n.more}
-          <a
-            rel="noreferrer"
-            href="https://svelte.dev"
-            target="_blank"
-            alt="Svelte website">
-            Svelte
-          </a>
+          {@html l10n.more}
           {@html l10n.but}
         </div>
       </div>
