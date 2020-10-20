@@ -52,6 +52,24 @@
   h5 {
     margin: 1rem 0;
   }
+
+  @media screen and (max-width: 768px) {
+    .job,
+    .main {
+      flex-direction: column;
+      margin: 2rem 0;
+    }
+    .description,
+    .base-info {
+      width: 100%;
+    }
+    .company,
+    .avatar {
+      width: 100%;
+      margin-left: 0;
+      margin-bottom: 2rem;
+    }
+  }
 </style>
 
 <svelte:head>
@@ -77,7 +95,8 @@
     </div>
     <section class="base-info">
       <p>
-        Я человек, который любит писать код (<a alt="link to my projects" rel="prefetch" href="projects">
+        Я человек, который любит писать код (
+        <a alt="link to my projects" rel="prefetch" href="projects">
           по этой ссылке
         </a>
         и на Github много небольших проектов) и учить разные новые штуки

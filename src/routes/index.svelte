@@ -63,11 +63,21 @@
   .text div {
     margin: 1rem 0;
   }
+
+    @media screen and (max-width: 768px) {
+    .text {
+      width: 100%;
+    }
+
+    .container {
+      margin-top: 1rem;
+    }
+  }
 </style>
 
 <svelte:head>
   <title>Viacheslav Ermakov</title>
-  <meta property="og:title" content={l10n["Viacheslav Ermakov"]} />
+  <meta property="og:title" content={l10n['Viacheslav Ermakov']} />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://viaermakov.com" />
   <meta property="og:description" content="Personal website" />
@@ -101,7 +111,12 @@
     <h5>{l10n.tags}</h5>
     <div class="tags">
       {#each skills as item, idx}
-        <a class="skill" target="_blink" rel="noreferrer" href={item.url} alt={item.title}>
+        <a
+          class="skill"
+          target="_blink"
+          rel="noreferrer"
+          href={item.url}
+          alt={item.title}>
           {item.title}{#if idx !== skills.length - 1},{/if}
         </a>
       {/each}
@@ -113,7 +128,11 @@
     <h5>{l10n.connect}</h5>
     <div class="list">
       {#each contacts as contact}
-        <a class="project-link" rel="noreferrer" target="_blink" href={contact.url}>
+        <a
+          class="project-link"
+          rel="noreferrer"
+          target="_blink"
+          href={contact.url}>
           {contact[$lang === 'ru' ? 'titleru' : 'titleen']}
         </a>
       {/each}
