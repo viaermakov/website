@@ -87,7 +87,7 @@ li p {
 a {
   width: max-content;
   padding: 0;
-  border-bottom: 1px dashed var(--brand-color-main);
+  border-bottom: 2px dashed var(--brand-color-main);
   text-decoration: none;
 }
 
