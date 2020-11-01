@@ -4,7 +4,7 @@ const ru = {
   name: "Меня зовут Вячеслав Ермаков.",
   short: "23 года. Frontend разработчик. Живу в Москве.",
   share:
-    "Как вы уже, наверное, поняли разрабатываю фронтенд для приложений в вебе. Но немного посматриваю на бэкенд. На данный момент на работе пишу на React и Redux.",
+    "Как вы уже, наверное, поняли, я разрабатываю фронтенд для приложений в вебе. Иногда посматриваю на бэкенд. На данный момент на работе пишу на React и Redux.",
   more:
     "Вообще я разносторонний человек и люблю попробовать что-то новое. Например, этот сайт написан на <a rel='noreferrer' href='https://svelte.dev' target='_blank' alt='Svelte website'>Svelte</a>.",
   but:
@@ -20,7 +20,8 @@ const ru = {
   photo2: "Фотография снова та же. Я не люблю фотографироваться",
   logo: "Красиво. Правда?",
   oops:
-    "Я как всегда что-то сломал. Мои лучшие люди занимаются этой проблемой.",
+    "Я как всегда что-то сломал. <br> Мои лучшие люди занимаются этой проблемой.",
+  errorMessage: "Ошибка:",
 };
 
 const en = {
@@ -41,7 +42,9 @@ const en = {
   Projects: "Projects",
   Articles: "Articles",
   logo: "Beautiful. Isn't it?",
-  oops: "As always, I broke something. My best people deal with this problem.",
+  oops:
+    "As always, I broke something. <br> My best people deal with this problem.",
+  errorMessage: "Error:",
 };
 
 export const translates = { en, ru };
