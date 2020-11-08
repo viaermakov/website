@@ -89,7 +89,7 @@
       <h2>{l10n.name}</h2>
       <div>{l10n.short}</div>
       <div>
-        {l10n.share}
+        {@html l10n.share}
         <div>
           {@html l10n.more}
           {@html l10n.but}

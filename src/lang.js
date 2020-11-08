@@ -30,7 +30,7 @@ const en = {
   name: "My name is Viacheslav Ermakov.",
   short: "23 y.o, Frontend engineer, live in Moscow.",
   share:
-    "As you see, I am developing a front-end part of web applications. But in the future I want to learn back-end. Now I developing applications by React and Redux.",
+    "I am responsible for a front-end part of web applications. Now I am developing travel marketplace at <a rel='noreferrer' href='https://onetwotrip.com' target='_blank' alt='OneTwoTrip website'>OneTwoTrip</a>.",
   more:
     "But in general, I am a versatile person and like to try something new. For example, this site is written on <a rel='noreferrer' href='https://svelte.dev' target='_blank' alt='Svelte website'>Svelte</a>.",
   but: "",
