@@ -4,13 +4,13 @@ const ru = {
   name: "Меня зовут Вячеслав Ермаков.",
   short: "23 года. Frontend разработчик. Живу в Москве.",
   share:
-    "Как вы уже, наверное, поняли, я разрабатываю фронтенд для приложений в вебе. Иногда посматриваю на бэкенд. На данный момент на работе пишу на React и Redux.",
+    "Разрабатываю фронтенд для приложений в вебе. Иногда посматриваю на бэкенд. Основной стек - React.",
   more:
-    "Вообще я разносторонний человек и люблю попробовать что-то новое. Например, этот сайт написан на <a rel='noreferrer' href='https://svelte.dev' target='_blank' alt='Svelte website'>Svelte</a>.",
+    "На самом деле я разносторонний человек и люблю попробовать что-то новое. Например, этот сайт написан на <a rel='noreferrer' href='https://svelte.dev' target='_blank' alt='Svelte website'>Svelte</a>.",
   but:
     "Больше о технологиях, инструментах и о моем опыте работы можно узнать <a href='about' alt='Link to about page'>здесь</a>.",
   open:
-    "Я всегда открыт к предложениям и интересным вакансиям. Так что пишите.",
+    "Всегда открыт к предложениям и интересным вакансиям.",
   tags: "Эти теги помогут понять, что я знаю и использовал:",
   connect: "Как связаться со мной",
   Projects: "Проекты",
@@ -28,14 +28,14 @@ const en = {
   "Viacheslav Ermakov": "Viacheslav Ermakov",
   hi: "Hi!",
   name: "My name is Viacheslav Ermakov.",
-  short: "23 y.o, Frontend engineer, live in Moscow.",
+  short: "23 y.o, Frontend engineer, living in Moscow.",
   share:
     "I am responsible for a front-end part of web applications. Now I am developing travel marketplace at <a rel='noreferrer' href='https://onetwotrip.com' target='_blank' alt='OneTwoTrip website'>OneTwoTrip</a>.",
   more:
-    "But in general, I am a versatile person and like to try something new. For example, this site is written on <a rel='noreferrer' href='https://svelte.dev' target='_blank' alt='Svelte website'>Svelte</a>.",
+    "But in general, I am a versatile person and like to explore new tools and technologies. For example, this site is written on <a rel='noreferrer' href='https://svelte.dev' target='_blank' alt='Svelte website'>Svelte</a>.",
   but: "",
   open: "I am always open to offers and interesting vacancies.",
-  tags: "These tags will help you understand what I know and used:",
+  tags: "These tags will help you understand what I know and use:",
   photo1: "Yeah.. It's me",
   photo2: "The photo is the same again. I do not like to be photographed",
   connect: "How to get in touch with me",

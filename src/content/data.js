@@ -108,12 +108,14 @@ export const projects = [
 
 export const contacts = [
   {
-    titleru: "Моя почта - предпочитаемый способ связи",
-    titleen: "Mail - preferred method of communication",
+    titleru: "Почта",
+    titleen: "Mail",
+    descru: "- предпочитаемый способ связи",
+    descen: "- preferred method of communication",
     url: "mailto:slavaskainet@gmail.com",
   },
   {
-    titleru: "Мой гитхаб",
+    titleru: "Гитхаб",
     titleen: "My github",
     url: "https://github.com/nathanielmaeus",
   },

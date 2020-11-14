@@ -1,8 +1,8 @@
 <script context="module">
   export function preload({ params, query }) {
     return this.fetch(`blog.json`)
-      .then(r => r.json())
-      .then(posts => {
+      .then((r) => r.json())
+      .then((posts) => {
         return { posts };
       });
   }
@@ -20,7 +20,7 @@
   export let posts;
 
   $: l10n = translates[$lang];
-  $: filteredPosts = posts.filter(post => post.lang === $lang).slice(0, 2);
+  $: filteredPosts = posts.filter((post) => post.lang === $lang).slice(0, 2);
   $: color =
     $theme === THEMES.LIGHT ? COLORS.DARK_BACKGROUND : COLORS.LIGHT_BACKGROUND;
 </script>
@@ -64,7 +64,7 @@
     margin: 1rem 0;
   }
 
-    @media screen and (max-width: 768px) {
+  @media screen and (max-width: 768px) {
     .text {
       width: 100%;
     }
@@ -128,13 +128,13 @@
     <h5>{l10n.connect}</h5>
     <div class="list">
       {#each contacts as contact}
-        <a
+        <span><a
           class="project-link"
           rel="noreferrer"
           target="_blink"
           href={contact.url}>
-          {contact[$lang === 'ru' ? 'titleru' : 'titleen']}
-        </a>
+          {contact[`title${$lang}`]}
+        </a>{contact[`desc${$lang}`] || ""}</span>
       {/each}
     </div>
   </div>
