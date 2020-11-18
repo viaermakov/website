@@ -49,8 +49,8 @@
 
   .content {
     margin: 3rem auto;
-    line-height: 1.65;
-    max-width: 728px;
+    line-height: 1.9;
+    max-width: 848px;
   }
 
   :global(.content pre, .content img) {
@@ -69,6 +69,11 @@
       width: 100%;
       right: 0;
     }
+  }
+
+  h2 {
+    margin-bottom: 1.2rem;
+    margin-top: 2.2rem;
   }
 </style>
 
