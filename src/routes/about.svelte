@@ -1,5 +1,5 @@
 <script>
-  import { ottSkills, alfaSkills, jobs, projects } from "../content/data";
+  import { ottSkills, alfaSkills } from "../content/data";
   import Tooltip from "../components/tooltip.svelte";
   import OTTLogo from "../icons/ottLogo.svelte";
   import AlfaLogo from "../icons/alfaLogo.svelte";

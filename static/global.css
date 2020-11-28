@@ -1,10 +1,10 @@
 :root {
-  --brand-color-main: #dbf32c;
-  --brand-color-additional: #a32cf3;
-  --text-light-theme: #212121;
-  --text-dark-theme: #fff;
-  --background-dark-theme: #212121;
-  --background-light-theme: #fff;
+  --theme-background-color: #fff;
+  --theme-text-color: #000;
+  --theme-brand-color: #8b963d;
+  --theme-hover-color: #fff;
+  --background-light-color: #fff;
+  --background-dark-color: #000;
 }
 
 *,
@@ -35,10 +35,12 @@ h3,
 h4,
 h5,
 h6 {
+  color: var(--theme-brand-color);
   font-family: system-ui, sans-serif;
   font-weight: 700;
   line-height: 1.2;
   margin: 0;
+  transition: all 0.2s;
 }
 
 h1 {
@@ -88,12 +90,15 @@ li p {
 a {
   width: max-content;
   padding: 0;
-  border-bottom: 2px dashed var(--brand-color-main);
+  color: var(--theme-text-color);
+  border-bottom: 2px dashed var(--theme-brand-color);
   text-decoration: none;
+  transition: all 0.2s;
 }
 
 a:hover {
-  background: var(--brand-color-main);
+  background: var(--theme-brand-color);
+  color: var(--theme-hover-color);
   text-decoration: none;
 }
 

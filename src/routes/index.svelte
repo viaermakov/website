@@ -1,28 +1,11 @@
-<script context="module">
-  export function preload({ params, query }) {
-    return this.fetch(`blog.json`)
-      .then((r) => r.json())
-      .then((posts) => {
-        return { posts };
-      });
-  }
-</script>
-
 <script>
-  import GithubIcon from "../icons/githubIcon.svelte";
   import Tooltip from "../components/tooltip.svelte";
-  import { skills, jobs, projects } from "../content/data";
-  import { COLORS, THEMES } from "../consts";
-  import { theme, lang } from "../store";
+  import { skills } from "../content/data";
+  import { lang } from "../store";
   import { translates } from "../lang";
   import { contacts } from "../content/data";
 
-  export let posts;
-
   $: l10n = translates[$lang];
-  $: filteredPosts = posts.filter((post) => post.lang === $lang).slice(0, 2);
-  $: color =
-    $theme === THEMES.LIGHT ? COLORS.DARK_BACKGROUND : COLORS.LIGHT_BACKGROUND;
 </script>
 
 <style>
@@ -116,9 +99,9 @@
           target="_blink"
           rel="noreferrer"
           href={item.url}
-          alt={item.title}>
-          {item.title}{#if idx !== skills.length - 1},{/if}
-        </a>
+          alt={item.title}>{item.title}</a>{#if idx !== skills.length - 1}
+          ,{' '}
+        {/if}
       {/each}
     </div>
   </div>
@@ -129,12 +112,12 @@
     <div class="list">
       {#each contacts as contact}
         <span><a
-          class="project-link"
-          rel="noreferrer"
-          target="_blink"
-          href={contact.url}>
-          {contact[`title${$lang}`]}
-        </a>{contact[`desc${$lang}`] || ""}</span>
+            class="project-link"
+            rel="noreferrer"
+            target="_blink"
+            href={contact.url}>
+            {contact[`title${$lang}`]}
+          </a>{contact[`desc${$lang}`] || ''}</span>
       {/each}
     </div>
   </div>

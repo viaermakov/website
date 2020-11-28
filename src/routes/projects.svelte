@@ -3,14 +3,16 @@
   import OutIcon from "../icons/outIcon.svelte";
   import Tags from "../components/tags.svelte";
 
-  import { COLORS, THEMES } from "../consts";
+  import { COLORS, LIGHTS_THEMES, THEMES } from "../consts";
   import { projects } from "../content/data";
   import { theme, lang } from "../store";
   import { translates } from "../lang";
 
   $: l10n = translates[$lang];
-  $: color =
-    $theme === THEMES.LIGHT ? COLORS.DARK_BACKGROUND : COLORS.LIGHT_BACKGROUND;
+
+  $: color = LIGHTS_THEMES.includes(THEMES[$theme])
+    ? COLORS.DARK_BACKGROUND
+    : COLORS.LIGHT_BACKGROUND;
 </script>
 
 <style>

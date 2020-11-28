@@ -65,7 +65,7 @@
     background-clip: padding-box;
     overflow: hidden;
     will-change: width;
-    transition: width 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: width 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
   }
 </style>
 

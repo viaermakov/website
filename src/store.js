@@ -8,5 +8,5 @@ const isLS =
 const initialTheme = isLS && window.localStorage.getItem("theme");
 const initialLang = isLS && window.localStorage.getItem("lang");
 
-export const theme = writable(initialTheme || "light");
+export const theme = writable(initialTheme || "LIGHT");
 export const lang = writable(initialLang || "en");

@@ -8,7 +8,7 @@
   const CONFIG = {
     edges: 5,
     growth: 5,
-    size: 500
+    size: 500,
   };
 
   let timer = null;
@@ -18,14 +18,14 @@
       targets: "#logo path",
       d: [
         {
-          value: path
+          value: path,
         },
         {
-          value: newPath
-        }
+          value: newPath,
+        },
       ],
       easing: "easeOutQuad",
-      duration: 3000
+      duration: 3000,
     });
   }
 
@@ -63,6 +63,10 @@
       transform: rotate(360deg);
     }
   }
+
+  #gradient stop:first-child {
+    stop-color: var(--theme-brand-color);
+  }
 </style>
 
 <svg
@@ -74,8 +78,7 @@
   height="100px">
   <defs>
     <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color: rgb(60, 165, 92);" />
-      <stop offset="100%" style="stop-color: rgb(181, 172, 73);" />
+      <stop offset="100%" />
     </linearGradient>
   </defs>
 

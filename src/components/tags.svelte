@@ -4,7 +4,7 @@
 
 <style>
   .tags {
-    color: var(--text-light-theme);
+    color: var(--theme-hover-color);
     margin: 0 0.5rem;
   }
 
@@ -13,7 +13,7 @@
     margin: 0 0.25rem;
     border-radius: 0.25rem;
     font-size: 0.8rem;
-    background-color: hsla(67, 89%, 56%, 0.8);
+    background-color: var(--theme-brand-color);
   }
 
   @media screen and (max-width: 768px) {
@@ -24,7 +24,5 @@
 </style>
 
 <div class="tags">
-  {#each tags as tag, idx}
-    <span class="tag">{tag}</span>
-  {/each}
+  {#each tags as tag(tag)}<span class="tag">{tag}</span>{/each}
 </div>

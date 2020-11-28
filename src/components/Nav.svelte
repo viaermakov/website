@@ -1,20 +1,18 @@
 <script>
   import LampIcon from "../icons/lamp.svelte";
-  import { getContext, setContext } from "svelte";
+  import Select from "../components/select.svelte";
+  import { THEMES } from "../consts";
   import { theme, lang } from "../store";
   import { translates } from "../lang";
-  import { COLORS, THEMES, LANGUAGES } from "../consts";
 
   export let segment;
 
   $: l10n = translates[$lang];
-  let color = COLORS.LIGHT_BACKGROUND;
 
-  const handleChangeTheme = () => {
-    const newTheme = $theme === THEMES.LIGHT ? THEMES.DARK : THEMES.LIGHT;
-    theme.update(() => newTheme);
-    window.localStorage.setItem("theme", newTheme);
-    color = newTheme === THEMES.LIGHT ? COLORS.LIGHT_BACKGROUND : "#ffce00";
+  const handleSelectTheme = (value) => {
+    const newTheme = THEMES[value];
+    theme.update(() => value);
+    window.localStorage.setItem("theme", value);
   };
 
   const handleChangeLang = () => {
@@ -36,7 +34,6 @@
   }
 
   a {
-    color: inherit;
     text-decoration: none;
     display: block;
     position: relative;
@@ -59,24 +56,15 @@
   }
 
   .switcher-lang {
+    margin-left: 0.5rem;
     color: var(--text-color);
     text-decoration: dotted;
   }
 
-  .light {
-    color: var(--background-dark-theme);
-  }
-
   .selected {
-    background: var(--brand-color-main);
-    color: var(--background-dark-theme) !important;
+    background: var(--theme-brand-color);
+    color: var(--theme-hover-color);
     text-decoration: none;
-  }
-
-  @media screen and (max-width: 376px) {
-    .theme {
-      display: none;
-    }
   }
 </style>
 
@@ -95,13 +83,7 @@
     </a>
   </div>
 </nav>
-<button
-  class="switcher theme"
-  class:light={$theme === 'light'}
-  on:click={handleChangeTheme}
-  aria-label="switch theme">
-  <LampIcon {color} />
-</button>
+<Select onChange={handleSelectTheme} value={$theme} aria-label="change theme" />
 <button
   class="switcher switcher-lang"
   aria-label="switch lang"

@@ -1,12 +1,8 @@
 <script>
-  import { fade } from "svelte/transition";
   import { stores } from "@sapper/app";
-
   import Header from "../components/Header.svelte";
   import Preloader from "../components/preloader.svelte";
-
   import { theme } from "../store";
-  import { contacts } from "../content/data";
 
   const { preloading } = stores();
   export let segment;
@@ -17,7 +13,7 @@
     if (typeof window !== "undefined") {
       const key = window.localStorage.getItem("theme");
       if (!key) {
-        const newTheme = window.matchMedia(MEDIA).matches ? "dark" : "light";
+        const newTheme = window.matchMedia(MEDIA).matches ? "DARK" : "LIGHT";
         theme.update(() => newTheme);
       }
     }
@@ -26,35 +22,51 @@
 
 <style>
   .layout {
+    background: var(--theme-background-color);
+    color: var(--theme-text-color);
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     min-height: 100vh;
     padding: 0 2rem;
-    transition: all 0.3s;
+    transition: all 0.2s;
+  }
+
+  .winter {
+    --theme-background-color: #fff;
+    --theme-text-color: #012339;
+    --theme-brand-color: #236ebf;
+    --theme-hover-color: #fff;
   }
 
   .light {
-    background: var(--background-light-theme);
-    color: var(--text-light-theme);
+    --theme-background-color: #fff;
+    --theme-text-color: #000;
+    --theme-brand-color: #8b963d;
+    --theme-hover-color: #fff;
   }
 
-  .light :global(a) {
-    color: var(--text-light-theme);
-  }
-
-  .dark :global(a) {
-    color: var(--text-dark-theme);
-  }
-
-  .dark :global(a):hover {
-    color: var(--text-light-theme);
+  .night_owl {
+    --theme-background-color: #011627;
+    --theme-text-color: #fff;
+    --theme-brand-color: #c792ea;
+    --theme-hover-color: #fff;
   }
 
   .dark {
-    background: var(--background-dark-theme);
-    color: var(--text-dark-theme);
+    --theme-background-color: #212121;
+    --theme-text-color: #fff;
+    --theme-brand-color: #8b963d;
+    --theme-hover-color: #fff;
+  }
+
+  .solarized {
+    --theme-background-color: #002b36;
+    --theme-text-color: #839496;
+    --theme-brand-color: #cb4b16;
+    --theme-hover-color: #fff;
   }
 
   main {
@@ -75,7 +87,7 @@
 </style>
 
 <div
-  class="layout {$theme}"
+  class="layout {$theme.toLowerCase()}"
   style={`visibility: ${process.browser ? 'initial' : 'hidden'}`}>
 
   <Header {segment} />
