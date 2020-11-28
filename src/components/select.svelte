@@ -37,7 +37,7 @@
 
 <div class="wrapper">
   <span class="text">{THEMES[selected.toUpperCase()]} </span>
-  <select class="select" bind:value={selected} on:change={onChangeTheme}>
+  <select label="Change theme" class="select" bind:value={selected} on:change={onChangeTheme}>
     {#each Object.keys(THEMES) as key}
       <option value={key}>{THEMES[key]}</option>
     {/each}
