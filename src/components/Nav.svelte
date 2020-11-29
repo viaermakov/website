@@ -1,7 +1,6 @@
 <script>
-  import LampIcon from "../icons/lamp.svelte";
   import Select from "../components/select.svelte";
-  import { THEMES } from "../consts";
+  import { THEMES, LANGUAGES } from "../consts";
   import { theme, lang } from "../store";
   import { translates } from "../lang";
 
