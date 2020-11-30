@@ -4,9 +4,9 @@ const ru = {
   name: "Меня зовут Вячеслав Ермаков.",
   short: "23 года. Frontend разработчик. Живу в Москве.",
   share:
-    "Разрабатываю фронтенд для приложений в вебе. Иногда посматриваю на бэкенд. Основной стек - React.",
+    "Разрабатываю фронтенд для приложений в вебе. Иногда работаю с бекендом. Основной стек - React.",
   more:
-    "На самом деле я разносторонний человек и люблю попробовать что-то новое. Например, этот сайт написан на <a rel='noreferrer' href='https://svelte.dev' target='_blank' alt='Svelte website'>Svelte</a>.",
+    "Я люблю попробовать что-то новое. Например, этот сайт написан на <a rel='noreferrer' href='https://svelte.dev' target='_blank' alt='Svelte website'>Svelte</a>. Увлекаюсь чтением различных статей и книг как для изучения фронтенда, так и для разработки приложений в целом.",
   but:
     "Больше о технологиях, инструментах и о моем опыте работы можно узнать <a href='about' alt='Link to about page'>здесь</a>.",
   open:
@@ -26,13 +26,13 @@ const ru = {
 
 const en = {
   "Viacheslav Ermakov": "Viacheslav Ermakov",
-  hi: "Hi!",
+  hi: "Hello!",
   name: "My name is Viacheslav Ermakov.",
   short: "23 y.o, Frontend engineer, living in Moscow.",
   share:
     "I am responsible for a front-end part of web applications. Now I am developing travel marketplace at <a rel='noreferrer' href='https://onetwotrip.com' target='_blank' alt='OneTwoTrip website'>OneTwoTrip</a>.",
   more:
-    "But in general, I am a versatile person and like to explore new tools and technologies. For example, this site is written on <a rel='noreferrer' href='https://svelte.dev' target='_blank' alt='Svelte website'>Svelte</a>.",
+    "I am a versatile person and like to explore new tools and technologies. For example, this site is written on <a rel='noreferrer' href='https://svelte.dev' target='_blank' alt='Svelte website'>Svelte</a>. I am interested in reading various articles and books both for studying the frontend and for developing applications in general.",
   but: "",
   open: "I am always open to offers and interesting vacancies.",
   tags: "These tags will help you understand what I know and use:",
