@@ -82,7 +82,7 @@
     </a>
   </div>
 </nav>
-<Select onChange={handleSelectTheme} value={$theme} aria-label="change theme" />
+<Select onChange={handleSelectTheme} value={$theme} />
 <button
   class="switcher switcher-lang"
   aria-label="switch lang"

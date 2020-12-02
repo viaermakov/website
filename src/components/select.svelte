@@ -15,7 +15,6 @@
   .wrapper {
     position: relative;
     min-width: 80px;
-    padding: 4px;
     text-align: center;
     border: 1px solid var(--theme-brand-color);
     border-radius: 4px;
@@ -30,16 +29,25 @@
     opacity: 0;
   }
 
+  .select:focus + .text {
+    border: 1px solid var(--theme-brand-color);
+  }
+
   .text {
     font-size: 0.8rem;
+    padding: 0.25rem;
   }
 </style>
 
 <label class="wrapper">
-  <span class="text">{THEMES[selected.toUpperCase()]} </span>
-  <select label="Change theme" class="select" bind:value={selected} on:change={onChangeTheme}>
+  <select
+    label="Change theme"
+    class="select"
+    bind:value={selected}
+    on:change={onChangeTheme}>
     {#each Object.keys(THEMES) as key}
       <option value={key}>{THEMES[key]}</option>
     {/each}
   </select>
+  <div class="text">{THEMES[selected.toUpperCase()]}</div>
 </label>
