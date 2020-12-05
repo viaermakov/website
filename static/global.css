@@ -20,7 +20,7 @@
 body {
   margin: 0;
   font-family: Inter, serif;
-  font-size: 16px;
+  font-size: 24px;
   line-height: 1.6;
 }
 
@@ -186,6 +186,15 @@ td {
 @media (max-width: 1020px) {
   h1 {
     font-size: 3em;
+  }
+  
+  h2 {
+    margin-bottom: 1rem;
+    margin-top: 1.2rem;
+  }
+
+  blockquote {
+    font-size: 1.2rem;
   }
 
   .content h1 {

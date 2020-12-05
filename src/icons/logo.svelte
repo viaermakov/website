@@ -47,6 +47,7 @@
   svg {
     transition: all;
     animation: slidein 5s linear infinite;
+    margin-left: -16px;
   }
 
   @media screen and (max-width: 768px) {

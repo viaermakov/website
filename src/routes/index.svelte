@@ -14,13 +14,9 @@
     justify-content: space-between;
     flex-wrap: wrap;
   }
-  .avatar {
-    height: 300px;
-  }
   .text {
     width: 70%;
   }
-
   .stack {
     margin-top: 4rem;
   }
@@ -50,6 +46,15 @@
   @media screen and (max-width: 768px) {
     .text {
       width: 100%;
+    }
+
+    .avatar {
+      width: 100%;
+      height: auto;
+    }
+
+    .stack {
+      margin-top: 2rem;
     }
 
     .container {
@@ -82,11 +87,11 @@
     </section>
     <Tooltip text={l10n.photo1}>
       <img
-        class="avatar"
         src="https://res.cloudinary.com/dk4mytxmk/image/upload/v1595920880/website/1233_fk2hoq.jpg"
         alt="This is my photo"
-        width="225"
-        height="300"
+        class="avatar"
+        width="425"
+        height="550"
         loading="lazy" />
     </Tooltip>
   </div>

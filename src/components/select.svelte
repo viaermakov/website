@@ -14,7 +14,7 @@
 <style>
   .wrapper {
     position: relative;
-    min-width: 80px;
+    min-width: 95px;
     text-align: center;
     border: 1px solid var(--theme-brand-color);
     border-radius: 4px;
@@ -27,6 +27,7 @@
     width: 100%;
     height: 100%;
     opacity: 0;
+    box-sizing: border-box;
   }
 
   .select:focus + .text {
@@ -34,8 +35,7 @@
   }
 
   .text {
-    font-size: 0.8rem;
-    padding: 0.25rem;
+    padding: 0.25rem 0.75rem;
   }
 </style>
 

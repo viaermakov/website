@@ -30,7 +30,7 @@
 
   .cover {
     position: relative;
-    height: 512px;
+    height: 712px;
     border-radius: 20px;
     background: center no-repeat;
   }
@@ -42,15 +42,15 @@
     right: 0;
     left: 0;
     bottom: 0;
-    height: 512px;
+    height: 712px;
     border-radius: 20px;
-    background: linear-gradient(transparent -30%, var(--background-dark-theme));
+    background: linear-gradient(transparent -30%, var(--theme-background-color));
   }
 
   .content {
     margin: 3rem auto;
     line-height: 1.9;
-    max-width: 848px;
+    max-width: 1048px;
   }
 
   :global(.content pre, .content img) {
@@ -61,6 +61,7 @@
   }
 
   @media screen and (max-width: 768px) {
+ 
     .cover {
       display: none;
     }

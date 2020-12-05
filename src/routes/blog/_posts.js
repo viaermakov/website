@@ -37,6 +37,15 @@ renderer.code = (code, language) => {
 
 marked.setOptions({ renderer });
 
+
+export function parseDate(currentDate) {
+  const day = currentDate.getDate().toString().padStart(2, "0");
+  const month = (currentDate.getMonth() + 1).toString().padStart(2, "0");
+  const year = currentDate.getFullYear();
+
+  return `${day}.${month}.${year}`;
+}
+
 const INITIAL_COVER_URL =
   "https://res.cloudinary.com/dk4mytxmk/image/upload/v1595919985/samples/cloudinary-group.jpg";
 const posts = fs
@@ -59,7 +68,9 @@ const posts = fs
     const html = marked(content);
     const readingStats = readingTime(content);
     const printReadingTime = readingStats.text;
-    const printDate = new Intl.DateTimeFormat().format(new Date(date));
+
+
+    const printDate = parseDate(date);
 
     return {
       title: title || slug,

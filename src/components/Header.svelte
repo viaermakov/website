@@ -15,7 +15,7 @@
     display: flex;
     align-items: center;
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 1600px;
     padding: 2rem 0;
     width: 100%;
   }

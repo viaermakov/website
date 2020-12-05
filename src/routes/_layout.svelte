@@ -30,7 +30,7 @@
     justify-content: space-between;
     align-items: center;
     min-height: 100vh;
-    padding: 0 2rem;
+    padding: 0 2rem 2rem 0;
     transition: all 0.2s;
   }
 
@@ -71,7 +71,7 @@
 
   main {
     flex: 1 0 auto;
-    max-width: 1200px;
+    max-width: 1600px;
     width: 100%;
   }
 

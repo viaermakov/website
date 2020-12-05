@@ -35,9 +35,6 @@
     width: 20%;
     margin-left: 10%;
   }
-  .avatar img {
-    width: 150px;
-  }
   .stack {
     display: flex;
     flex-wrap: wrap;
@@ -89,8 +86,8 @@
           src="https://res.cloudinary.com/dk4mytxmk/image/upload/v1595920880/website/1233_fk2hoq.jpg"
           alt="This is my photo"
           loading="lazy"
-          width="150"
-          height="200" />
+          width="250"
+          height="325" />
       </Tooltip>
     </div>
     <section class="base-info">

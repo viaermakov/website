@@ -1,8 +1,8 @@
 <script context="module">
   export function preload({ params, query }) {
     return this.fetch(`blog.json`)
-      .then(r => r.json())
-      .then(posts => {
+      .then((r) => r.json())
+      .then((posts) => {
         return { posts };
       });
   }
@@ -17,7 +17,7 @@
   export let posts;
   $: l10n = translates[$lang];
 
-  const getTags = post => {
+  const getTags = (post) => {
     return post.tags ? post.tags.split(" ") : [];
   };
 </script>
@@ -32,15 +32,20 @@
   }
 
   .post-item-date {
-    min-width: 90px;
+    min-width: 140px;
     margin-right: 1rem;
     color: #aaa;
     text-align: left;
     text-transform: uppercase;
   }
+
+  @media screen and (max-width: 768px) {
+    .post-item-date {
+      min-width: 90px;
+    }
+  }
   .post-item {
     display: flex;
-    align-items: center;
     margin: 1rem 0;
   }
 

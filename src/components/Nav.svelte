@@ -42,7 +42,7 @@
   .switcher {
     border: none;
     background: none;
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-decoration: underline;
     cursor: pointer;
     color: var(--background-light-theme);
