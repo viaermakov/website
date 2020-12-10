@@ -68,14 +68,14 @@
 </style>
 
 <nav>
-  <div>
+  <!-- <div>
     <a
       rel="prefetch"
       class={segment === 'projects' ? 'selected' : ''}
       href="projects">
       {l10n['Projects']}
     </a>
-  </div>
+  </div> -->
   <div>
     <a rel="prefetch" class={segment === 'blog' ? 'selected' : ''} href="blog">
       {l10n['Articles']}

@@ -18,7 +18,7 @@
     width: 70%;
   }
   .stack {
-    margin-top: 4rem;
+    margin-top: 5rem;
   }
   .tags {
     margin-top: 1rem;
@@ -39,8 +39,11 @@
     margin: 0.5rem 0 0 0;
   }
 
-  .text div {
-    margin: 1rem 0;
+  @media screen and (max-width: 1600px) {
+    .avatar {
+      width: 300px;
+      height: 400px;
+    }
   }
 
   @media screen and (max-width: 768px) {
@@ -84,31 +87,31 @@
         </div>
       </div>
       <div>{l10n.open}</div>
+      <div class="stack">
+        <h5>{l10n.tags}</h5>
+        <div class="tags">
+          {#each skills as item, idx}
+            <a
+              class="skill"
+              target="_blink"
+              rel="noreferrer"
+              href={item.url}
+              alt={item.title}>{item.title}</a>{#if idx !== skills.length - 1}
+              ,{' '}
+            {/if}
+          {/each}
+        </div>
+      </div>
     </section>
     <Tooltip text={l10n.photo1}>
       <img
         src="https://res.cloudinary.com/dk4mytxmk/image/upload/v1595920880/website/1233_fk2hoq.jpg"
         alt="This is my photo"
         class="avatar"
-        width="425"
+        width="405"
         height="550"
         loading="lazy" />
     </Tooltip>
-  </div>
-  <div class="stack">
-    <h5>{l10n.tags}</h5>
-    <div class="tags">
-      {#each skills as item, idx}
-        <a
-          class="skill"
-          target="_blink"
-          rel="noreferrer"
-          href={item.url}
-          alt={item.title}>{item.title}</a>{#if idx !== skills.length - 1}
-          ,{' '}
-        {/if}
-      {/each}
-    </div>
   </div>
 </main>
 <footer>

@@ -47,7 +47,6 @@ export const projects = [
     descen: "Music web player based on Deezer API",
     descru: "Веб-плеер",
     tags: ["react", "redux", "typescript"],
-    href: "https://spotifly.netlify.app",
     ghUrl: "https://github.com/nathanielmaeus/spotifLy",
   },
   {
@@ -57,14 +56,6 @@ export const projects = [
     tags: ["svelte", "sapper"],
     href: "https://spacegames.netlify.app",
     ghUrl: "https://github.com/nathanielmaeus/space-game",
-  },
-  {
-    title: "News app",
-    descen: "Technical assignment for Arival company",
-    descru: "Тестовое задание для компании Arival",
-    tags: ["react", "mobx", "typescript"],
-    href: "https://arival.netlify.app",
-    ghUrl: "https://github.com/nathanielmaeus/arival",
   },
   {
     title: "Telegram charts",
@@ -89,13 +80,6 @@ export const projects = [
     tags: ["react", "redux", "effector", "mobx", "typescript"],
     href: "https://chulakovtest.netlify.app",
     ghUrl: "https://github.com/nathanielmaeus/teamviewer",
-  },
-  {
-    title: "slider",
-    descen: "Slider component",
-    descru: "Компонент слайдера",
-    tags: ["react", "typescript", "linaria"],
-    ghUrl: "https://github.com/nathanielmaeus/slider",
   },
   {
     title: "linter",
