@@ -19,6 +19,7 @@
   }
   .stack {
     margin-top: 5rem;
+    margin-bottom: 5rem;
   }
   .tags {
     margin-top: 1rem;
