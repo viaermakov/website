@@ -30,7 +30,7 @@
     justify-content: space-between;
     align-items: center;
     min-height: 100vh;
-    padding: 0 2rem 2rem 0;
+    padding: 0 2rem 2rem 2rem;
     transition: all 0.2s;
   }
 
@@ -78,7 +78,6 @@
   .contacts {
     display: flex;
   }
-
   @media screen and (max-width: 768px) {
     .layout {
       padding: 1rem;
