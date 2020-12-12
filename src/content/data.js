@@ -93,7 +93,7 @@ export const projects = [
 export const contacts = [
   {
     titleru: "Почта",
-    titleen: "Mail",
+    titleen: "E-mail",
     descru: "- предпочитаемый способ связи",
     descen: "- preferred method of communication",
     url: "mailto:slavaskainet@gmail.com",
