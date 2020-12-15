@@ -34,6 +34,15 @@
     transition: all 0.2s;
   }
 
+  @media (prefers-color-scheme: dark) {
+    .layout {
+      --theme-background-color: #212121;
+      --theme-text-color: #fff;
+      --theme-brand-color: #8b963d;
+      --theme-hover-color: #fff;
+    }
+  }
+
   .winter {
     --theme-background-color: #fff;
     --theme-text-color: #012339;
@@ -85,10 +94,7 @@
   }
 </style>
 
-<div
-  class="layout {$theme.toLowerCase()}"
-  style={`visibility: ${process.browser ? 'initial' : 'hidden'}`}>
-
+<div class="layout {$theme.toLowerCase()}">
   <Header {segment} />
   <Preloader {preloading} />
 
