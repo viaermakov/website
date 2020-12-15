@@ -76,8 +76,8 @@
 <main>
   <div class="container">
     <section class="text">
-      <h2>{l10n.hi}</h2>
-      <h2>{l10n.name}</h2>
+      <h3>{l10n.hi}</h3>
+      <h3>{l10n.name}</h3>
       <div>{l10n.short}</div>
       <div>
         {@html l10n.share}
