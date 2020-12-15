@@ -21,6 +21,14 @@
     %sapper.styles% %sapper.head%
   </head>
   <body>
+    <noscript>
+      <style type="text/css">
+        .layout {
+          visibility: initial !important;
+        }
+      </style>
+    </noscript>
+    
     <div id="app">%sapper.html%</div>
 
     %sapper.scripts%

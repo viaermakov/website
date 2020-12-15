@@ -31,7 +31,7 @@
     align-items: center;
     min-height: 100vh;
     padding: 0 2rem 2rem 2rem;
-    transition: all 0.2s;
+    transition: background 0.2s, color 0.2s;
   }
 
   .winter {
