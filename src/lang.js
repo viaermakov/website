@@ -1,7 +1,7 @@
 const ru = {
   "Viacheslav Ermakov": "Вячеслав Ермаков",
-  hi: "Привет!",
-  name: "Меня зовут Вячеслав Ермаков.",
+  hi: "Привет.",
+  name: "Я Вячеслав Ермаков.",
   short: "23 года. Frontend разработчик. Живу в Москве.",
   share:
     "Разрабатываю фронтенд для приложений в вебе. Иногда работаю с бекендом. Основной стек - React.",
@@ -26,8 +26,8 @@ const ru = {
 
 const en = {
   "Viacheslav Ermakov": "Viacheslav Ermakov",
-  hi: "Hello!",
-  name: "My name is Viacheslav Ermakov.",
+  hi: "Hello.",
+  name: "I'm Viacheslav Ermakov.",
   short: "23 y.o, Frontend engineer, living in Moscow.",
   share:
     "I am responsible for a front-end part of web applications. Now I am developing travel marketplace at <a rel='noreferrer' href='https://onetwotrip.com' target='_blank' alt='OneTwoTrip website'>OneTwoTrip</a>.",
@@ -41,7 +41,7 @@ const en = {
   connect: "How to get in touch with me",
   Projects: "Projects",
   Articles: "Articles",
-  logo: "Beautiful. Isn't it?",
+  logo: "Beautiful. Right?",
   oops:
     "As always, I broke something. <br> My best people deal with this problem.",
   errorMessage: "Error:",

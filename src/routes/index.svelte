@@ -14,12 +14,34 @@
     justify-content: space-between;
     flex-wrap: wrap;
   }
-  .text {
+
+  .section {
+    height: 100vh;
+    width: 100%;
+  }
+
+  .section:first-child {
+    height: calc(100vh - 173px);
     width: 70%;
   }
-  .stack {
-    margin-top: 5rem;
+  .addition {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
   }
+  .more {
+    margin-bottom: 2rem;
+  }
+
+  .short {
+    font-size: 2rem;
+    margin-top: 1rem;
+  }
+
+  .base-info {
+    margin-top: 4rem;
+  }
+
   .tags {
     margin-top: 1rem;
     max-width: 520px;
@@ -46,22 +68,36 @@
     }
   }
 
-  @media screen and (max-width: 768px) {
-    .text {
+  @media screen and (max-width: 1268px) {
+    .text,
+    section {
       width: 100%;
     }
 
-    .avatar {
+    .section:first-child {
       width: 100%;
-      height: auto;
+      height: 100%;
     }
 
-    .stack {
+    .addition {
+      margin-top: 2rem;
+      flex-direction: column-reverse;
+    }
+
+    .stack,
+    .base-info {
       margin-top: 2rem;
     }
 
     .container {
       margin-top: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .avatar {
+      width: 100%;
+      height: auto;
     }
   }
 </style>
@@ -73,22 +109,28 @@
   <meta property="og:url" content="https://viaermakov.com" />
   <meta property="og:description" content="Personal website" />
 </svelte:head>
-<main>
-  <div class="container">
-    <section class="text">
-      <h3>{l10n.hi}</h3>
-      <h3>{l10n.name}</h3>
-      <div>{l10n.short}</div>
-      <div>
-        {@html l10n.share}
-        <div>
+
+<main class="container">
+  <section class="section text">
+    <h1>{l10n.hi} {l10n.name}</h1>
+    <p class="short">{l10n.short}</p>
+    <div class="base-info">
+      {@html l10n.share}
+      <div class="more">
+        <p>
           {@html l10n.more}
+        </p>
+        <p>
           {@html l10n.but}
-        </div>
+        </p>
       </div>
-      <div>{l10n.open}</div>
+    </div>
+    <div>{l10n.open}</div>
+  </section>
+  <section class=" addition">
+    <div>
       <div class="stack">
-        <h5>{l10n.tags}</h5>
+        <h4>{l10n.tags}</h4>
         <div class="tags">
           {#each skills as item, idx}
             <a
@@ -102,7 +144,21 @@
           {/each}
         </div>
       </div>
-    </section>
+      <div class="contacts">
+        <h4>{l10n.connect}</h4>
+        <div class="list">
+          {#each contacts as contact}
+            <span><a
+                class="project-link"
+                rel="noreferrer"
+                target="_blink"
+                href={contact.url}>
+                {contact[`title${$lang}`]}
+              </a>{contact[`desc${$lang}`] || ''}</span>
+          {/each}
+        </div>
+      </div>
+    </div>
     <Tooltip text={l10n.photo1}>
       <img
         src="https://res.cloudinary.com/dk4mytxmk/image/upload/v1595920880/website/1233_fk2hoq.jpg"
@@ -112,21 +168,5 @@
         height="550"
         loading="lazy" />
     </Tooltip>
-  </div>
+  </section>
 </main>
-<footer>
-  <div class="contacts">
-    <h5>{l10n.connect}</h5>
-    <div class="list">
-      {#each contacts as contact}
-        <span><a
-            class="project-link"
-            rel="noreferrer"
-            target="_blink"
-            href={contact.url}>
-            {contact[`title${$lang}`]}
-          </a>{contact[`desc${$lang}`] || ''}</span>
-      {/each}
-    </div>
-  </div>
-</footer>
