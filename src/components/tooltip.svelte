@@ -1,4 +1,6 @@
 <script>
+  import { fade } from 'svelte/transition';
+
   export let text;
   const WIDTH = 160;
   $: positionX = 0;
@@ -8,13 +10,13 @@
   function handleMouseOver(e) {
     visible = true;
     const currentWidth = document.documentElement.clientWidth;
-    const clientXWithWidth = e.clientX + WIDTH;
-    
+    const clientXWithWidth = e.pageX + WIDTH;
+
     positionX =
       currentWidth < clientXWithWidth
         ? e.clientX - (clientXWithWidth - currentWidth)
         : e.clientX;
-    positionY = e.clientY;
+    positionY = e.pageY;
   }
 
   function handleMouseOut() {
@@ -23,6 +25,9 @@
 </script>
 
 <style>
+  .wrapper {
+    width: fit-content;
+  }
   .container {
     position: absolute;
     max-width: 160px;
@@ -34,10 +39,14 @@
   }
 </style>
 
-<div on:mouseover={handleMouseOver} on:mouseleave={handleMouseOut}>
+<div
+  class="wrapper"
+  on:mouseover={handleMouseOver}
+  on:mouseleave={handleMouseOut}>
   <slot />
   {#if visible}
     <div
+      transition:fade={{ duration: 200 }}
       class="container"
       style={`top: ${positionY + 12}px; left: ${positionX}px;`}>
       {text}
