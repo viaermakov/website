@@ -19,8 +19,8 @@
 
 body {
   margin: 0;
-  font-family: Inter, serif;
-  font-size: 24px;
+  font-family: Inconsolata, serif;
+  font-size: 21px;
   line-height: 1.6;
 }
 
@@ -31,30 +31,27 @@ h4,
 h5,
 h6 {
   color: var(--theme-brand-color);
-  font-family: system-ui, sans-serif;
+  font-family: Inconsolata, system-ui, sans-serif;
   font-weight: 700;
   line-height: 1.2;
   margin: 0;
   transition: background 0.2s color 0.2s;
 }
 
-h1 {
-  font-size: 3.5em;
+h1, h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.2rem;
+  margin-top: 2.2rem;
 }
 
-h2 {
-  margin-bottom: 1.2rem;
+h3 {
+  margin-bottom: 1.3rem;
   margin-top: 2.2rem;
   font-size: 1.8em;
 }
 
-h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-h4 {
-  font-size: 1.4em;
+h3, h4 {
+  font-size: 1.3rem;
   margin-bottom: 1rem;
 }
 
@@ -64,6 +61,14 @@ h5 {
 
 h6 {
   font-size: 1.2em;
+}
+
+button {
+  font-family: Inconsolata, system-ui, sans-serif;
+}
+
+p {
+  margin: 1.5rem 0 ;
 }
 
 ol,

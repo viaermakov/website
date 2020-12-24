@@ -16,7 +16,7 @@
     align-items: center;
     margin: 0 auto;
     max-width: 1600px;
-    padding: 2rem 0;
+    padding: 1rem 0;
     width: 100%;
   }
 
@@ -29,7 +29,6 @@
 
   .text {
     margin-left: 0.6rem;
-    font-family: system-ui;
     font-weight: bold;
   }
 

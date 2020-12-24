@@ -82,18 +82,25 @@
   <div class="main">
     <div class="avatar">
       <Tooltip text={l10n.photo2}>
-        <img
-          src="https://res.cloudinary.com/dk4mytxmk/image/upload/v1595920880/website/1233_fk2hoq.jpg"
-          alt="This is my photo"
-          loading="lazy"
-          width="250"
-          height="325" />
+        <picture>
+          <source
+            srcset="https://res.cloudinary.com/dk4mytxmk/image/upload/v1608819901/website/1233_mh0yoy.webp"
+            type="image/webp" />
+          <source
+            srcset="https://res.cloudinary.com/dk4mytxmk/image/upload/v1595920880/website/1233_fk2hoq.jpg"
+            type="image/jpg" />
+          <img
+            src="https://res.cloudinary.com/dk4mytxmk/image/upload/v1608819901/website/1233_mh0yoy.webp"
+            alt="This is my photo"
+            width="250"
+            height="325"
+            loading="lazy" />
+        </picture>
       </Tooltip>
     </div>
     <section class="base-info">
       <p>
-        Люблю писать код (
-        <a alt="link to my projects" rel="prefetch" href="projects">
+        Люблю писать код (<a alt="link to my projects" rel="prefetch" href="projects">
           по этой ссылке
         </a>
         и на Github пара небольших проектов) и знакомиться с чем-то новым
@@ -116,7 +123,7 @@
       </p>
     </section>
   </div>
-  <h4>Чем занимался?</h4>
+  <h4>Мой опыт</h4>
   <div class="job">
     <div class="company">
       <a
@@ -133,8 +140,7 @@
       <div class="stack">
         {#each ottSkills as item, idx}
           <a class="skill" target="_blink" href={item.url} alt={item.title}>
-            {item.title}
-            {#if idx !== ottSkills.length - 1},&nbsp;{/if}
+            {item.title}{#if idx !== ottSkills.length - 1},&nbsp;{/if}
           </a>
         {/each}
       </div>
@@ -218,8 +224,7 @@
       <div class="stack">
         {#each alfaSkills as item, idx}
           <a class="skill" target="_blink" href={item.url} alt={item.title}>
-            {item.title}
-            {#if idx !== alfaSkills.length - 1},&nbsp;{/if}
+            {item.title}{#if idx !== alfaSkills.length - 1},&nbsp;{/if}
           </a>
         {/each}
       </div>

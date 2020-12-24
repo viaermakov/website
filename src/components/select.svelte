@@ -18,6 +18,7 @@
     text-align: center;
     border: 1px solid var(--theme-brand-color);
     border-radius: 4px;
+    font-size: 0.9rem;
   }
 
   .select {

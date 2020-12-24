@@ -28,7 +28,6 @@
     flex: 1;
     justify-content: flex-end;
     margin: 0 1rem;
-    font-family: system-ui;
     font-weight: bold;
   }
 
@@ -46,7 +45,6 @@
     text-decoration: underline;
     cursor: pointer;
     color: var(--background-light-theme);
-    font-family: system-ui;
     font-weight: bold;
   }
 

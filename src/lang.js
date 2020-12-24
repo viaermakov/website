@@ -3,14 +3,14 @@ const ru = {
   hi: "Привет.",
   name: "Я Вячеслав Ермаков.",
   short: "23 года. Frontend разработчик. Живу в Москве.",
+  briefly: "Кратко",
   share:
     "Разрабатываю фронтенд для приложений в вебе. Иногда работаю с бекендом. Основной стек - React.",
   more:
     "Я люблю попробовать что-то новое. Например, этот сайт написан на <a rel='noreferrer' href='https://svelte.dev' target='_blank' alt='Svelte website'>Svelte</a>. Увлекаюсь чтением различных статей и книг как для изучения фронтенда, так и для разработки приложений в целом.",
   but:
     "Больше о технологиях, инструментах и о моем опыте работы можно узнать <a href='about' alt='Link to about page'>здесь</a>.",
-  open:
-    "Всегда открыт к предложениям и интересным вакансиям.",
+  open: "Всегда открыт к предложениям и интересным вакансиям.",
   tags: "Эти теги помогут понять, что я знаю и использовал:",
   connect: "Как связаться со мной",
   Projects: "Проекты",
@@ -27,6 +27,7 @@ const ru = {
 const en = {
   "Viacheslav Ermakov": "Viacheslav Ermakov",
   hi: "Hello.",
+  briefly: "Briefly",
   name: "I'm Viacheslav Ermakov.",
   short: "23 y.o, Frontend engineer, living in Moscow.",
   share:

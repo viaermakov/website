@@ -9,10 +9,10 @@
   }
 
   .tag {
-    padding: 0.25rem 0.5rem;
+    padding: 0.3rem 0.5rem;
     margin: 0 0.25rem;
     border-radius: 0.25rem;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     background-color: var(--theme-brand-color);
   }
 

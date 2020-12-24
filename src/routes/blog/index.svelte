@@ -24,14 +24,24 @@
 
 <style>
   .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     margin-top: 3rem;
   }
 
   .article {
     line-height: 1.7rem;
   }
+  .post-item {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+  }
 
   .post-item-date {
+    display: flex;
+    align-items: center;
     min-width: 140px;
     margin-right: 1rem;
     color: #aaa;
@@ -43,10 +53,6 @@
     .post-item-date {
       min-width: 90px;
     }
-  }
-  .post-item {
-    display: flex;
-    margin: 1rem 0;
   }
 
   p {
