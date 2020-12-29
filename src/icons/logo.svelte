@@ -34,6 +34,16 @@
     animator(INIT_PATH, path);
   };
 
+  const onMouseEnter = () => {
+    CONFIG.size = 300;
+    CONFIG.growth = 2;
+  };
+
+  const onMouseLeave = () => {
+    CONFIG.size = 500;
+    CONFIG.growth = 5;
+  };
+
   onMount(async () => {
     timer = setInterval(changeBlob, 1000);
   });
@@ -71,6 +81,8 @@
 </style>
 
 <svg
+  on:mouseenter={onMouseEnter}
+  on:mouseleave={onMouseLeave}
   on:click={changeBlob}
   viewBox="0 0 500 500"
   id="logo"

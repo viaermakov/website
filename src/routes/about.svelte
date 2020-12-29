@@ -43,6 +43,10 @@
   p {
     margin: 0;
   }
+  h3 {
+    margin-bottom: 2rem;
+    margin-top: 0;
+  }
   h4 {
     margin: 2rem 0;
   }

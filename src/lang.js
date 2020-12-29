@@ -5,7 +5,7 @@ const ru = {
   short: "23 года. Frontend разработчик. Живу в Москве.",
   briefly: "Кратко",
   share:
-    "Разрабатываю фронтенд для приложений в вебе. Иногда работаю с бекендом. Основной стек - <a rel='noreferrer' href='https://reactjs.org/' target='_blank' alt='React website'>React</a>.",
+    "Разрабатываю фронтенд для приложений в вебе. Иногда работаю с бекендом. Основной стек - <a rel='noreferrer' href='https://reactjs.org/' target='_blank' alt='React website'>React</a> приложения.",
   more:
     "Я люблю попробовать что-то новое. Например, этот сайт написан на <a rel='noreferrer' href='https://svelte.dev' target='_blank' alt='Svelte website'>Svelte</a>. Увлекаюсь чтением различных статей и книг как для изучения фронтенда, так и для разработки приложений в целом.",
   but:
