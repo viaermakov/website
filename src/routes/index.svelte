@@ -116,11 +116,8 @@
         <source
           srcset="https://res.cloudinary.com/dk4mytxmk/image/upload/v1608819901/website/1233_mh0yoy.webp"
           type="image/webp" />
-        <source
-          srcset="https://res.cloudinary.com/dk4mytxmk/image/upload/v1595920880/website/1233_fk2hoq.jpg"
-          type="image/jpg" />
         <img
-          src="https://res.cloudinary.com/dk4mytxmk/image/upload/v1608819901/website/1233_mh0yoy.webp"
+          src="https://res.cloudinary.com/dk4mytxmk/image/upload/v1608819901/website/1233_fk2hoq.jpg"
           alt="This is my photo"
           class="avatar"
           width="405"
