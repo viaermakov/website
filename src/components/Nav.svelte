@@ -39,7 +39,7 @@
   }
 
   .switcher {
-    border: none;
+    border: 1px solid transparent;
     background: none;
     font-size: 1.2rem;
     text-decoration: underline;

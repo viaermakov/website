@@ -3,6 +3,8 @@
   import { generator } from "../generateLogo.js";
   import anime from "animejs";
 
+  export let isActive = false;
+
   const INIT_PATH =
     "M387.5,333Q304,416,187,398.5Q70,381,70.5,250.5Q71,120,187.5,102Q304,84,387.5,167Q471,250,387.5,333Z";
   const CONFIG = {
@@ -48,6 +50,14 @@
     timer = setInterval(changeBlob, 1000);
   });
 
+  $: {
+    if (isActive) {
+      onMouseEnter();
+    } else {
+      onMouseLeave();
+    }
+  }
+
   onDestroy(() => {
     clearInterval(timer);
   });
@@ -58,6 +68,7 @@
     transition: all;
     animation: slidein 5s linear infinite;
     margin-left: -16px;
+    cursor: pointer;
   }
 
   @media screen and (max-width: 768px) {

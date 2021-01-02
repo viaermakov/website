@@ -1,11 +1,12 @@
 <script>
   import Nav from "./Nav.svelte";
   import Logo from "../icons/logo.svelte";
-  import { theme, lang } from "../store";
+  import { lang } from "../store";
   import { translates } from "../lang";
   import Tooltip from "../components/tooltip.svelte";
 
   export let segment;
+  let isActive = false;
 
   $: l10n = translates[$lang];
 </script>
@@ -53,9 +54,13 @@
 <header>
   <div class="logo">
     <Tooltip text={l10n.logo}>
-      <Logo />
+      <Logo isActive={isActive}/>
     </Tooltip>
-    <a class={segment === undefined ? 'selected text' : 'text'} href=".">
+    <a
+      on:mouseenter={() => (isActive = true)}
+      on:mouseleave={() => (isActive = false)}
+      class={segment === undefined ? 'selected text' : 'text'}
+      href=".">
       {l10n['Viacheslav Ermakov']}
     </a>
   </div>
