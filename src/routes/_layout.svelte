@@ -3,6 +3,7 @@
   import Header from "../components/Header.svelte";
   import Preloader from "../components/preloader.svelte";
   import { theme } from "../store";
+  import Nav from "../components/Nav.svelte";
 
   const { preloading } = stores();
   export let segment;
@@ -56,7 +57,7 @@
   }
 
   .dark {
-    --theme-background-color: #212121;
+    --theme-background-color: #0e0e0e;
     --theme-text-color: #fff;
     --theme-brand-color: #8b963d;
     --theme-hover-color: #fff;
@@ -95,4 +96,6 @@
   <main>
     <slot />
   </main>
+
+  <Nav {segment} />
 </div>

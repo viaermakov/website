@@ -92,20 +92,20 @@ export const projects = [
 
 export const contacts = [
   {
-    titleru: "Почта",
-    titleen: "E-mail",
+    titleru: "почта",
+    titleen: "e-mail",
     descru: "- предпочитаемый способ связи",
     descen: "- preferred method of communication",
     url: "mailto:slavaskainet@gmail.com",
   },
   {
-    titleru: "Гитхаб",
-    titleen: "My github",
+    titleru: "гитхаб",
+    titleen: "github",
     url: "https://github.com/nathanielmaeus",
   },
   {
-    titleru: "Телеграм",
-    titleen: "My telegram",
+    titleru: "телеграм",
+    titleen: "telegram",
     url: "https://t.me/nathaniel_maeus",
   },
 ];

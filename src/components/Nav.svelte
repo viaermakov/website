@@ -23,19 +23,24 @@
 
 <style>
   nav {
-    align-items: center;
+    align-items: flex-end;
     display: flex;
     flex: 1;
+    width: 100%;
     justify-content: flex-end;
     margin: 0 1rem;
     font-weight: bold;
+  }
+
+  div {
+    display: flex;
   }
 
   a {
     text-decoration: none;
     display: block;
     position: relative;
-    margin-left: 20px;
+    margin: 0 20px;
   }
 
   .switcher {
@@ -74,16 +79,18 @@
       {l10n['Projects']}
     </a>
   </div> -->
-  <div>
+  <!-- <div>
     <a rel="prefetch" class={segment === 'blog' ? 'selected' : ''} href="blog">
       {l10n['Articles']}
     </a>
+  </div> -->
+  <div>
+    <Select onChange={handleSelectTheme} value={$theme} />
+    <button
+      class="switcher switcher-lang"
+      aria-label="switch lang"
+      on:click={handleChangeLang}>
+      {$lang}
+    </button>
   </div>
 </nav>
-<Select onChange={handleSelectTheme} value={$theme} />
-<button
-  class="switcher switcher-lang"
-  aria-label="switch lang"
-  on:click={handleChangeLang}>
-  {$lang}
-</button>

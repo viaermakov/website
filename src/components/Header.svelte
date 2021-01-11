@@ -15,6 +15,7 @@
   header {
     display: flex;
     align-items: center;
+    justify-content: center;
     margin: 0 auto;
     max-width: 1600px;
     padding: 1rem 0;
@@ -64,5 +65,5 @@
       {l10n['Viacheslav Ermakov']}
     </a>
   </div>
-  <Nav {segment} />
+  <!-- <Nav {segment} /> -->
 </header>
