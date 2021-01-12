@@ -2,11 +2,11 @@
   import Select from "../components/select.svelte";
   import { THEMES, LANGUAGES } from "../consts";
   import { theme, lang } from "../store";
-  // import { translates } from "../lang";
+  import { translates } from "../lang";
 
-  // export let segment;
+  export let segment;
 
-  // $: l10n = translates[$lang];
+  $: l10n = translates[$lang];
 
   const handleSelectTheme = (value) => {
     const newTheme = THEMES[value];
@@ -36,12 +36,12 @@
     display: flex;
   }
 
-  /* a {
+  a {
     text-decoration: none;
     display: block;
     position: relative;
     margin: 0 20px;
-  } */
+  }
 
   .switcher {
     border: 1px solid transparent;
@@ -79,11 +79,11 @@
       {l10n['Projects']}
     </a>
   </div> -->
-  <!-- <div>
+  <div>
     <a rel="prefetch" class={segment === 'blog' ? 'selected' : ''} href="blog">
       {l10n['Articles']}
     </a>
-  </div> -->
+  </div>
   <div>
     <Select onChange={handleSelectTheme} value={$theme} />
     <button
