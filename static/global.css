@@ -14,7 +14,7 @@
 }
 
 *:focus {
-  outline-color: var(--theme-brand-color);
+    outline: solid var(--theme-brand-color) 2px;
 }
 
 body {

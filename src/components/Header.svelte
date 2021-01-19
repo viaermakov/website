@@ -65,5 +65,5 @@
       {l10n['Viacheslav Ermakov']}
     </a>
   </div>
-  <!-- <Nav {segment} /> -->
+  <Nav {segment} />
 </header>

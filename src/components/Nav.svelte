@@ -80,7 +80,7 @@
     </a>
   </div> -->
   <div>
-    <a rel="prefetch" class={segment === 'blog' ? 'selected' : ''} href="blog">
+    <a rel="prefetch" style='display: none' class={segment === 'blog' ? 'selected' : ''} href="blog">
       {l10n['Articles']}
     </a>
   </div>

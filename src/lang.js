@@ -33,6 +33,7 @@ const ru = {
   oops:
     "Я как всегда что-то сломал. <br> Мои лучшие люди занимаются этой проблемой.",
   errorMessage: "Ошибка:",
+  footer: 'Этот сайт не собирает ваши данные. 2021'
 };
 
 const en = {
@@ -57,6 +58,7 @@ const en = {
   oops:
     "As always, I broke something. <br> My best people deal with this problem.",
   errorMessage: "Error:",
+  footer: 'This site does not collect your information. 2021'
 };
 
 export const translates = { en, ru };

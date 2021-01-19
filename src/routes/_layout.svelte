@@ -3,9 +3,12 @@
   import Header from "../components/Header.svelte";
   import Preloader from "../components/preloader.svelte";
   import { theme } from "../store";
-  import Nav from "../components/Nav.svelte";
-
+  import { lang } from "../store";
+  import { translates } from "../lang";
+  
   const { preloading } = stores();
+  $: l10n = translates[$lang];
+
   export let segment;
 
   const MEDIA = "(prefers-color-scheme: dark)";
@@ -20,6 +23,20 @@
     }
   }
 </script>
+
+<div
+  class="layout {$theme.toLowerCase()}"
+  style={`visibility: ${process.browser ? "initial" : "hidden"}`}
+>
+  <Header {segment} />
+  <Preloader {preloading} />
+
+  <main>
+    <slot />
+  </main>
+
+  <footer>{l10n.footer}</footer>
+</div>
 
 <style>
   .layout {
@@ -79,23 +96,16 @@
   .contacts {
     display: flex;
   }
+
+  footer {
+    text-align: right;
+    width: 100%;
+    margin-top: 4rem;
+    font-size: 0.8rem;
+  }
   @media screen and (max-width: 768px) {
     .layout {
       padding: 1rem;
     }
   }
 </style>
-
-<div
-  class="layout {$theme.toLowerCase()}"
-  style={`visibility: ${process.browser ? 'initial' : 'hidden'}`}>
-
-  <Header {segment} />
-  <Preloader {preloading} />
-
-  <main>
-    <slot />
-  </main>
-
-  <Nav {segment} />
-</div>
