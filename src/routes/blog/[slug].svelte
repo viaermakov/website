@@ -16,6 +16,30 @@
   const shortMessage = `${post.html.slice(3, 100)}...`;
 </script>
 
+<svelte:head>
+  <title>{post.title}</title>
+  <meta property="og:title" content={post.title} />
+  <meta property="og:type" content="website" />
+  <meta
+    property="og:url"
+    content={`https://viaermakov.com/blog/${post.slug}`}
+  />
+  <meta property="og:description" content={shortMessage} />
+  <meta property="og:image" content={post.cover} />
+</svelte:head>
+
+<header>
+  <p>{post.printDate} ~ {post.printReadingTime}</p>
+  <h2>{post.title}</h2>
+  <div class="cover" style={`background-image: url(${post.cover})`} />
+</header>
+<div class="container">
+  <pre />
+  <article class="content">
+    {@html post.html}
+  </article>
+</div>
+
 <style>
   header {
     text-align: center;
@@ -44,7 +68,10 @@
     bottom: 0;
     height: 712px;
     border-radius: 20px;
-    background: linear-gradient(transparent -30%, var(--theme-background-color));
+    background: linear-gradient(
+      transparent -30%,
+      var(--theme-background-color)
+    );
   }
 
   .content {
@@ -55,13 +82,12 @@
 
   :global(.content pre, .content img) {
     position: relative;
-    width: 120%;
-    right: 10%;
+    width: 100%;
+    right: 0%;
     margin: 1rem 0;
   }
 
   @media screen and (max-width: 768px) {
- 
     .cover {
       display: none;
     }
@@ -77,26 +103,3 @@
     margin-top: 2.2rem;
   }
 </style>
-
-<svelte:head>
-  <title>{post.title}</title>
-  <meta property="og:title" content={post.title} />
-  <meta property="og:type" content="website" />
-  <meta
-    property="og:url"
-    content={`https://viaermakov.com/blog/${post.slug}`} />
-  <meta property="og:description" content={shortMessage} />
-  <meta property="og:image" content={post.cover} />
-</svelte:head>
-
-<header>
-  <p>{post.printDate} ~ {post.printReadingTime}</p>
-  <h2>{post.title}</h2>
-  <div class="cover" style={`background-image: url(${post.cover})`} />
-</header>
-<div class="container">
-  <pre />
-  <article class="content">
-    {@html post.html}
-  </article>
-</div>
