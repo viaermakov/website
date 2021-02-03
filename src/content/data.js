@@ -106,6 +106,6 @@ export const contacts = [
   {
     titleru: "телеграм",
     titleen: "telegram",
-    url: "https://t.me/nathaniel_maeus",
+    url: "https://t.me/qnathaniel",
   },
 ];
