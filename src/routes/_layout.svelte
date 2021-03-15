@@ -62,7 +62,7 @@
   .light {
     --theme-background-color: #fff;
     --theme-text-color: #000;
-    --theme-brand-color: #8b963d;
+    --theme-brand-color: #000;
     --theme-hover-color: #fff;
   }
 
@@ -76,8 +76,8 @@
   .dark {
     --theme-background-color: #0e0e0e;
     --theme-text-color: #fff;
-    --theme-brand-color: #8b963d;
-    --theme-hover-color: #fff;
+    --theme-brand-color: #fff;
+    --theme-hover-color: #000;
   }
 
   .solarized {
