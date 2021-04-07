@@ -18,7 +18,7 @@
   <meta property="og:description" content="Обо мне" />
 </svelte:head>
 
-<main>
+<section>
   <h4>Кто я?</h4>
   <div class="main">
     <div class="avatar">
@@ -62,56 +62,49 @@
       </p>
       <h4>Образование</h4>
       <p>
-        Поступил в НИТУ МИСиС на информатику. Закончил с отличием. Также
-        закончил магистратуру в Информационных системах, получил опыт машинного
-        обучения и анализа данных.
+        Учился в НИТУ МИСиС на направлении Информатика и вычислительная техника.
+        Закончил с отличием. Также закончил магистратуру в Информационных
+        системах, получил опыт машинного обучения и анализа данных.
       </p>
     </section>
   </div>
   <h4>Мой опыт</h4>
-  <div class="job">
-    <div class="company">
-      <a
-        class="company-name"
-        alt="Link to Delivery Hero website"
-        href="https://www.deliveryhero.com"
-      >
-        Delivery Hero
-      </a>
-      <div>Software engineer</div>
-      <div class="company-period">март 2020 — Сейчас</div>
-      <span>
-        <DHIcon />
-      </span>
-      <div class="stack">
-        {#each ottSkills as item, idx}
-          <a class="skill" target="_blink" href={item.url} alt={item.title}>
-            {item.title}{#if idx !== ottSkills.length - 1},&nbsp;{/if}
-          </a>
-        {/each}
+  <div>
+    <div class="job">
+      <div class="company">
+        <a
+          class="company-name"
+          alt="Link to Delivery Hero website"
+          href="https://www.deliveryhero.com"
+        >
+          &#127465;&#127466; Delivery Hero
+        </a>
+        <div>Software engineer</div>
+        <div class="company-period">март 2020 — Сейчас</div>
+        <span>
+          <DHIcon />
+        </span>
+        <div class="stack">
+          {#each ottSkills as item, idx}
+            <a class="skill" target="_blink" href={item.url} alt={item.title}>
+              {item.title}{#if idx !== ottSkills.length - 1},&nbsp;{/if}
+            </a>
+          {/each}
+        </div>
       </div>
-    </div>
-    <div class="description">
-      <div>
-        <h3>
-          <a
-            class="company-name"
-            alt="Link to Delivery Hero website"
-            href="https://www.deliveryhero.com"
-          >
-            Delivery Hero
-          </a>
-        </h3>
-        <h5>Чем занимаюсь:</h5>
-        <ul class="results">
-          Будет позже...
-        </ul>
-        
+      <div class="description">
+        <div>
+          <h3 class="job-title">
+            <a
+              class="company-name"
+              alt="Link to Delivery Hero website"
+              href="https://www.deliveryhero.com"
+            >
+              &#127465;&#127466; Delivery Hero
+            </a>
+          </h3>
+        </div>
       </div>
-      <h5>Что сделал:</h5>
-        <ul class="results">
-          Обязательно все напишу...
-        </ul>
     </div>
     <div class="job">
       <div class="company">
@@ -120,7 +113,7 @@
           alt="Link to OneTwoTrip website"
           href="https://www.onetwotrip.com"
         >
-          OneTwoTrip
+          &#127479;&#127482; OneTwoTrip
         </a>
         <div>Frontend engineer</div>
         <div class="company-period">Июль 2018 — Сейчас</div>
@@ -137,42 +130,42 @@
       </div>
       <div class="description">
         <div>
-          <h3>
+          <h3 class="job-title">
             <a
               class="company-name"
               alt="link to OneTwoTrip website"
               href="https://www.onetwotrip.com"
             >
-              OneTwoTrip
+              &#127479;&#127482; OneTwoTrip
             </a>
           </h3>
           <p>
-            Работаю в команде Авиа, которая отвечает за весь флоу покупки и
+            Работал в команде Авиа, которая отвечает за весь флоу покупки и
             возвратов авиабилетов. Приложение включает в себя страницы поиска и
             фильтров, а также страницы оформления и оплаты билетов. Проект
-            большой и с различной сложной логикой. Пишу в основном на React и
+            большой и с различной сложной логикой. Писал в основном на React и
             Redux.
           </p>
-          <h5>Чем занимаюсь:</h5>
+          <h5>Чем занимался:</h5>
           <ul class="results">
             <li>
-              Активно разрабатываю новые фичи для продукта совместно с
-              дизайнерами (Zeplin), использую A/B тестирование фич.
+              Активно разрабатывал новые фичи для продукта совместно с
+              дизайнерами (Zeplin), использовал A/B тестирование фич.
             </li>
             <li>
-              Сражаюсь с легаси. Поднимаю старые библиотеки, в том числе значимо
+              Сражался с легаси. Поднимал старые библиотеки, в том числе значимо
               архитектурные, например React-Router(v1 → v4), Webpack.
             </li>
             <li>
-              Чиню баги, от некрасивой кнопки до неправильной гидрации Реакта
+              Чинил баги, от некрасивой кнопки до неправильной гидрации Реакта
               при SSR.
             </li>
-            <li>Пишу и чиню юнит тесты, E2E-тесты на Jest и Puppeteer.</li>
+            <li>Писал и чинил юнит тесты и E2E-тесты на Jest и Puppeteer.</li>
             <li>
-              Пишу компоненты для Реакт библиотеки не только для Авиа, но и для
+              Писал компоненты для библиотеки компонентов не только для Авиа, но и для
               всех продуктов OneTwoTrip.
             </li>
-            <li>Иногда собеседую frontend-разработчиков.</li>
+            <li>Иногда собеседовал frontend-разработчиков.</li>
           </ul>
         </div>
         <h5>Что сделал:</h5>
@@ -183,7 +176,7 @@
             и с точки зрения разработки.
           </li>
           <li>
-            Оптимизировал бандл на Webpack на 30%. Начиная от апгрейда старой
+            Оптимизировал бандл на Webpack на 30%, начиная от апгрейда старой
             версии(v2→v4) до разделения бандла на чанки.
           </li>
           <li>
@@ -191,11 +184,11 @@
             кодовой базы.
           </li>
           <li>
-            Перенес часть проекта на react hooks, чтобы новичкам в будущем было
+            Перенес часть проекта на react hooks, чтобы новым разработчикам было
             легче.
           </li>
           <li>
-            Внедрил различные практики в CI. Например, затащил в проекты
+            Успел поработать с CI. Например, затащил в проекты
             Typescript и Eslint, добавил в пайплайны для Jenkins сборок.
           </li>
         </ul>
@@ -208,7 +201,7 @@
           alt="link to AlfaStrahovanie website"
           href="https://www.alfastrah.ru/"
         >
-          АльфаСтрахование
+          &#127479;&#127482; АльфаСтрахование
         </a>
         <div class="company-period">Июль 2017 — декабрь 2018</div>
         <span>
@@ -224,7 +217,7 @@
       </div>
       <div class="description">
         <div>
-          <h3>
+          <h3 class="job-title">
             <a
               alt="link to AlfaStrahovanie website"
               class="company-name"
@@ -234,7 +227,7 @@
             </a>
           </h3>
           <p>
-            На 3 курсе стал искать работу. Получил оффер в
+            На 3 курсе университета получил оффер в
             <a
               href="https://www.alfastrah.ru/"
               alt="link to AlfaStrahovanie website"
@@ -284,13 +277,13 @@
         <div class="company-period">2016 — 2017</div>
       </div>
       <div class="description">
-        <h3>Freelance</h3>
+        <h3 class="job-title">Freelance</h3>
         Фриланс различных проектов и лэндингов. Познакомился с React и стал писать
         приложения на нем для нескольких заказчиков.
       </div>
     </div>
   </div>
-</main>
+</section>
 
 <style>
   .job,
@@ -298,13 +291,14 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row-reverse;
+  }
+
+  .main {
     margin: 2rem 0;
   }
-  .later {
-    margin-bottom: 25rem;
-  }
-  .job {
-    margin: 2rem 0;
+
+  .job:not(:first-child) {
+    margin: 8rem 0 2rem 0;
   }
   .company span {
     margin-top: 2rem;
@@ -344,7 +338,13 @@
     .job,
     .main {
       flex-direction: column;
-      margin: 2rem 0;
+    }
+
+    .job-title {
+      display: none;
+    }
+    .job:not(:first-child) {
+      margin: 3rem 0;
     }
     .description,
     .base-info {

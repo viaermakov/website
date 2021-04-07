@@ -103,9 +103,6 @@
     padding-top: 2rem;
     margin-top: 1rem;
     padding-bottom: 2rem;
-    border-top: 6px solid var(--theme-brand-color);
-    border-bottom: 6px solid var(--theme-brand-color);
-    border-radius: 2px;
   }
 
   .section {
@@ -144,8 +141,6 @@
       padding-top: 0;
       margin-top: 0;
       padding-bottom: 0;
-      border-top: none;
-      border-bottom: none;
     }
     .avatar {
       width: 100%;

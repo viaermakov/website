@@ -2,7 +2,7 @@ const ru = {
   "Viacheslav Ermakov": "Вячеслав Ермаков",
   hi: "Привет.",
   name: "Я Вячеслав Ермаков.",
-  short: "23 года. Frontend разработчик. Живу в <strike>Москве</strike> -> Берлине.",
+  short: "24 года. Frontend разработчик. Живу в &#127479;&#127482; <strike>Москве</strike> -> &#127465;&#127466; Берлине.",
   briefly: "Кратко",
   share: `Разрабатываю фронтенд для приложений в вебе. 
   Иногда работаю с бекендом. Основной стек - <a rel='noreferrer' href='https://reactjs.org/' target='_blank' alt='React website'>React</a> приложения. 
@@ -46,7 +46,7 @@ const en = {
   hi: "Hello.",
   briefly: "Briefly",
   name: "I'm Viacheslav Ermakov.",
-  short: "23 y.o, Frontend engineer, living in Moscow.",
+  short: "24 y.o, Frontend engineer, living in &#127479;&#127482; <strike>Moscow</strike> -> &#127465;&#127466; Berlin.",
   share:
     `I am responsible for the front-end part of web applications. 
     Now I am developing interfaces at <strike>
