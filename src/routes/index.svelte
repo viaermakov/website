@@ -100,7 +100,6 @@
   .container {
     display: flex;
     flex-wrap: wrap;
-    padding-top: 2rem;
     margin-top: 1rem;
     padding-bottom: 2rem;
   }

@@ -75,7 +75,7 @@
 
   .dark {
     --theme-background-color: #0e0e0e;
-    --theme-text-color: #fff;
+    --theme-text-color: #e2e1e1;
     --theme-brand-color: #fff;
     --theme-hover-color: #000;
   }

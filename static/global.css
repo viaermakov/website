@@ -14,12 +14,12 @@
 }
 
 *:focus {
-    outline: solid var(--theme-brand-color) 2px;
+  outline: solid var(--theme-brand-color) 2px;
 }
 
 body {
   margin: 0;
-  font-family: Inconsolata, serif;
+  font-family: "Trebuchet MS", Roboto, system-ui, serif;
   font-size: 20px;
   line-height: 1.6;
 }
@@ -31,7 +31,7 @@ h4,
 h5,
 h6 {
   color: var(--theme-brand-color);
-  font-family: -apple-system, system-ui, sans-serif;
+  font-family: Roboto, -apple-system, system-ui, sans-serif;
   font-weight: 700;
   line-height: 1.2;
   margin: 0;
@@ -56,7 +56,8 @@ h3 {
   font-size: 1.8em;
 }
 
-h3, h4 {
+h3,
+h4 {
   font-size: 1.3rem;
   margin-bottom: 1rem;
 }
@@ -74,7 +75,7 @@ button {
 }
 
 p {
-  margin: 1.5rem 0 ;
+  margin: 1.5rem 0;
 }
 
 ol,

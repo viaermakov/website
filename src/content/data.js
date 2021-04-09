@@ -16,9 +16,20 @@ export const skills = [
   { title: "styled-components", url: "https://styled-components.com/" },
 ];
 
+export const dhSkills = [
+  { title: "react", url: "https://reactjs.org/" },
+  { title: "redux", url: "https://redux.js.org/" },
+  { title: "typescript", url: "https://www.typescriptlang.org/" },
+  { title: "webpack", url: "https://webpack.js.org/" },
+  { title: "redux-saga", url: "https://github.com/redux-saga/redux-saga" },
+  { title: "reselect", url: "https://github.com/reduxjs/reselect" },
+  { title: "styled-components", url: "https://styled-components.com/" },
+];
+
 export const ottSkills = [
   { title: "react", url: "https://reactjs.org/" },
   { title: "redux", url: "https://redux.js.org/" },
+  { title: "effector", url: "https://github.com/effector/effector" },
   { title: "typescript", url: "https://www.typescriptlang.org/" },
   { title: "webpack", url: "https://webpack.js.org/" },
   { title: "redux-thunk", url: "https://github.com/reduxjs/redux-thunk" },
@@ -34,11 +45,6 @@ export const alfaSkills = [
   { title: "redux-thunk", url: "https://github.com/reduxjs/redux-thunk" },
   { title: "reselect", url: "https://github.com/reduxjs/reselect" },
   { title: "SASS", url: "https://sass-lang.com/" },
-];
-
-export const jobs = [
-  { title: "AlfaStrahovanie", url: "https://www.alfastrah.ru/" },
-  { title: "OneTwoTrip", url: "https://www.onetwotrip.com/" },
 ];
 
 export const projects = [

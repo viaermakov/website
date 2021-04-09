@@ -1,5 +1,5 @@
 <script>
-  import { ottSkills, alfaSkills } from "../content/data";
+  import { ottSkills, alfaSkills, dhSkills } from "../content/data";
   import Tooltip from "../components/tooltip.svelte";
   import OTTLogo from "../icons/ottLogo.svelte";
   import AlfaLogo from "../icons/alfaLogo.svelte";
@@ -48,8 +48,7 @@
           по этой ссылке
         </a>
         и на Github пара небольших проектов) и знакомиться с чем-то новым посредством
-        практики (Svelte, Elm, Typescript, Effector), читаю статьи и редко книги
-        о разработке. Иногда пытаюсь сам писать
+        практики (Svelte, Elm, Typescript, Effector). Иногда пытаюсь сам писать
         <a
           alt="link to my blog"
           rel="prefetch"
@@ -64,7 +63,7 @@
       <p>
         Учился в НИТУ МИСиС на направлении Информатика и вычислительная техника.
         Закончил с отличием. Также закончил магистратуру в Информационных
-        системах, получил опыт машинного обучения и анализа данных.
+        системах, научился машинному обучению и анализу данных.
       </p>
     </section>
   </div>
@@ -85,9 +84,9 @@
           <DHIcon />
         </span>
         <div class="stack">
-          {#each ottSkills as item, idx}
+          {#each dhSkills as item, idx}
             <a class="skill" target="_blink" href={item.url} alt={item.title}>
-              {item.title}{#if idx !== ottSkills.length - 1},&nbsp;{/if}
+              {item.title}{#if idx !== dhSkills.length - 1},&nbsp;{/if}
             </a>
           {/each}
         </div>
@@ -162,8 +161,8 @@
             </li>
             <li>Писал и чинил юнит тесты и E2E-тесты на Jest и Puppeteer.</li>
             <li>
-              Писал компоненты для библиотеки компонентов не только для Авиа, но и для
-              всех продуктов OneTwoTrip.
+              Писал компоненты для библиотеки компонентов не только для Авиа, но
+              и для всех продуктов OneTwoTrip.
             </li>
             <li>Иногда собеседовал frontend-разработчиков.</li>
           </ul>
@@ -188,8 +187,8 @@
             легче.
           </li>
           <li>
-            Успел поработать с CI. Например, затащил в проекты
-            Typescript и Eslint, добавил в пайплайны для Jenkins сборок.
+            Успел поработать с CI. Например, затащил в проекты Typescript и
+            Eslint, добавил в пайплайны для Jenkins сборок.
           </li>
         </ul>
       </div>
@@ -223,7 +222,7 @@
               class="company-name"
               href="https://www.alfastrah.ru/"
             >
-              АльфаСтрахование
+              &#127479;&#127482; АльфаСтрахование
             </a>
           </h3>
           <p>
