@@ -28,10 +28,7 @@
         {@html l10n.share}
       </p>
       <p class="base-info">
-        {@html l10n.more}
-      </p>
-      <p class="base-info">
-        {@html l10n.but}
+        {@html l10n.content}
       </p>
       <p>{l10n.open}</p>
     </div>
