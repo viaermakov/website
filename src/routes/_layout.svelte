@@ -5,7 +5,7 @@
   import { theme } from "../store";
   import { lang } from "../store";
   import { translates } from "../lang";
-  
+
   const { preloading } = stores();
   $: l10n = translates[$lang];
 
@@ -74,7 +74,7 @@
   }
 
   .dark {
-    --theme-background-color: #0e0e0e;
+    --theme-background-color: #0d1117;
     --theme-text-color: #e2e1e1;
     --theme-brand-color: #fff;
     --theme-hover-color: #000;
@@ -82,7 +82,7 @@
 
   .solarized {
     --theme-background-color: #002b36;
-    --theme-text-color: #839496;
+    --theme-text-color: #e2e1e1;
     --theme-brand-color: #cb4b16;
     --theme-hover-color: #fff;
   }

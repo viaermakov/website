@@ -27,7 +27,7 @@
         },
       ],
       easing: "easeOutQuad",
-      duration: 3000,
+      duration: 2000,
     });
   }
 
@@ -39,6 +39,10 @@
   const onMouseEnter = () => {
     CONFIG.size = 300;
     CONFIG.growth = 2;
+
+    clearInterval(timer);
+    changeBlob();
+    timer = setInterval(changeBlob, 1000);
   };
 
   const onMouseLeave = () => {
@@ -62,6 +66,25 @@
     clearInterval(timer);
   });
 </script>
+
+<svg
+  on:mouseenter={onMouseEnter}
+  on:mouseleave={onMouseLeave}
+  on:click={changeBlob}
+  viewBox="0 0 500 500"
+  id="logo"
+  xmlns="http://www.w3.org/2000/svg"
+  width="100px"
+  height="100px"
+>
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="100%" />
+    </linearGradient>
+  </defs>
+
+  <path d={INIT_PATH} fill="url(#gradient)" />
+</svg>
 
 <style>
   svg {
@@ -90,21 +113,3 @@
     stop-color: var(--theme-brand-color);
   }
 </style>
-
-<svg
-  on:mouseenter={onMouseEnter}
-  on:mouseleave={onMouseLeave}
-  on:click={changeBlob}
-  viewBox="0 0 500 500"
-  id="logo"
-  xmlns="http://www.w3.org/2000/svg"
-  width="100px"
-  height="100px">
-  <defs>
-    <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="100%" />
-    </linearGradient>
-  </defs>
-
-  <path d={INIT_PATH} fill="url(#gradient)" />
-</svg>
