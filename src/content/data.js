@@ -49,6 +49,13 @@ export const alfaSkills = [
 
 export const projects = [
   {
+    title: "Chat",
+    descen: "Chat application with virtual list support",
+    descru: "Чат с поддержкой более чем 100к сообщений на странице",
+    tags: ["react", "typescript"],
+    ghUrl: "https://github.com/nathanielmaeus/virtual-list-chat",
+  },
+  {
     title: "Spootifly",
     descen: "Music web player based on Deezer API",
     descru: "Веб-плеер",
@@ -86,14 +93,7 @@ export const projects = [
     tags: ["react", "redux", "effector", "mobx", "typescript"],
     href: "https://chulakovtest.netlify.app",
     ghUrl: "https://github.com/nathanielmaeus/teamviewer",
-  },
-  {
-    title: "linter",
-    descen: "Custom linter for yandex contest",
-    descru: "Линтер для проверки синтаксиса для Яндекса",
-    tags: ["javascript"],
-    ghUrl: "https://github.com/nathanielmaeus/custom-linter",
-  },
+  }
 ];
 
 export const contacts = [
