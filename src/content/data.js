@@ -1,21 +1,3 @@
-export const skills = [
-  { title: "react", url: "https://reactjs.org/" },
-  { title: "redux", url: "https://redux.js.org/" },
-  { title: "mobx", url: "https://mobx.js.org/" },
-  { title: "typescript", url: "https://www.typescriptlang.org/" },
-  { title: "effector", url: "https://effector.now.sh/" },
-  { title: "svelte", url: "https://svelte.dev/" },
-  { title: "sapper", url: "https://sapper.svelte.dev/" },
-  { title: "webpack", url: "https://webpack.js.org/" },
-  { title: "redux-thunk", url: "https://github.com/reduxjs/redux-thunk" },
-  { title: "reselect", url: "https://github.com/reduxjs/reselect" },
-  { title: "redux-saga", url: "https://github.com/redux-saga/redux-saga" },
-  { title: "rollup", url: "https://rollupjs.org/guide/en/" },
-  { title: "gatsby", url: "https://www.gatsbyjs.org/" },
-  { title: "next", url: "https://nextjs.org/" },
-  { title: "styled-components", url: "https://styled-components.com/" },
-];
-
 export const dhSkills = [
   { title: "react", url: "https://reactjs.org/" },
   { title: "redux", url: "https://redux.js.org/" },

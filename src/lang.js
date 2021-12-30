@@ -28,23 +28,18 @@ const ru = {
     alt="link to my projects"
     rel="prefetch"
     href="projects"
-  >
-    по этой ссылке
-  </a>
-  и на Github пара небольших проектов) и знакомиться с чем-то новым посредством
-  практики (Svelte, Elm, Typescript, Effector). Иногда пытаюсь сам писать
+  >на Github </a>пара небольших проектов) и знакомиться с чем-то новым посредством
+  практики. Иногда пытаюсь сам писать
   <a
     alt="link to my blog"
     rel="prefetch"
     class="company-name"
     href="blog"
   >
-    некоторые заметки.
-  </a>
+    некоторые заметки</a>.
   Выходит плохо.`,
   but: "Больше о технологиях, инструментах и о моем опыте работы можно узнать <a href='about' alt='Link to about page'>здесь</a>.",
   open: "Всегда открыт к предложениям и интересным вакансиям.",
-  tags: "Что знаю и использовал:",
   connect: "Как связаться со мной",
   Projects: "Проекты",
   Articles: "Заметки",
@@ -54,7 +49,7 @@ const ru = {
   logo: "Красиво. Правда?",
   oops: "Я как всегда что-то сломал. <br> Мои лучшие люди занимаются этой проблемой.",
   errorMessage: "Ошибка:",
-  footer: "Этот сайт не собирает ваши данные. 2019 - 2021",
+  footer: "Этот сайт не собирает ваши данные. 2019 - 2022",
 };
 
 const en = {
@@ -96,7 +91,6 @@ const en = {
 >notes</a> myself but it comes out badly.`,
   but: "",
   open: "I am always open to offers and curious vacancies.",
-  tags: "I know and use:",
   photo1: "Yeah.. It's me",
   photo2: "The photo is the same again. I do not like to be photographed",
   connect: "How to get in touch with me",
@@ -105,7 +99,7 @@ const en = {
   logo: "Beautiful. Right?",
   oops: "As always, I broke something. <br> My best people deal with this problem.",
   errorMessage: "Error:",
-  footer: "This site does not collect your data. 2019 - 2021",
+  footer: "This site does not collect your data. 2019 - 2022",
 };
 
 export const translates = { en, ru };

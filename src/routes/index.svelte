@@ -1,6 +1,5 @@
 <script>
   import Tooltip from "../components/tooltip.svelte";
-  import { skills } from "../content/data";
   import { lang } from "../store";
   import { translates } from "../lang";
   import { contacts } from "../content/data";
@@ -31,22 +30,6 @@
         {@html l10n.content}
       </p>
       <p>{l10n.open}</p>
-    </div>
-    <div>
-      <h1>{l10n.tags}</h1>
-      <p class="base-info">
-        {#each skills as item, idx}
-          <a
-            class="skill"
-            target="_blink"
-            rel="noreferrer"
-            href={item.url}
-            alt={item.title}>{item.title}</a
-          >{#if idx !== skills.length - 1}
-            ,{" "}
-          {/if}
-        {/each}
-      </p>
     </div>
     <div>
       <h1>{l10n.connect}</h1>
