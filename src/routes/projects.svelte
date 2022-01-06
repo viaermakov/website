@@ -15,6 +15,63 @@
     : COLORS.LIGHT_BACKGROUND;
 </script>
 
+<svelte:head>
+  <title>{l10n["Projects"]}</title>
+  <meta property="og:title" content="Viacheslav Ermakov" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://viaermakov.com" />
+  <meta property="og:description" content="Personal website" />
+  <meta
+    property="og:image"
+    content="https://res.cloudinary.com/dk4mytxmk/image/upload/v1595920880/website/1233_fk2hoq.jpg"
+  />
+</svelte:head>
+
+<section class="container">
+  <h2>{l10n["Projects"]}</h2>
+  <div class="projects">
+    <ul class="projects-list">
+      {#each projects as project}
+        <li class="project">
+          <div class="description">
+            <div>
+              <a
+                class="project-link"
+                target="_blink"
+                href={project.href || project.ghUrl}
+              >
+                {project.title}
+              </a>
+            </div>
+            <div class="desc">{project[`desc${$lang}`]}</div>
+          </div>
+          <Tags tags={project.tags} />
+          {#if project.href}
+            <a
+              class="other-link outlink"
+              aria-label={project.title}
+              target="_blink"
+              href={project.href}
+            >
+              <OutIcon {color} />
+            </a>
+          {/if}
+          {#if project.ghUrl}
+            <a
+              class="other-link"
+              target="_blink"
+              aria-label={project.title}
+              href={project.ghUrl}
+            >
+              <GithubIcon {color} />
+            </a>
+          {/if}
+        </li>
+      {/each}
+    </ul>
+  </div>
+</section>
+
 <style>
   .container {
     margin-top: 3rem;
@@ -47,6 +104,8 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    padding-left: 0;
+    margin: 0;
   }
 
   .project {
@@ -82,56 +141,3 @@
     }
   }
 </style>
-
-<svelte:head>
-  <title>{l10n['Projects']}</title>
-  <meta property="og:title" content="Viacheslav Ermakov" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://viaermakov.com" />
-  <meta property="og:description" content="Personal website" />
-  <meta
-    property="og:image"
-    content="https://res.cloudinary.com/dk4mytxmk/image/upload/v1595920880/website/1233_fk2hoq.jpg" />
-</svelte:head>
-
-<section class="container">
-  <h2>{l10n['Projects']}</h2>
-  <section class="projects">
-    <div class="projects-list">
-      {#each projects as project}
-        <div class="project">
-          <div class="description">
-            <div>
-              <a
-                class="project-link"
-                target="_blink"
-                href={project.href || project.ghUrl}>
-                {project.title}
-              </a>
-            </div>
-            <div class="desc">{project[`desc${$lang}`]}</div>
-          </div>
-          <Tags tags={project.tags} />
-          {#if project.href}
-            <a
-              class="other-link outlink"
-              aria-label={project.title}
-              target="_blink"
-              href={project.href}>
-              <OutIcon {color} />
-            </a>
-          {/if}
-          {#if project.ghUrl}
-            <a
-              class="other-link"
-              target="_blink"
-              aria-label={project.title}
-              href={project.ghUrl}>
-              <GithubIcon {color} />
-            </a>
-          {/if}
-        </div>
-      {/each}
-    </div>
-  </section>
-</section>
