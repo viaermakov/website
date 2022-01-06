@@ -35,6 +35,7 @@ export const projects = [
     descen: "Chat application with virtual list support",
     descru: "Чат с поддержкой более чем 100к сообщений на странице",
     tags: ["react", "typescript"],
+    href: "https://chatvl.netlify.app",
     ghUrl: "https://github.com/nathanielmaeus/virtual-list-chat",
   },
   {
